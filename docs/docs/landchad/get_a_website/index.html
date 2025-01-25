@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+
+  <title>Get a website – MJ Docs</title>
+  <meta name="description" content="This is the basic “course.” Follow this quick tutorial and you’ll have a fully functioning basic web page and server on the domain name of your choice.
+ℹ️ Domain name: The name of a website that you type in an address bar. This site’s domain name is maxwelljensen.no. Top-level domain (TLD): The extension of a domain name, like .com, .net, .no, etc. Registrar: A service authorized to reserve a domain name for you." />
+
+  
+
+<meta property="og:title" content="Get a website" />
+<meta property="og:description" content="This is the basic &ldquo;course.&rdquo; Follow this quick tutorial and you’ll have a fully functioning basic web page and server on the domain name of your choice.
+ℹ️ Domain name: The name of a website that you type in an address bar. This site&rsquo;s domain name is maxwelljensen.no. Top-level domain (TLD): The extension of a domain name, like .com, .net, .no, etc. Registrar: A service authorized to reserve a domain name for you." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://docs.maxwelljensen.eu/docs/landchad/get_a_website/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2024-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-07T00:00:00+00:00" />
+
+  
+  <meta itemprop="name" content="Get a website">
+  <meta itemprop="description" content="This is the basic “course.” Follow this quick tutorial and you’ll have a fully functioning basic web page and server on the domain name of your choice.
+ℹ️ Domain name: The name of a website that you type in an address bar. This site’s domain name is maxwelljensen.no. Top-level domain (TLD): The extension of a domain name, like .com, .net, .no, etc. Registrar: A service authorized to reserve a domain name for you.">
+  <meta itemprop="datePublished" content="2024-01-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-01-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="3666">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Get a website">
+  <meta name="twitter:description" content="This is the basic “course.” Follow this quick tutorial and you’ll have a fully functioning basic web page and server on the domain name of your choice.
+ℹ️ Domain name: The name of a website that you type in an address bar. This site’s domain name is maxwelljensen.no. Top-level domain (TLD): The extension of a domain name, like .com, .net, .no, etc. Registrar: A service authorized to reserve a domain name for you.">
+
+    <link rel="preload" href="/css/compiled/main.min.2fd8982815d4baf33b6acf949e788eafe9a3ff0490ac38a7a749fe9d8f292278.css" as="style" integrity="sha256-L9iYKBXUuvM7as&#43;UnniOr&#43;mj/wSQrDinp0n&#43;nY8pIng=" />
+    <link href="/css/compiled/main.min.2fd8982815d4baf33b6acf949e788eafe9a3ff0490ac38a7a749fe9d8f292278.css" rel="stylesheet" integrity="sha256-L9iYKBXUuvM7as&#43;UnniOr&#43;mj/wSQrDinp0n&#43;nY8pIng=" />
+
+
+
+  <link href="/css/custom.min.21f85f114517ce9952f6ebde01ee3ee5b7d8e53046dc27293f9709aeeacf6cbc.css" rel="stylesheet" integrity="sha256-IfhfEUUXzplS9uveAe4&#43;5bfY5TBG3CcpP5cJrurPbLw=" />
+
+
+
+  
+
+
+  <script>
+     
+    const defaultTheme = 'system';
+
+    const setDarkTheme = () => {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+    const setLightTheme = () => {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+    } else {
+      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+      if (defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+      }
+    }
+  </script>
+
+  
+</head>
+<body dir="ltr"><div class="nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
+  <div class="nav-container-blur pointer-events-none absolute z-[-1] h-full w-full bg-white dark:bg-dark shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:shadow-[0_0_0_1px_#000] dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:shadow-[0_0_0_1px_#fff]"></div>
+
+  <nav class="mx-auto flex items-center justify-end gap-2 h-16 px-6 max-w-screen-xl">
+    <a class="flex items-center hover:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
+        <img class="block dark:hidden" src="/logo.svg" alt="MJ Docs" height="20" width="110" />
+        <img class="hidden dark:block" src="/logo.svg" alt="MJ Docs" height="20" width="110" />
+    </a><a
+            title="Documentation"
+            href="/docs"
+            
+            class="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative -ml-2 hidden whitespace-nowrap p-2 md:inline-block font-medium"
+          >
+            <span class="text-center">Documentation</span>
+          </a><a
+            title="Blog"
+            href="https://maxwelljensen.eu"
+            target="_blank" rel="noreferer"
+            class="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative -ml-2 hidden whitespace-nowrap p-2 md:inline-block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            <span class="text-center">Blog</span>
+          </a><div class="search-wrapper relative md:w-64">
+  <div class="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input block w-full appearance-none rounded-lg px-3 py-2 transition-colors text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 focus:bg-white dark:focus:bg-dark placeholder:text-gray-500 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="absolute my-1.5 select-none ltr:right-1.5 rtl:left-1.5 h-5 rounded bg-white px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none hidden sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hidden border border-gray-200 bg-white text-gray-100 dark:border-neutral-800 dark:bg-neutral-900 absolute top-full z-20 mt-2 overflow-auto overscroll-contain rounded-xl py-2.5 shadow-xl max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] inset-x-0 ltr:md:left-auto rtl:md:right-auto contrast-more:border contrast-more:border-gray-900 contrast-more:dark:border-gray-50 w-screen min-h-[100px] max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+<a class="p-2 text-current" target="_blank" rel="noreferer" href="https://github.com/maxwelljens" title="GitHub"><svg height=24 fill="currentColor" viewBox="3 3 18 18">
+  <path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path>
+</svg>
+<span class="sr-only">GitHub</span>
+          </a><button type="button" aria-label="Menu" class="hamburger-menu -mr-2 rounded p-2 active:bg-gray-400/20 md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='mx-auto flex max-w-screen-xl'>
+    <div class="mobile-menu-overlay [transition:background-color_1.5s_ease] fixed inset-0 z-10 bg-black/80 dark:bg-black/60 hidden"></div>
+<aside class="sidebar-container flex flex-col print:hidden md:top-16 md:shrink-0 md:w-64 md:self-start max-md:[transform:translate3d(0,-100%,0)] md:sticky">
+  
+  <div class="px-4 pt-4 md:hidden">
+    <div class="search-wrapper relative md:w-64">
+  <div class="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input block w-full appearance-none rounded-lg px-3 py-2 transition-colors text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 focus:bg-white dark:focus:bg-dark placeholder:text-gray-500 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="absolute my-1.5 select-none ltr:right-1.5 rtl:left-1.5 h-5 rounded bg-white px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none hidden sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hidden border border-gray-200 bg-white text-gray-100 dark:border-neutral-800 dark:bg-neutral-900 absolute top-full z-20 mt-2 overflow-auto overscroll-contain rounded-xl py-2.5 shadow-xl max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] inset-x-0 ltr:md:left-auto rtl:md:right-auto contrast-more:border contrast-more:border-gray-900 contrast-more:dark:border-gray-50 w-screen min-h-[100px] max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar overflow-y-auto overflow-x-hidden p-4 grow md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="flex flex-col gap-1 md:hidden">
+      
+      
+          <li class="open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/"
+    
+  >Docs
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/"
+    
+  >Landchad
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+    href="/docs/landchad/get_a_website/"
+    
+  >Get a website
+    </a>
+  
+    <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
+              <a
+                href="#registering-a-domain-name"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Registering a domain name</a>
+            </li>
+          <li>
+              <a
+                href="#get-a-server"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Get a server</a>
+            </li>
+          <li>
+              <a
+                href="#domain-and-dns-records"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Domain and DNS Records</a>
+            </li>
+          <li>
+              <a
+                href="#the-web-server"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >The web server</a>
+            </li>
+          <li>
+              <a
+                href="#setting-up-https"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Setting up HTTPS</a>
+            </li>
+          <li>
+              <a
+                href="#going-from-here"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Going from here</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/ejabberd/"
+    
+  >ejabberd
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/git/"
+    
+  >git
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/cgit/"
+    
+  >cgit
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/gitea/"
+    
+  >Gitea
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/ergo/"
+    
+  >Ergo
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/dokuwiki/"
+    
+  >DokuWiki
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/pleroma/"
+    
+  >Pleroma
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/peertube/"
+    
+  >PeerTube
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/"
+    
+  >Maintenace tips
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/ssh/"
+    
+  >SSH key login
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/cron/"
+    
+  >Cronjobs
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/seo/"
+    
+  >Web optimisation
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <ul class="flex flex-col gap-1 max-md:hidden">
+        
+          <li class="open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/"
+    
+  >Landchad
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+    href="/docs/landchad/get_a_website/"
+    
+  >Get a website
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/ejabberd/"
+    
+  >ejabberd
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/git/"
+    
+  >git
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/cgit/"
+    
+  >cgit
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/gitea/"
+    
+  >Gitea
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/ergo/"
+    
+  >Ergo
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/dokuwiki/"
+    
+  >DokuWiki
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/pleroma/"
+    
+  >Pleroma
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/peertube/"
+    
+  >PeerTube
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/"
+    
+  >Maintenace tips
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/ssh/"
+    
+  >SSH key login
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/cron/"
+    
+  >Cronjobs
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/seo/"
+    
+  >Web optimisation
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  sticky bottom-0 bg-white dark:bg-dark mx-4 py-4 shadow-[0_-12px_16px_#fff] flex items-center gap-2 dark:border-neutral-800 dark:shadow-[0_-12px_16px_#111] contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:shadow-none border-t" data-toggle-animation="show"><div class="flex grow flex-col"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle group h-7 rounded-md px-2 text-left text-xs font-medium text-gray-600 transition-colors dark:text-gray-400 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100/5 dark:hover:text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="flex items-center gap-2 capitalize"><svg height=12 class="group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="group-data-[theme=light]:hidden">Light</span><svg height=12 class="group-data-[theme=dark]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="group-data-[theme=dark]:hidden">Dark</span></div>
+</button>
+</div></div></aside>
+    
+<nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#registering-a-domain-name">Registering a domain name
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#about-domain-names">About domain names
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#find-a-name">Find a name
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#get-a-server">Get a server
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#vps">VPS
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#starting-your-server-in-minutes">Starting your server in minutes
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#server-location">Server location
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#operating-system">Operating system
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#server-size">Server size
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#additional-features">Additional features
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#domain-and-dns-records">Domain and DNS Records
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#open-your-registrar">Open your registrar
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#your-ip-address">Your IP address
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#test-the-connection">Test the connection
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#the-web-server">The web server
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#installing-the-web-server">Installing the web server
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-our-nginx">Configuring our Nginx
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#explaining-the-configuration">Explaining the configuration
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#create-the-data">Create the data
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#firewall-configuration">Firewall configuration
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#our-website">Our website
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#setting-up-https">Setting up HTTPS
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#why-bother">Why bother?
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#certbot-to-the-rescue">Certbot to the rescue
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#verifying-success">Verifying success
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#going-from-here">Going from here
+        </a>
+      </li></ul>
+      <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline ml-1 h-3.5 w-3.5 border rounded-full border-gray-500 hover:border-gray-900 dark:border-gray-400 dark:hover:border-gray-100 contrast-more:border-gray-800 contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+        <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400 contrast-more:text-current">
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://docs.maxwelljensen.eu/docs/">Docs</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://docs.maxwelljensen.eu/docs/landchad/">Landchad</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="whitespace-nowrap transition-colors font-medium text-gray-700 contrast-more:font-bold contrast-more:text-current dark:text-gray-100 contrast-more:dark:text-current">Get a website</div>
+</div>
+
+        <div class="content">
+          <h1>Get a website</h1>
+          <p>This is the basic &ldquo;course.&rdquo; Follow this quick tutorial and you’ll have a fully
+functioning basic web page and server on the domain name of your choice.</p>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200">
+  <div class="ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"><div class="select-none text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        ℹ️
+      </div></div>
+
+  <div class="w-full min-w-0 leading-7">
+    <div class="mt-6 leading-7 first:mt-0">
+      <ul>
+<li><strong>Domain name</strong>: The name of a website that you type in an address bar. This
+site&rsquo;s domain name is <code>maxwelljensen.no</code>.</li>
+<li><strong>Top-level domain (TLD)</strong>: The extension of a domain name, like <code>.com</code>,
+<code>.net</code>, <code>.no</code>, etc.</li>
+<li><strong>Registrar</strong>: A service authorized to reserve a domain name for you.</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+<h2>Registering a domain name<span class="absolute -mt-20" id="registering-a-domain-name"></span>
+    <a href="#registering-a-domain-name" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When domain names first sell, they usually sell for very cheap, but once
+someone buys one, they have the rights to it until they decide to sell it,
+often for much, much more money. Therefore, it&rsquo;s a good idea to reserve a
+domain name ASAP, even if you didn&rsquo;t intend on doing anything big with it.</p>
+<p>So let&rsquo;s register your domain name!</p>
+<p>Domains can be registered at any accredited registrar and there are a lot to
+choose from. Some major names are
+<a href="https://www.hostgator.com/domains" target="_blank" rel="noopener">HostGator</a>,
+<a href="https://www.bluehost.com/domains" target="_blank" rel="noopener">BlueHost</a>,
+<a href="https://www.namecheap.com/domains/" target="_blank" rel="noopener">NameCheap</a> or
+<a href="https://www.dreamhost.com/domains/" target="_blank" rel="noopener">DreamHost</a>.</p>
+<p>There are also sites that are more private, like <a href="https://njal.la/" target="_blank" rel="noopener">Njalla</a> and
+<a href="https://cheapprivacy.ru/" target="_blank" rel="noopener">CheapPrivacy</a>, which register a domain for you under
+their name, but still allow you access to it. Normally all websites must be
+registered with the ICANN with a real name and address, but these sites allow
+you to bypass that.</p>
+<p>Choosing a registrar is not permanent, and you can transfer domains to a
+different registrar if you get a better deal later, so, in most cases, you can
+just choose one. Moving on.</p>
+<h3>About domain names<span class="absolute -mt-20" id="about-domain-names"></span>
+    <a href="#about-domain-names" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>Domain names usually require a very small yearly fee to keep registered,
+usually around 12$ for most generic TLDs. There are some &ldquo;specialty&rdquo; TLDs that
+are more expensive, but <code>.com</code>, <code>.xyz</code>, <code>.no</code> and other basic TLDs are that
+cheap.</li>
+<li>Once you own a domain, it is yours as long as you pay the yearly fee, but you
+can also sell it to someone for however much you want.</li>
+<li>Domain names do not hold your data or your website; instead, you add &ldquo;DNS
+settings&rdquo; that direct people connecting to your domain to your IP address. The
+purpose of a domain name is so that people don&rsquo;t have to remember your IP
+address to find your website!</li>
+<li>Some domain names can be gotten only by fulfilling certain requirements
+beyond pay. For example, to get a <code>.no</code> domain, you must be a citizen of the
+Kingdom of Norway.</li>
+</ul>
+<h3>Find a name<span class="absolute -mt-20" id="find-a-name"></span>
+    <a href="#find-a-name" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Most registrars offer a simple search function to look for available domain
+names on the Internet.</p>
+<p>You can look for whatever domain name you want. Domains that are already bought
+and owned by someone else might have the option to &ldquo;backorder,&rdquo; but it&rsquo;s always
+best to get one that is unowned, like these:</p>
+<p><img src="/landchad/domain-search.png" alt="Search results for a domain name" loading="lazy" /></p>
+<p>Note the differences in prices. Some unusual TLDs like <code>.game</code> and <code>.io</code> charge
+a much larger fee, although you might want one. Some domains like <code>.xyz</code>
+and <code>.org</code> have dramatically discounted prices, although it typically applies
+for the first one or two years of subscription.</p>
+<p>Choose the domain you want, and buy it. The process of purchasing is the same
+as for any other service on the Internet. That&rsquo;s all you have to do to own a
+domain name. As you register a domain, you can also setup an automatic payment
+to pay your fee yearly to keep your domain. Easy.</p>
+<h2>Get a server<span class="absolute -mt-20" id="get-a-server"></span>
+    <a href="#get-a-server" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Once you have a domain name, you&rsquo;ll need a server to host all your website
+files on. In general, a server is just a computer that is constanly
+broadcasting some services on the internet.</p>
+<p>Servers connected to the internet can be extremely useful with or without
+proper websites attached to them. You can be your own website, email,
+file-sharing service and much more.</p>
+<p>Alternatively you can use old hardware in your house, if you have any. A Dell
+Latitude from 2004 would be perfectly serviceable to host many services,
+including for instant messaging, conferencing, and more; let alone a website.
+However, we will assume you do not have surplus hardware around.</p>
+<h3>VPS<span class="absolute -mt-20" id="vps"></span>
+    <a href="#vps" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A virtual personal server (VPS) is a very cheap and easy way to get a web
+server, without you having to buy expensive equipment. There are a lot of
+online businesses that have massive server farms with great internet connection
+and big power bills that allow you to rent a VPS in that farm for pocket
+change.</p>
+<p>A VPS usually costs 5$ a month. Sometimes slightly more, sometimes slightly
+less. That&rsquo;s a good price for some Internet real estate, but, in truth, you can
+host a huge number of websites and services on a single VPS, so you get a lot
+more. Nothing stops you from hosting a dozen websites, an email server, a chat
+server and a file-sharing services on one VPS.</p>
+<h3>Starting your server in minutes<span class="absolute -mt-20" id="starting-your-server-in-minutes"></span>
+    <a href="#starting-your-server-in-minutes" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The VPS provider that we&rsquo;ll be using for this guide is
+<a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr</a>. Set up an account and get started. There are
+many VPS providers around, of course, but we will pick one mainly to illustrate
+how easy it is to get started. You are encouraged to find a VPS provider that
+is cheapest and offers best services for your particular needs.</p>
+<h4>Server location<span class="absolute -mt-20" id="server-location"></span>
+    <a href="#server-location" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>In general, it doesn&rsquo;t hugely matter what physical location you have your
+server in. You might theoretically want it close to where you or your audience
+might be, but if you host a server in Australia for a European audience, they
+won&rsquo;t have to be waiting a perceptibly longer time to load the site.</p>
+<p><img src="/landchad/vultr1.png" alt="" loading="lazy" /></p>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200">
+  <div class="ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"><div class="select-none text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        ℹ️
+      </div></div>
+
+  <div class="w-full min-w-0 leading-7">
+    <div class="mt-6 leading-7 first:mt-0">
+      Some locations might have different abilities and plans than others. For
+example, in Vultr, their New York location has optional DDOS protection and
+also has some cheaper 3.50$ servers.
+    </div>
+  </div>
+</div>
+
+<h4>Operating system<span class="absolute -mt-20" id="operating-system"></span>
+    <a href="#operating-system" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><img src="/landchad/vultr2.png" alt="" loading="lazy" /></p>
+<p>For most system administration needs, there are two Linux distributions that
+are the best: <strong>Debian</strong> and <strong>Fedora</strong>. We recommend Fedora as the operating
+system for your server. For administering a system, it is the most
+beginner-friendly Linux distribution. However, Debian is potentially better
+suited if you are planning to host sensitive data on your system, as it is a
+more &ldquo;minimalist&rdquo; system that is explicitly made for hosting servers.</p>
+<p>Ultimately, both are valid options and setting up services for either of them
+follows almost identical steps.</p>
+<h4>Server size<span class="absolute -mt-20" id="server-size"></span>
+    <a href="#server-size" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><img src="/landchad/vultr3.png" alt="" loading="lazy" /></p>
+<p>You finally have a choice in how beefy a server you want. On Vultr, we
+recommend getting the cheapest option that is not IPv6 only.</p>
+<p>Web hosting and even moderately complicated sites do not use huge amounts of
+RAM or CPU power. If you start doing more intensive stuff than hosting some
+webpages, such as a Matrix server, you can always bump up your plan on Vultr
+without data loss. It&rsquo;s not so easy to bump down, however.</p>
+<h4>Additional features<span class="absolute -mt-20" id="additional-features"></span>
+    <a href="#additional-features" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p><img src="/landchad/vultr4.png" alt="" loading="lazy" /></p>
+<p>On Vultr, there are some final checkboxes you can select additional options.
+You will want to check <strong>Enable IPv6</strong> and also <strong>Block Storage Compatible</strong>.</p>
+<p>We will be setting up IPv6, because it&rsquo;s important for future-proofing your
+website as more of the web moves to IPv6. Block storage is the ability (if you
+want) to later rent large storage disks to connect to your VPS. You just might
+want that as an option, so it&rsquo;s worth activating now.</p>
+<p>Once you select those settings, your server will automatically be deployed.
+Momentarily, you will be able to see your server&rsquo;s IP addresses which will be
+used for the next brief step.</p>
+<h2>Domain and DNS Records<span class="absolute -mt-20" id="domain-and-dns-records"></span>
+    <a href="#domain-and-dns-records" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now that we have a domain and a server, we can connect the two using DNS
+records. DNS records, which stands for domain name system records, are usually
+put into your registrar and direct people looking up your website to the server
+where your website and other things will be.</p>
+<p>Get your IPv4/IPv6 addresses from your VPS provider and put them into A/AAAA
+records on your registrar. Simple process, takes a minute, but here&rsquo;s a guide
+with a million images just so you know.</p>
+<p>Again, the details will vary from provider to provider, but the general
+principle is exactly the same at all of them. It is easy.</p>
+<h3>Open your registrar<span class="absolute -mt-20" id="open-your-registrar"></span>
+    <a href="#open-your-registrar" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As before, we will be using any registrar of your choice and Vultr as a server
+host. Go ahead and log into your accounts on both. Open up your registrar&rsquo;s
+website, logging into their DNS record management system, and click on your
+domain. Then, pick a choice for &ldquo;DNS records.&rdquo; You’ll want to see something
+like this on your registrar’s site.</p>
+<p><img src="/landchad/dns1.png" alt="" loading="lazy" /></p>
+<p>Note that we are on the &ldquo;External Hosts (A, AAAA)&rdquo; tab by default. There may be
+default settings set by your registrar. If there are, you can go ahead and
+delete them so they look clean like the picture above.</p>
+<p><strong>All we have to do now is get our IP addresses from Vultr and add new DNS
+records that will send connections to our server.</strong></p>
+<p>Keep the registrar tab open, open Vultr&rsquo;s website, and we will copy-and-paste
+our VPS&rsquo;s IP addresses in.</p>
+<h3>Your IP address<span class="absolute -mt-20" id="your-ip-address"></span>
+    <a href="#your-ip-address" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Looking at your server in the Vultr menu, you should see a number next to it.
+In the example here it is 104.238.126.105 as you can see below the server name,
+which we have named <em>landchad.net</em> after the domain we will soon attach to it.
+That is our IPv4 address.</p>
+<p><img src="/landchad/dns2.png" alt="" loading="lazy" /></p>
+<p>Copy your IPv4 address and on your registrar’s site, click the &ldquo;Add Record&rdquo;
+record button and add two A entries pasting in your IPv4 address like we&rsquo;ve
+done for ours here.</p>
+<p><img src="/landchad/dns3.png" alt="" loading="lazy" /></p>
+<p>We add two entries. One has nothing written in the &ldquo;Host&rdquo; section. This will
+direct connections to <code>landchad.net</code> over IPv4 to our IP address. The second
+has an asterisk in the &ldquo;Host&rdquo; section. This will direct connections to all
+possible subdomains to the right place too. For instance, <code>mail.landchad.net</code>,
+<code>blog.landchad.net</code>, or any other subdomain we might want to add later.</p>
+<p>Now let&rsquo;s get our IPv6 address, which is a little more hidden for some reason.
+IPv6 is important because we are running out of IPv4 addresses, so it is highly
+important to allow connections via IPv6 as it will be standard in the future.
+Anyway, now back on Vultr, click on the server name.</p>
+<p>On the server settings, click on settings and we will see we are on a submenu
+labeled &ldquo;IPv4&rdquo; where we see our IPv4 address again.</p>
+<p><img src="/landchad/dns4.png" alt="" loading="lazy" /></p>
+<p>Now just click on the IPv6 submenu to reveal your IPv6 address.</p>
+<p><img src="/landchad/dns5.png" alt="" loading="lazy" /></p>
+<p>That ugly looking sequence of numbers and letters with colons in between
+(<code>2001:19f0:5:ccc:5400:03ff:fe58:324a</code>) is our IPv6 address. Yours will look
+something like it. Now let&rsquo;s put it into your registrar’s site. This time, be
+sure to select to put in AAAA records as below:</p>
+<p><img src="/landchad/dns6.png" alt="" loading="lazy" /></p>
+<p>Now just click &ldquo;Save Changes.&rdquo; It might take a whilte for the DNS settings to
+propagate across the internet. It could take up to an hour, possibly longer or
+shorter. DNSes around the world operate quickly, but not instanteously, so be
+patient.</p>
+<h3>Test the connection<span class="absolute -mt-20" id="test-the-connection"></span>
+    <a href="#test-the-connection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>We can check if our domain name works by pinging our domain name, like so:</p>
+<p><img src="/landchad/dns-ping.png" alt="" loading="lazy" /></p>
+<p>As you can see, our ping to <code>landchad.net</code> is now being directed to
+<code>104.238.128.105</code>. That means we have successfully set up our DNS records! You
+can also run the command <code>host</code> if you have it, which will list both IPv4 and
+IPv6 addresses for a domain name.</p>
+<h2>The web server<span class="absolute -mt-20" id="the-web-server"></span>
+    <a href="#the-web-server" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>At this point, we should have a domain name and a server and the domain name
+should direct to the IP address of the server with DNS records. We first want
+to log into our VPS to get a command prompt where we can set up the web server.
+We are assuming you are using either macOS or GNU/Linux and you know how to
+open a terminal. On Windows, you can also use either PuTTY or the Windows
+Subsystem for Linux (WSL).</p>
+<p>We will be installing a web server known as
+<a href="https://en.wikipedia.org/wiki/Nginx" target="_blank" rel="noopener">Nginx</a>, which is a relatively new but
+well-tested web server that&rsquo;s very easy to operate. For our simple uses, it is
+the best solution.</p>
+<p>Now, on Vultr&rsquo;s site, you can click on your VPS and you will see that there is
+an area that shows you the password for your server at the bottom here.</p>
+<p><img src="/landchad/nginx1.png" alt="" loading="lazy" /></p>
+<p>Now pull up a terminal, type the following, and hit the enter key:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ssh</span> user@example.org</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>In our case, we would use <code>root</code> instead of <code>user</code>, and <code>landchad.net</code> instead
+of <code>example.org</code>. Use the user name as provided by your VPS. Those are your
+login credentials for an account on your system of choice.</p>
+<p>This command will attempt to log into your server. It should prompt you for
+your password, and you can just copy or type in the password from Vultr&rsquo;s site.</p>
+<p>If you get an error here, you might not have done your DNS settings right.
+Double-check those.</p>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200">
+  <div class="ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"><div class="select-none text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        ℹ️
+      </div></div>
+
+  <div class="w-full min-w-0 leading-7">
+    <div class="mt-6 leading-7 first:mt-0">
+      You can also replace the <code>example.org</code> with your VPS&rsquo;s IP address, but you&rsquo;ll
+want to fix your DNS settings soon.
+    </div>
+  </div>
+</div>
+
+<h3>Installing the web server<span class="absolute -mt-20" id="installing-the-web-server"></span>
+    <a href="#installing-the-web-server" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>If the program runs without an error, <code>ssh</code> has now logged you into your
+server. Let&rsquo;s start by running the following commands, depending on which
+system you have set up for your VPS.</p>
+<div class="mt-4 flex w-max min-w-full border-b border-gray-200 pb-px dark:border-neutral-800"><button
+      class="tabs-toggle data-[state=selected]:border-primary-500 data-[state=selected]:text-primary-600 mr-2 rounded-t p-2 font-medium leading-5 transition-colors -mb-0.5 select-none border-b-2 border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-0"
+      aria-selected="true"
+      tabindex="0"
+      data-state="selected"
+    >Debian</button><button
+      class="tabs-toggle data-[state=selected]:border-primary-500 data-[state=selected]:text-primary-600 mr-2 rounded-t p-2 font-medium leading-5 transition-colors -mb-0.5 select-none border-b-2 border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-1"
+      
+      
+      
+    >Fedora</button></div>
+<div>
+  
+  <div
+  class="tabs-panel rounded pt-6 hidden data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel"
+  tabindex="0"
+  data-state="selected"
+>
+  <div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">apt</span> update <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">apt</span> upgrade <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">apt</span> install nginx</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>The first command checks for packages that can be updated and the second
+command installs any updates.</p>
+<p>The third command installs <code>nginx</code>, the web server we&rsquo;ll be using, along with
+some other programs and bits.</p>
+
+</div>
+
+
+  <div
+  class="tabs-panel rounded pt-6 hidden data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"
+  
+  
+>
+  <div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">dnf</span> update <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">dnf</span> install nginx</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>The first command checks for packages that can be updated and checks for any
+system updates, downloading them. The second command, of course, installs
+<code>nginx</code> as in Debian.</p>
+</div>
+
+
+</div>
+
+<h3>Configuring our Nginx<span class="absolute -mt-20" id="configuring-our-nginx"></span>
+    <a href="#configuring-our-nginx" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Nginx is your webserver. You can make a little website or page, put it on your
+VPS and then tell Nginx where it is and how to host it on the Internet. It&rsquo;s
+simple. Let&rsquo;s do it.</p>
+<p>Nginx configuration files are in <code>/etc/nginx/</code>. If you are not sure what that
+means, you might want to watch <a href="https://www.youtube.com/watch?v=42iQKuQodW4" target="_blank" rel="noopener">this three-minute
+video</a>. The two main
+subdirectories in there are <code>/etc/nginx/sites-available</code> and
+<code>/etc/nginx/sites-enabled</code>. The names are descriptive. The idea is that you can
+make a site configuration file in <code>sites-available</code> and when it&rsquo;s all ready,
+you make a link (explained in a bit) to it in <code>sites-enabled</code> which will
+activate it.</p>
+<p>First, let&rsquo;s create the settings for our website. You can copy and paste, with
+required changes, but we will also explain what the lines do.</p>
+<p>Create a file in <code>/etc/nginx/sites-available</code> by doing this:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">nano</span> /etc/nginx/sites-available/mywebsite</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Note that <code>nano</code> is a noob-friendly command line text editor. You will now be
+able to create and edit this file. By saving, this file will now appear. Note
+also we name the file <code>mywebsite</code>, but you can name it whatever you&rsquo;d like.</p>
+<p>We&rsquo;re going to add the following content to the file. The content like this
+will be different depending on what you want to call your site.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span> ;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">listen</span> <span style="color:#e6db74">[::]:80</span> ;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">server_name</span> <span style="color:#e6db74">example.org</span> ;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">root</span> <span style="color:#e6db74">/var/www/mysite</span> ;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">index</span> <span style="color:#e6db74">index.html</span> <span style="color:#e6db74">index.htm</span> <span style="color:#e6db74">index.nginx-debian.html</span> ;
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">try_files</span> $uri $uri/ =<span style="color:#ae81ff">404</span> ;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h4>Explaining the configuration<span class="absolute -mt-20" id="explaining-the-configuration"></span>
+    <a href="#explaining-the-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ul>
+<li>
+<p>The <code>listen</code> lines tell nginx to listen for connections on both IPv4 and
+IPv6.</p>
+</li>
+<li>
+<p>The <code>server_name</code> is the website that we are looking for. By putting
+<code>landchad.net</code> here, that means whenever someone connects to this server and is
+looking for that address, they will be directed to the content in this block.</p>
+</li>
+<li>
+<p><code>root</code> specifies the directory we&rsquo;re going to put our website files in. This
+can theoretically be wherever, but it is conventional to have them in
+<code>/var/www/</code>. Name the directory in there whatever you want.</p>
+</li>
+<li>
+<p><code>index</code> determine what the &ldquo;default&rdquo; file is; normally when you go to a
+website, say <code>landchad.net</code>, you are actually going to a file at
+<code>landchad.net/index.html</code>. That&rsquo;s all that is. Note that that this in concert
+with the line above mean that <code>/var/www/landchad/index.html</code>, a file on our
+computer that we&rsquo;ll create, will be the main page of our website.</p>
+</li>
+<li>
+<p>Lastly, the <code>location</code> block is really just telling the server how to look up
+files, otherwise throw a 404 error. Location settings are very powerful, but
+this is all we need them for now.</p>
+</li>
+</ul>
+<h3>Create the data<span class="absolute -mt-20" id="create-the-data"></span>
+    <a href="#create-the-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>We&rsquo;ll actually start making a &ldquo;real&rdquo; website later, but let&rsquo;s go ahead and
+create a little page that will appear when someone looks up the domain.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">mkdir</span> /var/www/mysite</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Now let&rsquo;s create an index file inside of that directory, which will appear when
+the website is accessed:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">nano</span> /var/www/mysite/index.html</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>We&rsquo;ll add the following basic content, but you can add whatever you want. This
+will appear on your website.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;My website!&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;This is my website. Thanks for stopping by!&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;Now my website is live!&lt;/<span style="color:#f92672">p</span>&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Once you save that file, we can enable it making a link to it in the
+sites-enabled directory:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ln</span> <span style="color:#a6e22e">-s</span> /etc/nginx/sites-available/mywebsite /etc/nginx/sites-enabled</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Now we can just reload to make Nginx service the new website and its
+configuration:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">systemctl</span> reload nginx</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Note that if you are on Fedora, you will likely have to preface the above
+command with <code>sudo</code>.</p>
+<h3>Firewall configuration<span class="absolute -mt-20" id="firewall-configuration"></span>
+    <a href="#firewall-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Vultr and some other VPSes automatically install and enable a firewall program.
+This will block basically everything by default, so we have to change that.</p>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="overflow-x-auto mt-6 flex rounded-lg border py-2 ltr:pr-4 rtl:pl-4 contrast-more:border-current contrast-more:dark:border-current border-blue-200 bg-blue-100 text-blue-900 dark:border-blue-200/30 dark:bg-blue-900/30 dark:text-blue-200">
+  <div class="ltr:pl-3 ltr:pr-2 rtl:pr-3 rtl:pl-2"><div class="select-none text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        ℹ️
+      </div></div>
+
+  <div class="w-full min-w-0 leading-7">
+    <div class="mt-6 leading-7 first:mt-0">
+      There could also be no firewall. If that is the case, the following commands
+will not work, in which case you may simply skip this step.
+    </div>
+  </div>
+</div>
+
+<div class="mt-4 flex w-max min-w-full border-b border-gray-200 pb-px dark:border-neutral-800"><button
+      class="tabs-toggle data-[state=selected]:border-primary-500 data-[state=selected]:text-primary-600 mr-2 rounded-t p-2 font-medium leading-5 transition-colors -mb-0.5 select-none border-b-2 border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-0"
+      aria-selected="true"
+      tabindex="0"
+      data-state="selected"
+    >Debian</button><button
+      class="tabs-toggle data-[state=selected]:border-primary-500 data-[state=selected]:text-primary-600 mr-2 rounded-t p-2 font-medium leading-5 transition-colors -mb-0.5 select-none border-b-2 border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-1"
+      
+      
+      
+    >Fedora</button></div>
+<div>
+  
+  <div
+  class="tabs-panel rounded pt-6 hidden data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel"
+  tabindex="0"
+  data-state="selected"
+>
+  <p>Debian makes use of what is called <code>ufw</code>. We must open up at least ports 80 and
+443 as below:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ufw</span> allow <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ufw</span> allow <span style="color:#ae81ff">443</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+</div>
+
+
+  <div
+  class="tabs-panel rounded pt-6 hidden data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"
+  
+  
+>
+  <p>Fedora makes use of <code>firewall-cmd</code>. The equivalent of the Debian commands is
+the following:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">firewall-cmd</span> <span style="color:#a6e22e">--permanent</span> <span style="color:#a6e22e">--add-service</span><span style="color:#f92672">=</span>https
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">firewall-cmd</span> <span style="color:#a6e22e">--permanent</span> <span style="color:#a6e22e">--add-service</span><span style="color:#f92672">=</span>http
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">firewall-cmd</span> <span style="color:#a6e22e">--reload</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+</div>
+
+
+</div>
+
+<p>Port 80 is the canonical webserver port, while 443 is the port used for
+encrypted connections. We will certainly need that for the next steps.</p>
+<p>As you add more services to your website, they might need you to open more
+ports, but that will be mentioned on individual articles. It should be noted
+that some local services run only for other services on your machine, so you
+don’t need to open ports for every process running locally, only those that
+directly interact with the internet, although it’s common to run those through
+Nginx for simplicity and security.</p>
+<h3>Our website<span class="absolute -mt-20" id="our-website"></span>
+    <a href="#our-website" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>At this point you can now type in your website in your browser and this webpage
+will appear!</p>
+<p><img src="/landchad/nginx2.png" alt="" loading="lazy" /></p>
+<p>Note the &ldquo;Not secure&rdquo; notification. The next brief step is securing encrypted
+connections to your website.</p>
+<h2>Setting up HTTPS<span class="absolute -mt-20" id="setting-up-https"></span>
+    <a href="#setting-up-https" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Once you have a website, it is extremely important to enable encrypted
+connections over HTTPS. You might have no idea what that means, but it&rsquo;s easy
+to do now that we&rsquo;ve set our web server up.</p>
+<h3>Why bother?<span class="absolute -mt-20" id="why-bother"></span>
+    <a href="#why-bother" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>
+<p>You get the official-looking green <code>🔒</code> symbol in the URL bar in most browsers
+which makes non-techies subtly trust your site more. Some browsers might also
+issue a full-screen warning altogether when your site is not encrypted.</p>
+</li>
+<li>
+<p>Some services you might set up make use of SSL certificates that you get for
+your domain name to encrypt their traffic, not just Nginx.</p>
+</li>
+<li>
+<p>With HTTPS, users&rsquo; ISPs cannot snoop on what they are looking at on your
+website. They know that they have connected, but the particular pages they
+visit are private as everything is encrypted. HTTPS increases user privacy.</p>
+</li>
+<li>
+<p>Search engines like Google favour pages with HTTPS over unencrypted HTTP.</p>
+</li>
+</ul>
+<h3>Certbot to the rescue<span class="absolute -mt-20" id="certbot-to-the-rescue"></span>
+    <a href="#certbot-to-the-rescue" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Certbot is a program that automatically creates and deploys the certificates
+that allow encrypted connections. It used to be painful, and often expensive
+to do this, but now it&rsquo;s all free and automatic, thanks to the Electronic
+Frontier Foundation and their Let&rsquo;s Encrypt initiative.</p>
+<p>This part of the guide is easy for us, since Certbot&rsquo;s website has an entire
+interactive guide that shows you step-by-step exactly what you need to do to
+have your website certified. <a href="https://certbot.eff.org/" target="_blank" rel="noopener">Head over there right now and follow their Nginx
+instructions for your system.</a> <strong>This should take you
+around five minutes.</strong></p>
+<p>By the end of the setup, Certbot will automatically renew certificates on your
+system. Previously you had to set up automation for this yourself, but now
+Certbot truly does everything.</p>
+<h3>Verifying success<span class="absolute -mt-20" id="verifying-success"></span>
+    <a href="#verifying-success" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You should now be able to go to your website and see that there is a <code>🔒</code> or
+some other notification that you are now on an encrypted connection.</p>
+<p><img src="/landchad/certbot1.png" alt="" loading="lazy" /></p>
+<h2>Going from here<span class="absolute -mt-20" id="going-from-here"></span>
+    <a href="#going-from-here" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You are now a landchad, or at least the beginnings of one. Indeed, installing a
+website is almost as easy, if not easier, than back in 1999.</p>
+<p>However, if you are not familiar with Linux, you just input commands from this
+guide without understanding much of what they do. To become a proper landchad,
+you must understand at least the basics of system administration of Linux and
+what makes it work. This is something that will take a lot longer than a single
+afternoon, but if you got this far through the guide then you are probably the
+type of person who is naturally inclined towards this in the first place.
+Knowing Linux will help you with setting up your server beyond Nginx, and
+become an even more affluent landchad.</p>
+<p>Here are some resources to help you get started. You could do these as you go
+along with building up your Internet estate.</p>
+<div class="mt-4 flex w-max min-w-full border-b border-gray-200 pb-px dark:border-neutral-800"><button
+      class="tabs-toggle data-[state=selected]:border-primary-500 data-[state=selected]:text-primary-600 mr-2 rounded-t p-2 font-medium leading-5 transition-colors -mb-0.5 select-none border-b-2 border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-0"
+      aria-selected="true"
+      tabindex="0"
+      data-state="selected"
+    >Terminal</button><button
+      class="tabs-toggle data-[state=selected]:border-primary-500 data-[state=selected]:text-primary-600 mr-2 rounded-t p-2 font-medium leading-5 transition-colors -mb-0.5 select-none border-b-2 border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-1"
+      
+      
+      
+    >Filesystem</button><button
+      class="tabs-toggle data-[state=selected]:border-primary-500 data-[state=selected]:text-primary-600 mr-2 rounded-t p-2 font-medium leading-5 transition-colors -mb-0.5 select-none border-b-2 border-transparent text-gray-600 hover:border-gray-200 hover:text-black dark:text-gray-200 dark:hover:border-neutral-800 dark:hover:text-white"
+      role="tab"
+      type="button"
+      aria-controls="tabs-panel-2"
+      
+      
+      
+    >Users</button></div>
+<div>
+  
+  <div
+  class="tabs-panel rounded pt-6 hidden data-[state=selected]:block"
+  id="tabs-panel-0"
+  role="tabpanel"
+  tabindex="0"
+  data-state="selected"
+>
+  <a href="https://www.youtube.com/watch?v=s3ii48qYBxA" target="_blank" rel="noopener">Beginner&rsquo;s Guide To The Linux
+Terminal</a>: This video is a good
+introduction into how to interact with Linux through the terminal. While you do
+need to know some other things to understand why things are done in a certain
+way in the terminal, it is a good starting point for someone who is used to
+graphical interfaces.
+</div>
+
+  <div
+  class="tabs-panel rounded pt-6 hidden data-[state=selected]:block"
+  id="tabs-panel-1"
+  role="tabpanel"
+  
+  
+>
+  <a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMKEcAhhnNT7Ov25cPlgxWAT" target="_blank" rel="noopener">The Linux Filesystem
+playlist</a>:
+This playlist introduces you to the basics of the Linux filesystem and how file
+permissions work. File permissions in particular are important, because Linux
+is a system heavily based on files as a fundamental unit of operation.
+</div>
+
+  <div
+  class="tabs-panel rounded pt-6 hidden data-[state=selected]:block"
+  id="tabs-panel-2"
+  role="tabpanel"
+  
+  
+>
+  <a href="https://www.youtube.com/watch?v=19WOD84JFxA" target="_blank" rel="noopener">Linux Crash Course - Managing
+Users</a>: Lastly, this video deals
+with managing users. Users are the main mechanism in a well-structured Linux
+system for managing not just humans but services as well. It&rsquo;s simpler than it
+might seem at first.
+</div>
+
+
+</div>
+
+
+        </div>
+        
+    <div class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400">Last updated on <time datetime="2024-01-07T00:00:00.000Z">7 January, 2024</time></div>
+        <div class="mb-8 flex items-center border-t pt-8 dark:border-neutral-800 contrast-more:border-neutral-400 dark:contrast-more:border-neutral-400 print:hidden"><a
+        href="/docs/landchad/ejabberd/"
+        title="ejabberd"
+        class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:ml-auto ltr:pl-4 ltr:text-right rtl:mr-auto rtl:pr-4 rtl:text-left"
+      >ejabberd<svg class="inline h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        <script>
+  
+
+  function getGiscusTheme() {
+    return localStorage.getItem("color-theme");
+  }
+
+  function setGiscusTheme() {
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(),
+      },
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const giscusAttributes = {
+      "src": "https://giscus.app/client.js",
+      "data-repo": "maxwelljens\/giscus",
+      "data-repo-id": "R_kgDOLBvmOA",
+      "data-category": "General",
+      "data-category-id": "DIC_kwDOLBvmOM4CcQLr",
+      "data-mapping": "pathname",
+      "data-strict": "1",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "top",
+      "data-theme": getGiscusTheme(),
+      "data-lang": "en",
+      "crossorigin": "anonymous",
+      "async": "",
+    };
+
+    
+    const giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById('giscus').appendChild(giscusScript);
+
+    
+    const toggles = document.querySelectorAll(".theme-toggle");
+    if (toggles) {
+      toggles.forEach(toggle => toggle.addEventListener('click', setGiscusTheme));
+    }
+  });
+</script>
+
+<div id="giscus"></div>
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer bg-gray-100 pb-[env(safe-area-inset-bottom)] dark:bg-neutral-900 print:bg-transparent"><div
+    class="max-w-screen-xl mx-auto flex justify-center py-12 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] text-gray-600 dark:text-gray-400 md:justify-start"
+  >
+    <div class="flex w-full flex-col items-center sm:items-start"><div class="font-semibold"><a class="flex text-sm items-center gap-1 text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>Powered by generous guys at Hextra<svg height=1em class="inline-block ml-1 align-text-bottom" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>
+  </a></div><div class="mt-6 text-xs">© Maxwell Jensen. All content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</div>
+    </div>
+  </div>
+</footer>
+    
+  </body>
+  <script defer src="/js/main.min.a0311b78f3a0a229e5789d65bad5f0d6127911b5a7643b3f83714b8de2f52e03.js" integrity="sha256-oDEbePOgoinleJ1lutXw1hJ5EbWnZDs/g3FLjeL1LgM="></script>
+
+
+<script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
+    <script defer src="/en.search.min.9afdc7c586c6f971dd94df10b989f10faaf38e5702571fd8cfc9ff9135c2d495.js" integrity="sha256-mv3HxYbG&#43;XHdlN8QuYnxD6rzjlcCVx/Yz8n/kTXC1JU="></script>
+
+
+</html>

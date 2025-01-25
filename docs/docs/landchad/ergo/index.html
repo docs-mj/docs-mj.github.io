@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+
+  <title>Ergo – MJ Docs</title>
+  <meta name="description" content="Creating your own chat server for you and your friends is easy, and you don&#39;t have to rely on a complicated system to get started.
+Having a chat server for you and your friends makes it impossible for a group of arbitrarily appointed moderators to deplatform you for wrong-think, and gives you greater freedom of communication. This is a good alternative to ejabberd if you and your friends do not mind minimalism." />
+
+  
+
+<meta property="og:title" content="Ergo" />
+<meta property="og:description" content="Creating your own chat server for you and your friends is easy, and you don&#39;t have to rely on a complicated system to get started.
+Having a chat server for you and your friends makes it impossible for a group of arbitrarily appointed moderators to deplatform you for wrong-think, and gives you greater freedom of communication. This is a good alternative to ejabberd if you and your friends do not mind minimalism." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://docs.maxwelljensen.eu/docs/landchad/ergo/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2024-02-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-03T00:00:00+00:00" />
+
+  
+  <meta itemprop="name" content="Ergo">
+  <meta itemprop="description" content="Creating your own chat server for you and your friends is easy, and you don&#39;t have to rely on a complicated system to get started.
+Having a chat server for you and your friends makes it impossible for a group of arbitrarily appointed moderators to deplatform you for wrong-think, and gives you greater freedom of communication. This is a good alternative to ejabberd if you and your friends do not mind minimalism.">
+  <meta itemprop="datePublished" content="2024-02-03T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-02-03T00:00:00+00:00">
+  <meta itemprop="wordCount" content="5393">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ergo">
+  <meta name="twitter:description" content="Creating your own chat server for you and your friends is easy, and you don&#39;t have to rely on a complicated system to get started.
+Having a chat server for you and your friends makes it impossible for a group of arbitrarily appointed moderators to deplatform you for wrong-think, and gives you greater freedom of communication. This is a good alternative to ejabberd if you and your friends do not mind minimalism.">
+
+    <link rel="preload" href="/css/compiled/main.min.2fd8982815d4baf33b6acf949e788eafe9a3ff0490ac38a7a749fe9d8f292278.css" as="style" integrity="sha256-L9iYKBXUuvM7as&#43;UnniOr&#43;mj/wSQrDinp0n&#43;nY8pIng=" />
+    <link href="/css/compiled/main.min.2fd8982815d4baf33b6acf949e788eafe9a3ff0490ac38a7a749fe9d8f292278.css" rel="stylesheet" integrity="sha256-L9iYKBXUuvM7as&#43;UnniOr&#43;mj/wSQrDinp0n&#43;nY8pIng=" />
+
+
+
+  <link href="/css/custom.min.21f85f114517ce9952f6ebde01ee3ee5b7d8e53046dc27293f9709aeeacf6cbc.css" rel="stylesheet" integrity="sha256-IfhfEUUXzplS9uveAe4&#43;5bfY5TBG3CcpP5cJrurPbLw=" />
+
+
+
+  
+
+
+  <script>
+     
+    const defaultTheme = 'system';
+
+    const setDarkTheme = () => {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+    const setLightTheme = () => {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
+    }
+
+    if ("color-theme" in localStorage) {
+      localStorage.getItem("color-theme") === "dark" ? setDarkTheme() : setLightTheme();
+    } else {
+      defaultTheme === "dark" ? setDarkTheme() : setLightTheme();
+      if (defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
+      }
+    }
+  </script>
+
+  
+</head>
+<body dir="ltr"><div class="nav-container sticky top-0 z-20 w-full bg-transparent print:hidden">
+  <div class="nav-container-blur pointer-events-none absolute z-[-1] h-full w-full bg-white dark:bg-dark shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:shadow-[0_0_0_1px_#000] dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:shadow-[0_0_0_1px_#fff]"></div>
+
+  <nav class="mx-auto flex items-center justify-end gap-2 h-16 px-6 max-w-screen-xl">
+    <a class="flex items-center hover:opacity-75 ltr:mr-auto rtl:ml-auto" href="/">
+        <img class="block dark:hidden" src="/logo.svg" alt="MJ Docs" height="20" width="110" />
+        <img class="hidden dark:block" src="/logo.svg" alt="MJ Docs" height="20" width="110" />
+    </a><a
+            title="Documentation"
+            href="/docs"
+            
+            class="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative -ml-2 hidden whitespace-nowrap p-2 md:inline-block font-medium"
+          >
+            <span class="text-center">Documentation</span>
+          </a><a
+            title="Blog"
+            href="https://maxwelljensen.eu"
+            target="_blank" rel="noreferer"
+            class="text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative -ml-2 hidden whitespace-nowrap p-2 md:inline-block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            <span class="text-center">Blog</span>
+          </a><div class="search-wrapper relative md:w-64">
+  <div class="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input block w-full appearance-none rounded-lg px-3 py-2 transition-colors text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 focus:bg-white dark:focus:bg-dark placeholder:text-gray-500 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="absolute my-1.5 select-none ltr:right-1.5 rtl:left-1.5 h-5 rounded bg-white px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none hidden sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hidden border border-gray-200 bg-white text-gray-100 dark:border-neutral-800 dark:bg-neutral-900 absolute top-full z-20 mt-2 overflow-auto overscroll-contain rounded-xl py-2.5 shadow-xl max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] inset-x-0 ltr:md:left-auto rtl:md:right-auto contrast-more:border contrast-more:border-gray-900 contrast-more:dark:border-gray-50 w-screen min-h-[100px] max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+<a class="p-2 text-current" target="_blank" rel="noreferer" href="https://github.com/maxwelljens" title="GitHub"><svg height=24 fill="currentColor" viewBox="3 3 18 18">
+  <path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path>
+</svg>
+<span class="sr-only">GitHub</span>
+          </a><button type="button" aria-label="Menu" class="hamburger-menu -mr-2 rounded p-2 active:bg-gray-400/20 md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='mx-auto flex max-w-screen-xl'>
+    <div class="mobile-menu-overlay [transition:background-color_1.5s_ease] fixed inset-0 z-10 bg-black/80 dark:bg-black/60 hidden"></div>
+<aside class="sidebar-container flex flex-col print:hidden md:top-16 md:shrink-0 md:w-64 md:self-start max-md:[transform:translate3d(0,-100%,0)] md:sticky">
+  
+  <div class="px-4 pt-4 md:hidden">
+    <div class="search-wrapper relative md:w-64">
+  <div class="relative flex items-center text-gray-900 contrast-more:text-gray-800 dark:text-gray-300 contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="search-input block w-full appearance-none rounded-lg px-3 py-2 transition-colors text-base leading-tight md:text-sm bg-black/[.05] dark:bg-gray-50/10 focus:bg-white dark:focus:bg-dark placeholder:text-gray-500 dark:placeholder:text-gray-400 contrast-more:border contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="absolute my-1.5 select-none ltr:right-1.5 rtl:left-1.5 h-5 rounded bg-white px-1.5 font-mono text-[10px] font-medium text-gray-500 border dark:border-gray-100/20 dark:bg-dark/50 contrast-more:border-current contrast-more:text-current contrast-more:dark:border-current items-center gap-1 transition-opacity pointer-events-none hidden sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="search-results hextra-scrollbar hidden border border-gray-200 bg-white text-gray-100 dark:border-neutral-800 dark:bg-neutral-900 absolute top-full z-20 mt-2 overflow-auto overscroll-contain rounded-xl py-2.5 shadow-xl max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] inset-x-0 ltr:md:left-auto rtl:md:right-auto contrast-more:border contrast-more:border-gray-900 contrast-more:dark:border-gray-50 w-screen min-h-[100px] max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar overflow-y-auto overflow-x-hidden p-4 grow md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="flex flex-col gap-1 md:hidden">
+      
+      
+          <li class="open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/"
+    
+  >Docs
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/"
+    
+  >Landchad
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/get_a_website/"
+    
+  >Get a website
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/ejabberd/"
+    
+  >ejabberd
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/git/"
+    
+  >git
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/cgit/"
+    
+  >cgit
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/gitea/"
+    
+  >Gitea
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+    href="/docs/landchad/ergo/"
+    
+  >Ergo
+    </a>
+  
+    <ul class='flex flex-col gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] dark:before:bg-neutral-800 ltr:pl-3 ltr:before:left-0 rtl:pr-3 rtl:before:right-0 ltr:ml-3 rtl:mr-3'><li>
+              <a
+                href="#installing"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Installing an IRCd</a>
+            </li>
+          <li>
+              <a
+                href="#configuring"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Configuring Ergo</a>
+            </li>
+          <li>
+              <a
+                href="#starting-and-using-your-server"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Starting and using your server</a>
+            </li>
+          <li>
+              <a
+                href="#registering"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Registering accounts and channels</a>
+            </li>
+          <li>
+              <a
+                href="#moderation"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Moderation</a>
+            </li>
+          <li>
+              <a
+                href="#contribution"
+                class="flex rounded px-2 py-1.5 text-sm transition-colors [word-break:break-word] cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:border gap-2 before:opacity-25 before:content-['#'] text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:text-gray-900 contrast-more:dark:text-gray-50 contrast-more:border-transparent contrast-more:hover:border-gray-900 contrast-more:dark:hover:border-gray-50"
+              >Contribution</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/dokuwiki/"
+    
+  >DokuWiki
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/pleroma/"
+    
+  >Pleroma
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/peertube/"
+    
+  >PeerTube
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/"
+    
+  >Maintenace tips
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/ssh/"
+    
+  >SSH key login
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/cron/"
+    
+  >Cronjobs
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/seo/"
+    
+  >Web optimisation
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <ul class="flex flex-col gap-1 max-md:hidden">
+        
+          <li class="open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/"
+    
+  >Landchad
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/get_a_website/"
+    
+  >Get a website
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/ejabberd/"
+    
+  >ejabberd
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/git/"
+    
+  >git
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/cgit/"
+    
+  >cgit
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/gitea/"
+    
+  >Gitea
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 contrast-more:border contrast-more:border-primary-500 dark:bg-primary-400/10 dark:text-primary-600 contrast-more:dark:border-primary-500"
+    href="/docs/landchad/ergo/"
+    
+  >Ergo
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/dokuwiki/"
+    
+  >DokuWiki
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/pleroma/"
+    
+  >Pleroma
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/peertube/"
+    
+  >PeerTube
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/"
+    
+  >Maintenace tips
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class='relative flex flex-col gap-1 before:absolute before:inset-y-1 before:w-px before:bg-gray-200 before:content-[""] ltr:ml-3 ltr:pl-3 ltr:before:left-0 rtl:mr-3 rtl:pr-3 rtl:before:right-0 dark:before:bg-neutral-800'><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/ssh/"
+    
+  >SSH key login
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/cron/"
+    
+  >Cronjobs
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="flex items-center justify-between gap-2 cursor-pointer rounded px-2 py-1.5 text-sm transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 contrast-more:border contrast-more:border-transparent contrast-more:text-gray-900 contrast-more:hover:border-gray-900 dark:text-neutral-400 dark:hover:bg-primary-100/5 dark:hover:text-gray-50 contrast-more:dark:text-gray-50 contrast-more:dark:hover:border-gray-50"
+    href="/docs/landchad/maintenance/seo/"
+    
+  >Web optimisation
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  sticky bottom-0 bg-white dark:bg-dark mx-4 py-4 shadow-[0_-12px_16px_#fff] flex items-center gap-2 dark:border-neutral-800 dark:shadow-[0_-12px_16px_#111] contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:shadow-none border-t" data-toggle-animation="show"><div class="flex grow flex-col"><button
+  title="Change theme"
+  data-theme="light"
+  class="theme-toggle group h-7 rounded-md px-2 text-left text-xs font-medium text-gray-600 transition-colors dark:text-gray-400 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-primary-100/5 dark:hover:text-gray-50"
+  type="button"
+  aria-label="Change theme"
+>
+  <div class="flex items-center gap-2 capitalize"><svg height=12 class="group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="group-data-[theme=light]:hidden">Light</span><svg height=12 class="group-data-[theme=dark]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="group-data-[theme=dark]:hidden">Dark</span></div>
+</button>
+</div></div></aside>
+    
+<nav class="hextra-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar sticky top-16 overflow-y-auto pr-4 pt-6 text-sm [hyphens:auto] max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:-mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#installing">Installing an IRCd
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring">Configuring Ergo
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-names">Network and server names
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-password">Network password
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-motd">Message of the day (MotD)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-ip-limits">IP limits
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-ip-cloaking">IP cloaking
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-hexchat-password">Password enforcement adjustments for HexChat (and possibly other clients)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-multiclient">Multiclient, always-on clients, history, etc
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-vhosts">VHosts
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-channels">Channels
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-operators">Operators (administrators, etc)
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-history">Chat history
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#configuring-spam">Spam reduction
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#starting-and-using-your-server">Starting and using your server
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#using-starting">Starting the server
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#using-connecting">Connecting to the server
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#registering">Registering accounts and channels
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#registering-accounts">Registering an account with NickServ
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#registering-channels">Registering channels with ChanServ
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#moderation">Moderation
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#moderation-masks">Understanding masks
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#moderation-real-ips">Discovering real IPs
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#moderation-network-ban">Banning someone from the network
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#moderation-channel-ban">Banning someone from a channel
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#moderation-muting">Muting people in a channel
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="ltr:pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#moderation-appointing">Appointing channel administrators and operators
+        </a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 contrast-more:text-gray-900 contrast-more:underline contrast-more:dark:text-gray-50 w-full break-words" href="#contribution">Contribution
+        </a>
+      </li></ul>
+      <div class="mt-8 border-t bg-white pt-8 shadow-[0_-12px_16px_white] dark:bg-dark dark:shadow-[0_-12px_16px_#111] sticky bottom-0 flex flex-col items-start gap-2 pb-8 dark:border-neutral-800 contrast-more:border-t contrast-more:border-neutral-400 contrast-more:shadow-none contrast-more:dark:border-neutral-400">
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="transition-all transition duration-75 opacity-0 text-xs font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 contrast-more:text-gray-800 contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline ml-1 h-3.5 w-3.5 border rounded-full border-gray-500 hover:border-gray-900 dark:border-gray-400 dark:hover:border-gray-100 contrast-more:border-gray-800 contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+        <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400 contrast-more:text-current">
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://docs.maxwelljensen.eu/docs/">Docs</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://docs.maxwelljensen.eu/docs/landchad/">Landchad</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="whitespace-nowrap transition-colors font-medium text-gray-700 contrast-more:font-bold contrast-more:text-current dark:text-gray-100 contrast-more:dark:text-current">Ergo</div>
+</div>
+
+        <div class="content">
+          <h1>Ergo</h1>
+          <p>Creating your own chat server for you and your friends is easy, and you don't
+have to rely on a complicated system to get started.</p>
+<p>Having a chat server for you and your friends makes it impossible for a group
+of arbitrarily appointed moderators to deplatform you for wrong-think, and
+gives you greater freedom of communication. This is a good alternative to
+<a href="../ejabberd" >ejabberd</a> if you and your friends do not mind minimalism.</p>
+<details class="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4 group" >
+  <summary class="flex items-center cursor-pointer select-none list-none p-1 rounded transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800 before:mr-1 before:inline-block before:transition-transform before:content-[''] dark:before:invert rtl:before:rotate-180 group-open:before:rotate-90">
+    <strong class="text-lg">What is IRC?</strong>
+  </summary>
+  <div class="p-2 overflow-hidden">
+    <p>Internet Relay Chat, or IRC, is a protocol developed in the late 1980s live
+interactive Internet text messaging. It’s a fully text-based system that allows
+for real-time communication. The communication on IRC is structured around
+&ldquo;channels&rdquo;, which are similar to chat rooms and can be created by any user.
+Users can join multiple channels for different conversations. In addition to
+group communication, IRC also supports one-on-one messaging. It even allows for
+file sharing.</p>
+<p>IRC follows a client-server model where users connect to an IRC server using a
+client, which comes in any form you can imagine due to how long IRC has been
+around for. IRC servers can be connected to each other to form larger networks,
+allowing messages to be relayed across multiple servers. Despite the decline in
+IRC usage since early 2000s, it played a significant role in the early
+development of Internet communities and has had a lasting impact on Internet
+communication. Discord, in fact, is wrapped around IRC.</p>
+  </div>
+</details>
+<h2>Installing an IRCd<span class="absolute -mt-20" id="installing"></span>
+    <a href="#installing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>An IRCd is short for &quot;IRC daemon&quot;, which just means an IRC server. The
+most easy IRCd to set up is <a href="https://ergo.chat/" target="_blank" rel="noopener">Ergo</a>.</p>
+<p>The first thing you need to do is create a new user for the server to be
+run by. This is good practice for installing software/servers manually,
+as it give you more fine-grained control over which permissions the
+application has.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">useradd</span> <span style="color:#a6e22e">-m</span> ergo <span style="color:#a6e22e">-s</span> /bin/bash</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Next, we want to switch to our newly created <code>ergo</code> user and create the
+server directory.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">-i</span> <span style="color:#a6e22e">-u</span> ergo
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mkdir</span> server</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>You can find the latest release of Ergo on its GitHub <a href="https://github.com/ergochat/ergo/releases/latest" target="_blank" rel="noopener">latest
+release</a> page.<br>
+There are several platforms available, but you want to choose Linux,
+most likely <code>linux-x86_64</code>.<br>
+Once you have selected the correct package, copy its URL and replace the
+release url with the package URL (still as the <code>ergo</code> user):</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">wget</span> <span style="color:#e6db74">&#34;https://github.com/ergochat/ergo/releases/download/v2.10.0/ergo-2.10.0-linux-x86_64.tar.gz&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">tar</span> <span style="color:#a6e22e">-xf</span> ergo-<span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">10</span>.<span style="color:#ae81ff">0</span>-linux-x86_64.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mv</span> ergo-<span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">10</span>.<span style="color:#ae81ff">0</span>-linux-x86_64/*
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rm</span> <span style="color:#a6e22e">-r</span> ergo-<span style="color:#ae81ff">2</span>.<span style="color:#ae81ff">10</span>.<span style="color:#ae81ff">0</span>-linux-x86_64*</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Executing <code>ls -l</code> should now yield something like this:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> ergo ergo  <span style="color:#ae81ff">118825</span> Jun  <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">00</span>:<span style="color:#ae81ff">51</span> CHANGELOG.md
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-rw-r--r--</span> <span style="color:#ae81ff">1</span> ergo ergo    <span style="color:#ae81ff">1983</span> May <span style="color:#ae81ff">31</span> <span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">48</span> README
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-rw-r--r--</span> <span style="color:#ae81ff">1</span> ergo ergo   <span style="color:#ae81ff">41440</span> Jun  <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">00</span>:<span style="color:#ae81ff">42</span> default.yaml
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">drwxr-xr-x</span> <span style="color:#ae81ff">2</span> ergo ergo    <span style="color:#ae81ff">4096</span> Jul  <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">09</span>:<span style="color:#ae81ff">01</span> docs
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-rwxr-xr-x</span> <span style="color:#ae81ff">1</span> ergo ergo <span style="color:#ae81ff">9654272</span> Jun  <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">00</span>:<span style="color:#ae81ff">53</span> ergo
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-rw-r--r--</span> <span style="color:#ae81ff">1</span> ergo ergo    <span style="color:#ae81ff">1753</span> May <span style="color:#ae81ff">31</span> <span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">48</span> ergo.motd
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">drwxr-xr-x</span> <span style="color:#ae81ff">2</span> ergo ergo   <span style="color:#ae81ff">12288</span> Jul  <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">09</span>:<span style="color:#ae81ff">01</span> languages
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">-rw-r--r--</span> <span style="color:#ae81ff">1</span> ergo ergo   <span style="color:#ae81ff">39722</span> Jun  <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">00</span>:<span style="color:#ae81ff">42</span> traditional.yaml</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>If you see something similar to the above, that means Ergo is installed,
+although not quite ready to run yet.</p>
+<h2>Configuring Ergo<span class="absolute -mt-20" id="configuring"></span>
+    <a href="#configuring" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now that Ergo is installed, you want to configure it to fit the needs of
+your group.<br>
+The configuration in this section is tailored towards a small group of
+people, and less for a possibly large network, but it should work for
+any size of group.</p>
+<p>First thing, make sure you're still using the <code>ergo</code> user, and are in
+the <code>~/server</code> directory.<br>
+If you aren't, you can run the following to get back there:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">-i</span> <span style="color:#a6e22e">-u</span> ergo
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">cd</span> ~/server</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>To start configuring, we need to copy some files:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">cp</span> default.yaml ircd.yaml
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cp</span> ergo.motd ircd.motd</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Next, generate certificate files for TLS:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>./ergo mkcerts</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Ergo comes with a default configuration file with detailed documentation
+that can be used to guide you through the configuration process. This
+guide will help you setup the server for a typical use-case, but if you
+see any settings that you would like to change along the way, go ahead
+and change them, as long as you know what you're doing.</p>
+<p>The next steps involve editing the newly copied <code>ircd.yaml</code> file. If you
+do not know how to edit text files from the command line, you can use
+<code>nano</code>, which is very simple, using arrow keys to navigate, <kbd>CTRL+O</kbd> to
+save, and <kbd>CTRL+X</kbd> to exit.<br>
+Another option is <code>vim</code>, which is a much more powerful text editor, but
+has a learning curve. It is only recommended for this guide if you
+already know how to use it.<br>
+Lastly, you can copy the <code>ircd.yaml</code> file to a text editor on your
+computer and edit it with a GUI text editor of your choice. If that is
+what you choose to do, you may want to just download the file from
+<a href="https://raw.githubusercontent.com/ergochat/ergo/master/default.yaml" target="_blank" rel="noopener">Ergo's
+GitHub</a>,
+edit it on your computer, clear the <code>ircd.yaml</code> file on the server, and
+then paste the contents from your computer into the blank file.<br>
+No matter how you do it, the next steps assume you can edit the
+configuration file.</p>
+<p><strong>Note</strong>:<br>
+The options highlighted in this section are not a complete overview of
+all options. Instead, the options shown are the ones which are most
+relevant to a small network.<br>
+You should read over the configuration file yourself if you are curious
+about everything you can change.</p>
+<h3>Network and server names<span class="absolute -mt-20" id="configuring-names"></span>
+    <a href="#configuring-names" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>One of the first properties in the config file is network name. You can
+change this to whatever you like, as it will show up as the name when
+you connect to the server.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># network configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">network</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># name of the network</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Land-Chat&#34;</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Change the server name to your server's domain name.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># server configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">server</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># server name</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;example.org&#34;</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>Network password<span class="absolute -mt-20" id="configuring-password"></span>
+    <a href="#configuring-password" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The next step is optional, depending on if you want your network
+password protected or not. The benefit of password protection is fairly
+obvious; nobody can connect to your network unless you gave them the
+password. If you're wanting to run a public network which anyone can
+join and create a channel, you want to skip this, but for personal
+setups, it is highly recommended.</p>
+<p>Generate a password to use by executing the following:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>./ergo genpasswd</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>It will ask you to enter a password and confirm it, then you will be
+given a hashed password.<br>
+Copy this password, and paste it into the following field (also removing
+the <code>#</code> before the <code>password:</code> line):</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># password to login to the server, generated using `ergo genpasswd`:</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">password</span>: <span style="color:#e6db74">&#34;your hashed password&#34;</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>Message of the day (MotD)<span class="absolute -mt-20" id="configuring-motd"></span>
+    <a href="#configuring-motd" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Change the MotD (<strong>M</strong>essage <strong>o</strong>f <strong>t</strong>he <strong>D</strong>ay) file to the one you
+copied earlier:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># motd filename</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># if you change the motd, you should move it to ircd.motd</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">motd</span>: <span style="color:#ae81ff">ircd.motd</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Feel free to edit <code>ircd.motd</code> to your heart's content. Its contents
+will be sent to clients when they connect to the network.</p>
+<h3>IP limits<span class="absolute -mt-20" id="configuring-ip-limits"></span>
+    <a href="#configuring-ip-limits" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>For security purposes, you might want to limit the amount of client
+connections per IP. For a private network, 4 is likely the maximum
+amount of connections you will have per IP, so that is a safe value.<br>
+If your network is password protected, this is less of an issue, since
+the only people connecting will be people who have the password. The
+following is the default, but you can change it to be whichever value
+you like:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># IP-based DoS protection</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ip-limits</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># whether to limit the total number of concurrent connections per IP/CIDR</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">count</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># maximum concurrent connections per IP/CIDR</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">max-concurrent-connections</span>: <span style="color:#ae81ff">16</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>IP cloaking<span class="absolute -mt-20" id="configuring-ip-cloaking"></span>
+    <a href="#configuring-ip-cloaking" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Traditionally, IRC networks expose users' IP addresses to everyone.
+This is not a good practice for privacy, however. With Ergo, IP cloaking
+is enable by default. You can enable or disable it if you like, and
+change how it looks to users.<br>
+In this case, <code>netname</code> was changed to <code>&quot;chad&quot;</code>.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># IP cloaking hides users&#39; IP addresses from other users and from channel admins</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (but not from server admins), while still allowing channel admins to ban</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># offending IP addresses or networks. In place of hostnames derived from reverse</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># DNS, users see fake domain names like pwbs2ui4377257x8.irc. These names are</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># generated deterministically from the underlying IP address, but if the underlying</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># IP is not already known, it is infeasible to recover it from the cloaked name.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If you disable this, you should probably enable lookup-hostnames in its place.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ip-cloaking</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># whether to enable IP cloaking</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># whether to use these cloak settings (specifically, `netname` and `num-bits`)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># to produce unique hostnames for always-on clients. you can enable this even if</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># you disabled IP cloaking for normal clients above. if this is disabled,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># always-on clients will all have an identical hostname (the server name).</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled-for-always-on</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># fake TLD at the end of the hostname, e.g., pwbs2ui4377257x8.irc</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># you may want to use your network name here</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">netname</span>: <span style="color:#e6db74">&#34;chad&#34;</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>Password enforcement adjustments for HexChat (and possibly other clients)<span class="absolute -mt-20" id="configuring-hexchat-password"></span>
+    <a href="#configuring-hexchat-password" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Ergo offers account registration to allow users to do things like use
+history and bouncer features, register channels, etc.<br>
+In clients such as HexChat, server passwords may conflict with account
+passwords, so the following setting should be enabled if you wish to use
+accounts with clients such as HexChat.<br>
+Note that this could under some circumstances be considered a security
+hazard, as a user with an account does not need to know the server
+password to connect, although that user would have needed to register an
+account before the server had a password, and then a password would need
+to have been set after the fact, so this can be considered a very small
+concern if your setup has always had a password.<br>
+Also keep in mind that this setting has no effect if your network does
+not even have a password at all.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># some clients (notably Pidgin and Hexchat) offer only a single password field,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># which makes it impossible to specify a separate server password (for the PASS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># command) and SASL password. if this option is set to true, a client that</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># successfully authenticates with SASL will not be required to send</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PASS as well, so it can be configured to authenticate with SASL only.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">skip-server-password</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>Multiclient, always-on clients, history, etc<span class="absolute -mt-20" id="configuring-multiclient"></span>
+    <a href="#configuring-multiclient" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Traditionally, IRC servers have no message history, and once you close
+your client, you cannot receive messages, and are not shown to be online
+at all. Ergo includes functionality to allow users to both receive
+history, and keep their clients &quot;online&quot; even after they have left. It
+also allows multiple clients to connect to the same account.<br>
+If you are running a private network for friends, you should set
+<code>always-on</code> and <code>auto-away</code> to <code>opt-out</code>, to have all users with
+accounts to appear as if they are online at all times, and be able to
+receive messages when they are offline.<br>
+For a public network, keep everything as their default values, since you
+probably do not want randoms having this by default.<br>
+If for some reason you do not want any of these features at all, you can
+set <code>enabled</code> to <code>false</code>, but this is not recommended. Below are the
+recommended values for a private network (e.g. for friends) where users
+with accounts will be able to receive messages and history while they
+are offline.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># multiclient controls whether Ergo allows multiple connections to</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># attach to the same client/nickname identity; this is part of the</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># functionality traditionally provided by a bouncer like ZNC</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">multiclient</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># when disabled, each connection must use a separate nickname (as is the</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># typical behavior of IRC servers). when enabled, a new connection that</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># has authenticated with SASL can associate itself with an existing</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># client</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># if this is disabled, clients have to opt in to bouncer functionality</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># using nickserv or the cap system. if it&#39;s enabled, they can opt out</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># via nickserv</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">allowed-by-default</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># whether to allow clients that remain on the server even</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># when they have no active connections. The possible values are:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># &#34;disabled&#34;, &#34;opt-in&#34;, &#34;opt-out&#34;, or &#34;mandatory&#34;.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">always-on</span>: <span style="color:#e6db74">&#34;opt-out&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># whether to mark always-on clients away when they have no active connections:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">auto-away</span>: <span style="color:#e6db74">&#34;opt-out&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># QUIT always-on clients from the server if they go this long without connecting</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (use 0 or omit for no expiration):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#always-on-expiration: 90d</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>VHosts<span class="absolute -mt-20" id="configuring-vhosts"></span>
+    <a href="#configuring-vhosts" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>IP cloaking was mentioned previously, and somewhat related to that, Ergo
+includes &quot;vhost&quot; functionality, which allows users to set a custom
+IP/host string. This is mostly for cosmetic value, and does not
+interfere with operators being able to see actual IP addresses for
+banning, but if you do not want it enable for some reason, you can
+disable it.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># vhosts controls the assignment of vhosts (strings displayed in place of the user&#39;s</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># hostname/IP) by the HostServ service</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">vhosts</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># are vhosts enabled at all?</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>Channels<span class="absolute -mt-20" id="configuring-channels"></span>
+    <a href="#configuring-channels" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Channels are where everyone on an IRC network talk. By default, anyone
+can create a channel, and anyone with an account can register one. The
+difference between a normal channel and a registered one is that the
+registered one will preserve the operator status of the person who
+created, whereas a normal channel's owner will lose operator status if
+they leave the channel or disconnect from the network.<br>
+There are various settings for channels available, but the defaults are
+suitable for a private network with trust among users, or where you just
+want anyone to have the ability to create a channel. Below are the
+default values:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># channel options</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">channels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># modes that are set when new channels are created</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># +n is no-external-messages and +t is op-only-topic</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># see  /QUOTE HELP cmodes  for more channel modes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">default-modes</span>: <span style="color:#ae81ff">+nt</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># how many channels can a client be in at once?</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">max-channels-per-client</span>: <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># if this is true, new channels can only be created by operators with the</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># `chanreg` operator capability</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">operator-only-creation</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># channel registration - requires an account</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">registration</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># can users register new channels?</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># restrict new channel registrations to operators only?</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># (operators can then transfer channels to regular users using /CS TRANSFER)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">operator-only</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># how many channels can each account register?</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">max-channels-per-account</span>: <span style="color:#ae81ff">15</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>Operators (administrators, etc)<span class="absolute -mt-20" id="configuring-operators"></span>
+    <a href="#configuring-operators" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The IRC term for an administrator or another privileged user is
+&quot;operator&quot;, or &quot;oper&quot; for short.<br>
+Ergo's opers have different permissions that can be granted to them,
+and are defined in &quot;classes&quot;, basically groups of permissions under a
+name. For example, &quot;chat-moderator&quot; and &quot;server-admin&quot; are defined
+in the default configuration:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># operator classes</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">oper-classes</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># chat moderator: can ban/unban users from the server, join channels,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># fix mode issues and sort out vhosts.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;chat-moderator&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># title shown in WHOIS</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Chat Moderator</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># capability names</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">capabilities</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;kill&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;ban&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;nofakelag&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;roleplay&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;relaymsg&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;vhosts&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;sajoin&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;samode&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;snomasks&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># server admin: has full control of the ircd, including nickname and</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># channel registrations</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;server-admin&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># title shown in WHOIS</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Server Admin</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># oper class this extends from</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">extends</span>: <span style="color:#e6db74">&#34;chat-moderator&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># capability names</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">capabilities</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;rehash&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;accreg&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;chanreg&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;history&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;defcon&#34;</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#e6db74">&#34;massmessage&#34;</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>The above can be kept with their default values, but you are free to
+modify them or create any new classes that are appropriate for your
+setup.<br>
+Next, let's actually create an operator account:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># ircd operators</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">opers</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># default operator named &#39;gigachad&#39;; log in with /OPER gigachad &lt;password&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;gigachad&#34;</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># which capabilities this oper has access to</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">class</span>: <span style="color:#e6db74">&#34;server-admin&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># custom whois line</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">whois-line</span>: <span style="color:#ae81ff">is the server administrator</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># custom hostname</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">vhost</span>: <span style="color:#e6db74">&#34;gigachad&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># normally, operator status is visible to unprivileged users in WHO and WHOIS</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># responses. this can be disabled with &#39;hidden&#39;. (&#39;hidden&#39; also causes the</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># &#39;vhost&#39; line above to be ignored.)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">hidden</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># modes are modes to auto-set upon opering-up. uncomment this to automatically</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># enable snomasks (&#34;server notification masks&#34; that alert you to server events;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># see `/quote help snomasks` while opered-up for more information):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#modes: +is acjknoqtuxv</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># operators can be authenticated either by password (with the /OPER command),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># or by certificate fingerprint, or both. if a password hash is set, then a</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># password is required to oper up (e.g., /OPER dan mypassword). to generate</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># the hash, use `ergo genpasswd`.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">password</span>: <span style="color:#e6db74">&#34;&lt;your oper password&gt;&#34;</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>This is a modified version of the default oper entry. The account name
+is &quot;gigachad&quot;, but you can change it to anything.<br>
+Replace <code>&lt;your oper password&gt;</code> with a password generated by
+<code>./ergo genpasswd</code>, and you will have a new oper account to use.<br>
+Note that to log into an oper account, clients have to enter
+<code>/OPER &lt;oper name&gt; &lt;oper password&gt;</code> each time they log in. This can be
+automated by most clients by setting the command to be executed when the
+client logs in. In the case of HexChat, you can edit your network and
+add the command to the <code>Connect commands</code> tab of the menu.<br>
+You can copy everything from <code>&quot;gigachad&quot;</code> to the end of the line, paste
+it again, and change the name to create another oper account. Another,
+less privileged example of an oper is shown as a comment below the above
+configuration snippet.</p>
+<h3>Chat history<span class="absolute -mt-20" id="configuring-history"></span>
+    <a href="#configuring-history" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Traditionally, IRC networks do not store, relay, or handle chat history
+in any way.<br>
+On a privacy standpoint, this is a good thing, since chats are entirely
+ephemeral and handled by clients.<br>
+On a practicality standpoint, this is a bad thing, since people have to
+keep a client connected 24/7 to see message history.<br>
+For normalfriends, this can be a big problem, not only because having to
+stay online 24/7 is just annoying or infeasible, but also because they
+are likely used to chat platforms that handle history for them.<br>
+With this in mind, enabling history is a good idea if you want to move
+friends over to IRC, and will make things a lot more pleasant for
+private networks.</p>
+<p>Ergo's <code>history</code> configuration group is very long, so it is encouraged
+to read over it yourself. This section will go over the most important
+pieces of that configuration group.</p>
+<p>History is not endless (unless you want it to be), and the amount that
+can be stored for channels is configurable:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># how many channel-specific events (messages, joins, parts) should be tracked per channel?</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">channel-length</span>: <span style="color:#ae81ff">2048</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>History is already enabled by default, but that just means it is being
+collected, not relayed by default. To relay history to clients when they
+connect, change the following to the amount of messages that you think
+is appropriate:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># number of messages to automatically play back on channel join (0 to disable):</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">autoreplay-on-join</span>: <span style="color:#ae81ff">250</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>History older than a certain time can be configured to be deleted or be
+inaccessible. The default cutoff time is 1 week, but this is
+configurable as well.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># options to delete old messages, or prevent them from being retrieved</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">restrictions</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># if this is set, messages older than this cannot be retrieved by anyone</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (and will eventually be deleted from persistent storage, if that&#39;s enabled)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expire-time</span>: <span style="color:#ae81ff">1w</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>By default, Ergo only stores chat history in memory, so when the server
+restarts, all history is lost. If you wish to have chat history persist
+beyond restarts, you must store it in a MySQL database:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># options to store history messages in a persistent database (currently only MySQL).</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># in order to enable any of this functionality, you must configure a MySQL server</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># in the `datastore.mysql` section.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">persistent</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># store unregistered channel messages in the persistent database?</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">unregistered-channels</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># connection information for MySQL (currently only used for persistent history):</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">mysql</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;localhost&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">port</span>: <span style="color:#ae81ff">3306</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># if socket-path is set, it will be used instead of host:port</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#socket-path: &#34;/var/run/mysqld/mysqld.sock&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">user</span>: <span style="color:#e6db74">&#34;ergo&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">password</span>: <span style="color:#e6db74">&#34;hunter2&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">history-database</span>: <span style="color:#e6db74">&#34;ergo_history&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">3s</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">max-conns</span>: <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># this may be necessary to prevent middleware from closing your connections:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#conn-max-lifetime: 180s</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>For privacy reasons, you may want to allow users to delete their own
+messages in history, or export their messages to JSON:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># options to control how messages are stored and deleted:</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">retention</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># allow users to delete their own messages from history?</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">allow-individual-delete</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># if persistent history is enabled, create additional index tables,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># allowing deletion of JSON export of an account&#39;s messages. this</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># may be needed for compliance with data privacy regulations.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enable-account-indexing</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h3>Spam reduction<span class="absolute -mt-20" id="configuring-spam"></span>
+    <a href="#configuring-spam" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Most IRC networks have measures in place to reduce chat spam. By
+default, &quot;fakelag&quot; is enabled in Ergo, and that can deal with most
+aggregious chat spam.<br>
+If you are running a private network where user trust is high, you can
+disable it so that there are no limits on the speed that messages can be
+sent.</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># fakelag: prevents clients from spamming commands too rapidly</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">fakelag</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># whether to enforce fakelag</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># time unit for counting command rates</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">window</span>: <span style="color:#ae81ff">1s</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># clients can send this many commands without fakelag being imposed</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">burst-limit</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># once clients have exceeded their burst allowance, they can send only</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># this many commands per `window`:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">messages-per-window</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># client status resets to the default state if they go this long without</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># sending any commands:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">cooldown</span>: <span style="color:#ae81ff">2s</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<h2>Starting and using your server<span class="absolute -mt-20" id="starting-and-using-your-server"></span>
+    <a href="#starting-and-using-your-server" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now that Ergo is both installed and configured, you can actually start
+using it!</p>
+<h3>Starting the server<span class="absolute -mt-20" id="using-starting"></span>
+    <a href="#using-starting" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>First thing, make sure you're still using the <code>ergo</code> user, and are in
+the <code>~/server</code> directory.<br>
+If you aren't, you can run the following to get back there:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">-i</span> <span style="color:#a6e22e">-u</span> ergo
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">cd</span> server</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Starting the server is done in one command:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>./ergo run</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>It will stay online until you close the terminal, or press <kbd>CTRL+C</kbd>.
+Don't worry, the next section goes over how to make it run like a
+normal server with a SystemD service.<br>
+If you have not already, make sure the port <code>6697</code> is not blocked on
+your server. If you are using UFW as your firewall, you need to run
+<code>ufw enable 6697</code> (not as the <code>ergo</code> user, of course).<br>
+If you make and configuration changes while the server is running, you
+can apply them without restarting by typing <code>/rehash</code> as an operator.</p>
+<h3>Connecting to the server<span class="absolute -mt-20" id="using-connecting"></span>
+    <a href="#using-connecting" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To use IRC, you of course need an IRC client. There are many choices
+available, but the most widely used for Windows and Linux is
+<a href="https://hexchat.github.io/" target="_blank" rel="noopener">HexChat</a>. On Mac, you have a slightly nicer
+option with <a href="https://www.codeux.com/textual/" target="_blank" rel="noopener">Textual</a>, although you
+have to <a href="https://github.com/Codeux-Software/Textual/#building-textual" target="_blank" rel="noopener">compile it from
+source</a> if
+you want to use it for free.<br>
+A more user-friendly and modern client choice is TheLounge, which is
+explained in the last section of this guide, if you want to look into
+it.</p>
+<p>Connecting with HexChat is very easy. When you start it, you will see
+something like this:</p>
+<p><img src="/landchad/ergo/hexchat1.png" alt="" loading="lazy" /></p>
+<p>From there, you should click <code>+ Add</code> and name the server whatever you
+like (so you can find it on the server list).</p>
+<p>Once you have created a new server and named it, select it and click
+<code>Edit...</code>. A menu will show up like the one below. Change the domain to
+whatever domain your server is running on, and make sure to put in your
+server password if you set one.</p>
+<p><img src="/landchad/ergo/hexchat2.png" alt="" loading="lazy" /></p>
+<p>Once you're done editing the network, click <code>(X) Close</code>, select your
+network from the network list, and click <code>Connect</code>. If all is well, you should
+be connected!</p>
+<p><img src="/landchad/ergo/hexchat3.png" alt="" loading="lazy" /></p>
+<p>The process is very similar on Textual.<br>
+Create a new network and connect to it. Note that it will ask if you
+want to connect even though the certificate is unsigned. This is due to
+the self-signed certificates generated for the server, and is not a
+problem or security vulnerability, it is just a little annoying.</p>
+<p><img src="/landchad/ergo/hexchat4.png" alt="" loading="lazy" /></p>
+<p>Surviving restarts with a SystemD service</p>
+<p>In the beginning of the last section, Ergo was started by simply running
+<code>./ergo run</code>, but this is only suitable for testing. To have a proper
+server setup, you need to run it as a service. This can be achieved via
+a SystemD service.</p>
+<p>Before creating your service file, make sure you are in <code>~/server</code> as
+the <code>ergo</code> user.<br>
+Once you have done that, create a file called <code>start.sh</code> with the
+following content:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>./ergo run</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Save the file, then mark it as executable:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">chmod</span> +x start.sh</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Now, create a file called <code>ergo.service</code> with the following content:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-systemd" data-lang="systemd"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">Ergo IRC server</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">network.target</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If you are using MySQL for history storage, comment out the above line</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># and uncomment these two instead (you must independently install and configure</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># MySQL for your system):</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Wants=mysql.service</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># After=network.target mysql.service</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">simple</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">User</span><span style="color:#f92672">=</span><span style="color:#e6db74">ergo</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/ergo/server</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/ergo/server/start.sh</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecReload</span><span style="color:#f92672">=</span><span style="color:#e6db74">/bin/kill -HUP $MAINPID</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Restart</span><span style="color:#f92672">=</span><span style="color:#e6db74">on-failure</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">LimitNOFILE</span><span style="color:#f92672">=</span><span style="color:#e6db74">1048576</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Uncomment this for a hidden service:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PrivateNetwork=true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Install]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>You now have your service file, but it is not installed yet. To install
+it, switch to your normal user, and execute the following lines to
+install, enable, and start the SystemD service:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ln</span> <span style="color:#a6e22e">-s</span> /home/ergo/server/ergo.service /etc/systemd/system/ergo.service
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">systemctl</span> enable ergo
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">systemctl</span> start ergo</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Ergo is now installed and running as a service, and will automatically
+start when the system boots.</p>
+<h2>Registering accounts and channels<span class="absolute -mt-20" id="registering"></span>
+    <a href="#registering" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Account and channel registration were mentioned multiple times in this
+guide, and are indeed very important parts of the modern IRC ecosystem.
+You can connect to most IRC networks and talk without creating an
+account, but you will not be able to reserve your nickname or register
+channels, so it is important to register an account.</p>
+<h3>Registering an account with NickServ<span class="absolute -mt-20" id="registering-accounts"></span>
+    <a href="#registering-accounts" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>First, make sure you are connected to your IRC network. Once you are,
+type <code>/nickserv help</code> to make sure NickServ (the registration system) is
+working propertly.<br>
+If all is well, type the following, replacing <code>&lt;your password&gt;</code> with the
+password you want to use:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/nickserv register &lt;your password&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>At this point, you are now registered!<br>
+The final step is to configure authentication with your client.</p>
+<p>In HexChat, all that needs to be done is changing <code>Login method</code> to
+<code>SASL (username + password)</code>, and entering your NickServ password that
+you used earlier into the password field:</p>
+<p><img src="/landchad/ergo/hexchat5.png" alt="" loading="lazy" /></p>
+<p>In Textual, open up your network in the menu, and click <code>Identity</code> under
+<code>Server Properties</code>. Enter your password in <code>Personal Password</code>, and
+check <code>Wait for identification before joining channels</code>.</p>
+<p><img src="/landchad/ergo/hexchat6.png" alt="" loading="lazy" /></p>
+<p>You will now be logged into your account when you connect to your
+network.</p>
+<h3>Registering channels with ChanServ<span class="absolute -mt-20" id="registering-channels"></span>
+    <a href="#registering-channels" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Once you have an account registered, you can register channels with
+ChanServ.<br>
+To do so, join the channel you want to register, then type the
+following, replacing <code>&lt;your channel&gt;</code> with the name of the channel you
+want to register:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/chanserv register #&lt;your channel&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>You are now the channel owner, and are free to appoint operators,
+administrators, etc for it. When you go offline, you won't lose
+ownership, and you cannot be removed as the owner unless you unregister
+the channel later.</p>
+<h2>Moderation<span class="absolute -mt-20" id="moderation"></span>
+    <a href="#moderation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Like any chat, there will come a point where you need to use moderation
+tools to keep things under control. Many IRC setup guides do not go over
+moderation, so it can be stressful when operators need to actually use
+moderation tools.<br>
+The main difference between IRC and other chat systems in terms of
+moderation is the difference between channel bans and network bans.
+Channel ban keeps a person out of channel a channel, whereas a network
+ban keeps a person out of the entire network.</p>
+<h3>Understanding masks<span class="absolute -mt-20" id="moderation-masks"></span>
+    <a href="#moderation-masks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Bans are applied &quot;masks&quot;, which are formatted pieces of text that
+contain a user's nick (username), their realname value, and their IP
+address or host.<br>
+This is what a mask looks like: <code>nick!~nick-dude@127.0.0.1</code>.<br>
+In bans, asterisks can be used as wildcards, which is useful for banning
+IP address ranges, patterns of nicknames, or whatever else you can think
+of.<br>
+A ban on the nick <code>person</code>, for example, would look like this:
+<code>person!*@*</code>.<br>
+A ban on anyone with the IP address <code>127.0.0.1</code> would look like this:
+<code>*!*@127.0.0.1</code></p>
+<h3>Discovering real IPs<span class="absolute -mt-20" id="moderation-real-ips"></span>
+    <a href="#moderation-real-ips" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Even if IP cloaking is enabled on your network, you can still obtain
+real IP addresses/hosts if you are an operator. See the <strong>Operators</strong>
+part of the configuration section of this guide on how to become an
+operator.<br>
+To find out a user's real IP, simply type <code>/whois</code> along with the
+user's nick, and you will see information about the user, along with
+their real IP address/host.<br>
+<code>/whois</code> is not a command that is exclusive to operators, but it does
+not reveal as much information to non-operators.</p>
+<h3>Banning someone from the network<span class="absolute -mt-20" id="moderation-network-ban"></span>
+    <a href="#moderation-network-ban" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Any netword-wide moderation action requires being an operator. See the
+<strong>Operators</strong> part of the configuration section of this guide on how to
+become an operator.<br>
+Banning someone from the network is achieved with the <code>/kline</code> command.
+To see more info on the command, type <code>/helpop kline</code>.\</p>
+<p>To ban a nick from the network:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/kline andkill &lt;nick&gt;!*@*</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>To ban an IP address or host from the network:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/kline andkill *!*@&lt;IP or mask&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>To unban a mask, you can use the <code>/unkline</code> command with the mask you
+want to unban.</p>
+<h3>Banning someone from a channel<span class="absolute -mt-20" id="moderation-channel-ban"></span>
+    <a href="#moderation-channel-ban" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Channel owners, administrators, and operators can ban people from
+channels. This is not the same as banning someone from the network,
+since it only has an effect on one channel. Additionally, a channel
+operator is not the same as a network operator.</p>
+<p>To ban someone in a channel, type the following in that channel,
+replacing <code>&lt;mask&gt;</code> with the user's mask:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/mode +b &lt;mask&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Note that this will only ban the user, not kick them immediately. You
+will want to run <code>/kick</code> along with the user's nick to also kick them.<br>
+To unban a user, run the command above, but replace the <code>+</code> with a <code>-</code>.<br>
+You can see who is banned in a channel by typing <code>/banlist</code>.</p>
+<h3>Muting people in a channel<span class="absolute -mt-20" id="moderation-muting"></span>
+    <a href="#moderation-muting" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>By default, anyone can speak in an IRC channel. To change this, you must
+be a channel owner, administrator, or operator.<br>
+Channels, along with users, have modes, which modify their behavior.
+There is a special mode for channels called <code>m</code> (moderated) which
+requires users to be privileged in some way to talk.<br>
+To set a channel as moderated, type the following in the channel:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/mode +m</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Now, users must be an owner, administrator, operator, or be voiced to
+talk in the channel This be reversed by typing the command above, but
+changing the <code>+</code> to a <code>-</code>.<br>
+To voice a user, run the following, replacing <em>&lt;nick&gt;</em> with the
+user's nick:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/mode +v &lt;nick&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>Unvoice the user by typing the above command, but replacing the <code>+</code> with
+a <code>-</code>.</p>
+<h3>Appointing channel administrators and operators<span class="absolute -mt-20" id="moderation-appointing"></span>
+    <a href="#moderation-appointing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Assuming you a channel owner, you can appoint both administrators and
+operators. If you are only an operator, you may only appoint operators.<br>
+The difference between administrator and operator is mainly that
+administrators cannot have their privileges taken away by operators,
+only owners. To appoint an administrator, type the following, replacing
+<em>&lt;nick&gt;</em> with the user's nick:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/mode +a &lt;nick&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>To appoint an operator, type the following, replacing <em>&lt;nick&gt;</em> with
+the user's nick:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>/mode +o &lt;nick&gt;</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button
+      class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50"
+      title="Copy code"
+    >
+      <div class="group-[.copied]/copybtn:hidden copy-icon pointer-events-none h-4 w-4"></div>
+      <div class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4"></div>
+    </button>
+  </div>
+</div>
+<p>You can also use <code>/op</code> and <code>/deop</code> on most clients to appoint and remove
+an operator.<br>
+To remove administrator or operator status, run either of the above
+commands, but replace the <code>+</code> with a <code>-</code>.</p>
+<p>Bringing modern-day features to IRC with TheLounge</p>
+<p>A large downside to IRC as a protocol is just how old it is, and the
+limitations that exist because of it. Other old protocols such as HTTP
+were built to be content-agnostic and versitile, but IRC was built with
+a very specific set of features, so it has not held up so well to
+contemporary chat systems.<br>
+A notable thing that IRC as a protocol is missing is file uploads, and
+other fancy features that many other chats have.<br>
+With that said, these problems can be fixed by clients, although many
+clients are still very primitive.</p>
+<p><a href="https://thelounge.chat/" target="_blank" rel="noopener">TheLounge</a> is a modern self-hosted IRC web
+client that tries to make IRC as user-friendly as possible. It can be
+the answer to many of the complaints that normalfriends may have about
+IRC. It runs on anything with a web browser, can be &quot;installed&quot; since
+it is a PWA (Progressive Web App), and is optimized for both desktops
+and mobile devices. It keeps you logged in even when you are gone, and
+even supports file uploads and embeds.<br>
+Effectively, it brings IRC up to the standard of most other chat
+systems.</p>
+<p>If you would like to setup an instance of TheLounge for you and your
+friends, you can take a look at their <a href="https://thelounge.chat/docs/install-and-upgrade" target="_blank" rel="noopener">installation
+guide</a>.<br>
+It is a self-hosted web app, so you can run it for multiple people, not
+just yourself.</p>
+<h2>Contribution<span class="absolute -mt-20" id="contribution"></span>
+    <a href="#contribution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><a href="https://termer.net/" target="_blank" rel="noopener">Termer</a></li>
+</ul>
+
+        </div>
+        
+    <div class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400">Last updated on <time datetime="2024-02-03T00:00:00.000Z">3 February, 2024</time></div>
+        <div class="mb-8 flex items-center border-t pt-8 dark:border-neutral-800 contrast-more:border-neutral-400 dark:contrast-more:border-neutral-400 print:hidden"><a
+        href="/docs/landchad/gitea/"
+        title="Gitea"
+        class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:pr-4 rtl:pl-4"
+      ><svg class="inline h-5 shrink-0 ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Gitea</a><a
+        href="/docs/landchad/dokuwiki/"
+        title="DokuWiki"
+        class="flex max-w-[50%] items-center gap-1 py-4 text-base font-medium text-gray-600 transition-colors [word-break:break-word] hover:text-primary-600 dark:text-gray-300 md:text-lg ltr:ml-auto ltr:pl-4 ltr:text-right rtl:mr-auto rtl:pr-4 rtl:text-left"
+      >DokuWiki<svg class="inline h-5 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        <script>
+  
+
+  function getGiscusTheme() {
+    return localStorage.getItem("color-theme");
+  }
+
+  function setGiscusTheme() {
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(),
+      },
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const giscusAttributes = {
+      "src": "https://giscus.app/client.js",
+      "data-repo": "maxwelljens\/giscus",
+      "data-repo-id": "R_kgDOLBvmOA",
+      "data-category": "General",
+      "data-category-id": "DIC_kwDOLBvmOM4CcQLr",
+      "data-mapping": "pathname",
+      "data-strict": "1",
+      "data-reactions-enabled": "1",
+      "data-emit-metadata": "0",
+      "data-input-position": "top",
+      "data-theme": getGiscusTheme(),
+      "data-lang": "en",
+      "crossorigin": "anonymous",
+      "async": "",
+    };
+
+    
+    const giscusScript = document.createElement("script");
+    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+    document.getElementById('giscus').appendChild(giscusScript);
+
+    
+    const toggles = document.querySelectorAll(".theme-toggle");
+    if (toggles) {
+      toggles.forEach(toggle => toggle.addEventListener('click', setGiscusTheme));
+    }
+  });
+</script>
+
+<div id="giscus"></div>
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer bg-gray-100 pb-[env(safe-area-inset-bottom)] dark:bg-neutral-900 print:bg-transparent"><div
+    class="max-w-screen-xl mx-auto flex justify-center py-12 pl-[max(env(safe-area-inset-left),1.5rem)] pr-[max(env(safe-area-inset-right),1.5rem)] text-gray-600 dark:text-gray-400 md:justify-start"
+  >
+    <div class="flex w-full flex-col items-center sm:items-start"><div class="font-semibold"><a class="flex text-sm items-center gap-1 text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>Powered by generous guys at Hextra<svg height=1em class="inline-block ml-1 align-text-bottom" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>
+  </a></div><div class="mt-6 text-xs">© Maxwell Jensen. All content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</div>
+    </div>
+  </div>
+</footer>
+    
+  </body>
+  <script defer src="/js/main.min.a0311b78f3a0a229e5789d65bad5f0d6127911b5a7643b3f83714b8de2f52e03.js" integrity="sha256-oDEbePOgoinleJ1lutXw1hJ5EbWnZDs/g3FLjeL1LgM="></script>
+
+
+<script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
+    <script defer src="/en.search.min.9afdc7c586c6f971dd94df10b989f10faaf38e5702571fd8cfc9ff9135c2d495.js" integrity="sha256-mv3HxYbG&#43;XHdlN8QuYnxD6rzjlcCVx/Yz8n/kTXC1JU="></script>
+
+
+</html>

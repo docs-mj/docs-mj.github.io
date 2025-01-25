@@ -1,0 +1,69 @@
+baseURL: https://docs.maxwelljensen.eu/
+languageCode: en-gb
+title: MJ Docs
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+menu:
+  main:
+    - name: Documentation
+      pageRef: /docs
+      weight: 1
+    - name: Blog
+      url: https://maxwelljensen.eu
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: GitHub
+      weight: 4
+      url: https://github.com/maxwelljens
+      params:
+        icon: github
+
+
+params:
+  description: Various documentation by Maxwell Jensen.
+  displayUpdatedDate: true
+  dateFormat: "2 January, 2006"
+
+  navbar:
+    displayTitle: false
+    logo:
+      path: /logo.svg
+      width: 110
+    width: normal
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    width: normal
+
+  comments:
+    enable: true
+    type: giscus
+
+    giscus:
+      repo: maxwelljens/giscus
+      repoId: R_kgDOLBvmOA
+      category: General
+      categoryId: DIC_kwDOLBvmOM4CcQLr
+      mapping: pathname
+      strict: 1
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: top
+      lang: en
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
