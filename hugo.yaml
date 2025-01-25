@@ -48,9 +48,8 @@ params:
 
     giscus:
       repo: maxwelljens/giscus
-      repoId: R_kgDOLBvmOA
-      category: General
-      categoryId: DIC_kwDOLBvmOM4CcQLr
+      repoId: R_kgDONvaPWw
+      categoryId: DIC_kwDONvaPW84CmVXm
       mapping: pathname
       strict: 1
       reactionsEnabled: 1
