@@ -1,6 +1,7 @@
 +++
 title = "Get a website"
 date = 2024-01-07
+lastmod = 2025-01-26
 weight = 2
 +++
 
@@ -9,9 +10,9 @@ functioning basic web page and server on the domain name of your choice.
 
 {{< callout type="info" >}}
 - **Domain name**: The name of a website that you type in an address bar. This
-site's domain name is `maxwelljensen.no`.
+site's domain name is `maxwelljensen.eu`.
 - **Top-level domain (TLD)**: The extension of a domain name, like `.com`,
-`.net`, `.no`, etc.
+`.net`, `.eu`, etc.
 - **Registrar**: A service authorized to reserve a domain name for you.
 {{< /callout >}}
 

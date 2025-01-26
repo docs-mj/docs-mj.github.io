@@ -1,9 +1,11 @@
 +++
 title = 'Landchad'
 date = 2024-02-04
+lastmod = 2025-01-26
 prev = '/'
 next = '/docs/landchad/getting_started'
 toc = false
+weight = 1
 +++
 
 {{% details title="What is a landchad?" closed="true" %}}
@@ -50,7 +52,7 @@ found something interesting that's not covered on that site already.
 {{< /callout >}}
 
 Many services you might want to set up depend on a domain name (e.g.
-`maxwelljensen.no`), so it is advisable to start with setting up your own domain
+`maxwelljensen.eu`), so it is advisable to start with setting up your own domain
 name and website. This costs pocket change and **can take as little as one
 hour** to do. Click on the card below to get started.
 

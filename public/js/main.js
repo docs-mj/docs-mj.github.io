@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const sidebarContainer = document.querySelector('.sidebar-container');
 
   // Initialize the overlay
-  const overlayClasses = ['fixed', 'inset-0', 'z-10', 'bg-black/80', 'dark:bg-black/60'];
-  overlay.classList.add('bg-transparent');
-  overlay.classList.remove("hidden", ...overlayClasses);
+  const overlayClasses = ['hx-fixed', 'hx-inset-0', 'hx-z-10', 'hx-bg-black/80', 'dark:hx-bg-black/60'];
+  overlay.classList.add('hx-bg-transparent');
+  overlay.classList.remove("hx-hidden", ...overlayClasses);
 
   function toggleMenu() {
     // Toggle the hamburger menu
@@ -72,22 +72,22 @@ document.addEventListener('DOMContentLoaded', function () {
     sidebarContainer.classList.toggle('max-md:[transform:translate3d(0,0,0)]');
 
     // When the menu is open, we want to prevent the body from scrolling
-    document.body.classList.toggle('overflow-hidden');
-    document.body.classList.toggle('md:overflow-auto');
+    document.body.classList.toggle('hx-overflow-hidden');
+    document.body.classList.toggle('md:hx-overflow-auto');
   }
 
   menu.addEventListener('click', (e) => {
     e.preventDefault();
     toggleMenu();
 
-    if (overlay.classList.contains('bg-transparent')) {
+    if (overlay.classList.contains('hx-bg-transparent')) {
       // Show the overlay
       overlay.classList.add(...overlayClasses);
-      overlay.classList.remove('bg-transparent');
+      overlay.classList.remove('hx-bg-transparent');
     } else {
       // Hide the overlay
       overlay.classList.remove(...overlayClasses);
-      overlay.classList.add('bg-transparent');
+      overlay.classList.add('hx-bg-transparent');
     }
   });
 
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Hide the overlay
     overlay.classList.remove(...overlayClasses);
-    overlay.classList.add('bg-transparent');
+    overlay.classList.add('hx-bg-transparent');
   });
 });
 
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return svg;
   }
 
-  document.querySelectorAll('.code-copy-btn').forEach(function (button) {
+  document.querySelectorAll('.hextra-code-copy-btn').forEach(function (button) {
     // Add copy and success icons
     button.querySelector('.copy-icon')?.appendChild(getCopyIcon());
     button.querySelector('.success-icon')?.appendChild(getSuccessIcon());
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
           button.classList.add('copied');
           setTimeout(function () {
             button.classList.remove('copied');
-          }, 500);
+          }, 1000);
         }).catch(function (err) {
           console.error('Failed to copy text: ', err);
         });
@@ -170,17 +170,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 ;
-document.querySelectorAll('.tabs-toggle').forEach(function (button) {
+document.querySelectorAll('.hextra-tabs-toggle').forEach(function (button) {
   button.addEventListener('click', function (e) {
     // set parent tabs to unselected
-    const tabs = Array.from(e.target.parentElement.querySelectorAll('.tabs-toggle'));
+    const tabs = Array.from(e.target.parentElement.querySelectorAll('.hextra-tabs-toggle'));
     tabs.map(tab => tab.dataset.state = '');
 
     // set current tab to selected
     e.target.dataset.state = 'selected';
 
     // set all panels to unselected
-    const panelsContainer = e.target.parentElement.nextElementSibling;
+    const panelsContainer = e.target.parentElement.parentElement.nextElementSibling;
     Array.from(panelsContainer.children).forEach(function (panel) {
       panel.dataset.state = '';
     });
@@ -199,7 +199,7 @@ document.querySelectorAll('.tabs-toggle').forEach(function (button) {
       e.preventDefault();
       switcher.dataset.state = switcher.dataset.state === 'open' ? 'closed' : 'open';
       const optionsElement = switcher.nextElementSibling;
-      optionsElement.classList.toggle('hidden');
+      optionsElement.classList.toggle('hx-hidden');
 
       // Calculate position of language options element
       const switcherRect = switcher.getBoundingClientRect();
@@ -215,7 +215,7 @@ document.querySelectorAll('.tabs-toggle').forEach(function (button) {
       languageSwitchers.forEach((switcher) => {
         switcher.dataset.state = 'closed';
         const optionsElement = switcher.nextElementSibling;
-        optionsElement.classList.add('hidden');
+        optionsElement.classList.add('hx-hidden');
       });
     }
   });
@@ -238,6 +238,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ;
 document.addEventListener("DOMContentLoaded", function () {
+  scrollToActiveItem();
+  enableCollapsibles();
+});
+
+function enableCollapsibles() {
   const buttons = document.querySelectorAll(".hextra-sidebar-collapsible-button");
   buttons.forEach(function (button) {
     button.addEventListener("click", function (e) {
@@ -248,7 +253,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
+
+function scrollToActiveItem() {
+  const sidebarScrollbar = document.querySelector("aside.sidebar-container > .hextra-scrollbar");
+  const activeItems = document.querySelectorAll(".sidebar-active-item");
+  const visibleActiveItem = Array.from(activeItems).find(function (activeItem) {
+    return activeItem.getBoundingClientRect().height > 0;
+  });
+
+  if (!visibleActiveItem) {
+    return;
+  }
+
+  const yOffset = visibleActiveItem.clientHeight;
+  const yDistance = visibleActiveItem.getBoundingClientRect().top - sidebarScrollbar.getBoundingClientRect().top;
+  sidebarScrollbar.scrollTo({
+    behavior: "instant",
+    top: yDistance - yOffset
+  });
+}
 
 ;
 // Back to top button
@@ -258,9 +282,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (backToTop) {
     document.addEventListener("scroll", (e) => {
       if (window.scrollY > 300) {
-        backToTop.classList.remove("opacity-0");
+        backToTop.classList.remove("hx-opacity-0");
       } else {
-        backToTop.classList.add("opacity-0");
+        backToTop.classList.add("hx-opacity-0");
       }
     });
   }

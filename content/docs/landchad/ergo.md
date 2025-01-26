@@ -680,7 +680,7 @@ problem or security vulnerability, it is just a little annoying.
 
 ![](/landchad/ergo/hexchat4.png)
 
-Surviving restarts with a SystemD service
+### Surviving restarts with a systemd service
 
 In the beginning of the last section, Ergo was started by simply running
 `./ergo run`, but this is only suitable for testing. To have a proper
