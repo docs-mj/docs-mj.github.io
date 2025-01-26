@@ -1,6 +1,7 @@
 +++
 title = "Ergo"
 date = 2024-02-03
+lastmod = 2025-01-27
 weight = 7
 +++
 
@@ -631,7 +632,7 @@ Starting the server is done in one command:
 
 It will stay online until you close the terminal, or press <kbd>CTRL+C</kbd>.
 Don\'t worry, the next section goes over how to make it run like a
-normal server with a SystemD service.\
+normal server with a systemd service.\
 If you have not already, make sure the port `6697` is not blocked on
 your server. If you are using UFW as your firewall, you need to run
 `ufw enable 6697` (not as the `ergo` user, of course).\
@@ -685,7 +686,7 @@ problem or security vulnerability, it is just a little annoying.
 In the beginning of the last section, Ergo was started by simply running
 `./ergo run`, but this is only suitable for testing. To have a proper
 server setup, you need to run it as a service. This can be achieved via
-a SystemD service.
+a systemd service.
 
 Before creating your service file, make sure you are in `~/server` as
 the `ergo` user.\
@@ -732,7 +733,7 @@ WantedBy=multi-user.target
 
 You now have your service file, but it is not installed yet. To install
 it, switch to your normal user, and execute the following lines to
-install, enable, and start the SystemD service:
+install, enable, and start the systemd service:
 
 ```fish
 ln -s /home/ergo/server/ergo.service /etc/systemd/system/ergo.service
@@ -928,7 +929,7 @@ an operator.\
 To remove administrator or operator status, run either of the above
 commands, but replace the `+` with a `-`.
 
-Bringing modern-day features to IRC with TheLounge
+### Bringing modern-day features to IRC with TheLounge
 
 A large downside to IRC as a protocol is just how old it is, and the
 limitations that exist because of it. Other old protocols such as HTTP

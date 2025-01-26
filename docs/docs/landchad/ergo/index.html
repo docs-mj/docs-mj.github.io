@@ -20,13 +20,13 @@ Having a chat server for you and your friends makes it impossible for a group of
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.maxwelljensen.eu/docs/landchad/ergo/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2024-02-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-02-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-01-27T00:00:00+00:00" />
 
   <meta itemprop="name" content="Ergo">
   <meta itemprop="description" content="Creating your own chat server for you and your friends is easy, and you don&#39;t have to rely on a complicated system to get started.
 Having a chat server for you and your friends makes it impossible for a group of arbitrarily appointed moderators to deplatform you for wrong-think, and gives you greater freedom of communication. This is a good alternative to ejabberd if you and your friends do not mind minimalism.">
   <meta itemprop="datePublished" content="2024-02-03T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2024-02-03T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-01-27T00:00:00+00:00">
   <meta itemprop="wordCount" content="5393">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ergo">
@@ -587,6 +587,10 @@ Having a chat server for you and your friends makes it impossible for a group of
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#moderation-appointing">Appointing channel administrators and operators
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#bringing-modern-day-features-to-irc-with-thelounge">Bringing modern-day features to IRC with TheLounge
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -1415,7 +1419,7 @@ If you aren't, you can run the following to get back there:</p>
 </div>
 <p>It will stay online until you close the terminal, or press <kbd>CTRL+C</kbd>.
 Don't worry, the next section goes over how to make it run like a
-normal server with a SystemD service.<br>
+normal server with a systemd service.<br>
 If you have not already, make sure the port <code>6697</code> is not blocked on
 your server. If you are using UFW as your firewall, you need to run
 <code>ufw enable 6697</code> (not as the <code>ergo</code> user, of course).<br>
@@ -1456,7 +1460,7 @@ problem or security vulnerability, it is just a little annoying.</p>
     <a href="#surviving-restarts-with-a-systemd-service" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the beginning of the last section, Ergo was started by simply running
 <code>./ergo run</code>, but this is only suitable for testing. To have a proper
 server setup, you need to run it as a service. This can be achieved via
-a SystemD service.</p>
+a systemd service.</p>
 <p>Before creating your service file, make sure you are in <code>~/server</code> as
 the <code>ergo</code> user.<br>
 Once you have done that, create a file called <code>start.sh</code> with the
@@ -1523,7 +1527,7 @@ following content:</p>
 </div>
 <p>You now have your service file, but it is not installed yet. To install
 it, switch to your normal user, and execute the following lines to
-install, enable, and start the SystemD service:</p>
+install, enable, and start the systemd service:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ln</span> <span style="color:#a6e22e">-s</span> /home/ergo/server/ergo.service /etc/systemd/system/ergo.service
@@ -1761,8 +1765,8 @@ the user's nick:</p>
 an operator.<br>
 To remove administrator or operator status, run either of the above
 commands, but replace the <code>+</code> with a <code>-</code>.</p>
-<p>Bringing modern-day features to IRC with TheLounge</p>
-<p>A large downside to IRC as a protocol is just how old it is, and the
+<h3>Bringing modern-day features to IRC with TheLounge<span class="hx-absolute -hx-mt-20" id="bringing-modern-day-features-to-irc-with-thelounge"></span>
+    <a href="#bringing-modern-day-features-to-irc-with-thelounge" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A large downside to IRC as a protocol is just how old it is, and the
 limitations that exist because of it. Other old protocols such as HTTP
 were built to be content-agnostic and versitile, but IRC was built with
 a very specific set of features, so it has not held up so well to
@@ -1792,7 +1796,7 @@ just yourself.</p>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2024-02-03T00:00:00.000Z">3 February, 2024</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-01-27T00:00:00.000Z">27 January, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
         href="/docs/landchad/gitea/"
         title="Gitea"

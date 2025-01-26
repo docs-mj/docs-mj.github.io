@@ -2551,7 +2551,7 @@ If you aren&#39;t, you can run the following to get back there:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;It will stay online until you close the terminal, or press &lt;kbd&gt;CTRL+C&lt;/kbd&gt;.
 Don&#39;t worry, the next section goes over how to make it run like a
-normal server with a SystemD service.&lt;br&gt;
+normal server with a systemd service.&lt;br&gt;
 If you have not already, make sure the port &lt;code&gt;6697&lt;/code&gt; is not blocked on
 your server. If you are using UFW as your firewall, you need to run
 &lt;code&gt;ufw enable 6697&lt;/code&gt; (not as the &lt;code&gt;ergo&lt;/code&gt; user, of course).&lt;br&gt;
@@ -2592,7 +2592,7 @@ problem or security vulnerability, it is just a little annoying.&lt;/p&gt;
     &lt;a href=&#34;#surviving-restarts-with-a-systemd-service&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In the beginning of the last section, Ergo was started by simply running
 &lt;code&gt;./ergo run&lt;/code&gt;, but this is only suitable for testing. To have a proper
 server setup, you need to run it as a service. This can be achieved via
-a SystemD service.&lt;/p&gt;
+a systemd service.&lt;/p&gt;
 &lt;p&gt;Before creating your service file, make sure you are in &lt;code&gt;~/server&lt;/code&gt; as
 the &lt;code&gt;ergo&lt;/code&gt; user.&lt;br&gt;
 Once you have done that, create a file called &lt;code&gt;start.sh&lt;/code&gt; with the
@@ -2659,7 +2659,7 @@ following content:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;You now have your service file, but it is not installed yet. To install
 it, switch to your normal user, and execute the following lines to
-install, enable, and start the SystemD service:&lt;/p&gt;
+install, enable, and start the systemd service:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ln&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;-s&lt;/span&gt; /home/ergo/server/ergo.service /etc/systemd/system/ergo.service
@@ -2897,8 +2897,8 @@ the user&#39;s nick:&lt;/p&gt;
 an operator.&lt;br&gt;
 To remove administrator or operator status, run either of the above
 commands, but replace the &lt;code&gt;+&lt;/code&gt; with a &lt;code&gt;-&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Bringing modern-day features to IRC with TheLounge&lt;/p&gt;
-&lt;p&gt;A large downside to IRC as a protocol is just how old it is, and the
+&lt;h3&gt;Bringing modern-day features to IRC with TheLounge&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;bringing-modern-day-features-to-irc-with-thelounge&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#bringing-modern-day-features-to-irc-with-thelounge&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A large downside to IRC as a protocol is just how old it is, and the
 limitations that exist because of it. Other old protocols such as HTTP
 were built to be content-agnostic and versitile, but IRC was built with
 a very specific set of features, so it has not held up so well to

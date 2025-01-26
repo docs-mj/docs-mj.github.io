@@ -18,11 +18,11 @@ services. However, he is not an unrefined man: he understands the money he
 saves by self-hosting, instead of paying for a premium for a service that he
 can set up himself.
 
-## The answer: the cloud
+## The answer: IaaS
 
 While hosting in the cloud is indeed not truly self-hosting, since you do not
 own the hardware that the service runs on, there are still fair reasons to
-deploy what you want in the cloud:
+deploy what you want through an infrastructure-as-a-service (IaaS) cloud:
 
 - You pay only the infrastructure fee that the cloud host asks for, as opposed
 to third-party services that want payment for... well, the service.
