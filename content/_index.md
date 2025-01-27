@@ -1,33 +1,40 @@
 +++
 title = ''
-date = 2024-01-06
-lastmod = 2025-01-26
 toc = false
+layout = "hextra-home"
 +++
 
-# Maxwell Jensen Docs
+<div class="hx-mt-6 hx-mb-6">
+{{< hextra/hero-headline >}}
+  Simple documentation
+{{< /hextra/hero-headline >}}
+</div>
 
-This is the place where I keep documentation for various technical things I
-have come across; technical knowledge that I personally find interesting, that
-nobody else might have documented before.
+<div class="hx-mb-12">
+{{< hextra/hero-subtitle >}}
+  No nonsense; simple explanations and guides
+{{< /hextra/hero-subtitle >}}
+</div>
 
-[{{< icon "arrow-circle-right" >}} **Enter docs**](docs)
+<div class="hx-mb-6">
+{{< hextra/hero-button text="Enter Docs" link="docs" >}}
+</div>
 
-**Minimalism** 🚂: My focus is concepts in the spirit of the UNIX philosophy. I
-prefer my software small, simple, and with purpose. Why use WordPress when a
-static website generator (like this one) does the job easier, faster, and for
-free?
-
-## Sections
-
-{{< cards >}}
-  {{< card link="/docs/landchad" title="Landchad" image="/landchad/landchad.jpg" >}}
-In times before the modern Internet, nerds on the Internet had their own land,
-fearlessly running and powering their own services. Here is how you can become
-a landchad and be the aristocrat that the corporate giants fear.
-
-  {{< card link="/docs/landprince" title="Landprince" image="/landprince/landprince.jpg" >}}
-Being a landchad is hard. Maybe you don't feel like being tied down to a
-  computer in your basement; you're on the move, you got stuff to do, but you
-  still want to self-host. It's still possible, and there are ways.
-{{< /cards >}}
+{{< hextra/feature-grid >}}
+  {{< hextra/feature-card
+    title="By chads, for chads"
+    subtitle="No bloated software. Respect for both new and old solutions. That's what's highlighted."
+    class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
+    image="/landchad/landchad.jpg"
+    imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));"
+  >}}
+  {{< hextra/feature-card
+    title="🚂 Minimalism"
+    subtitle="My focus is concepts in the spirit of the UNIX philosophy. I prefer my software small, simple, and with purpose. Why use WordPress when a static website generator (like this one) does the job easier, faster, and for free?"
+  >}}
+  {{< hextra/feature-card
+    title="🎩 Tastefulness"
+    subtitle="Some people fly into histrionics at the mere mention of the word 'systemd.' Not here. If a valid solution exists – as long as it's not bloated, slow, and clunky – if it saves you time, why not use it?"
+  >}}
+{{< /hextra/feature-grid >}}

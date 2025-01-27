@@ -4,6 +4,7 @@ title: MJ Docs
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
+enableGitInfo: true
 
 menu:
   main:
