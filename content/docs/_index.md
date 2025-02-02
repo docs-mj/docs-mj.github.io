@@ -18,3 +18,11 @@ fearlessly running and powering their own services. Here is how you can become
 a landchad and be the aristocrat that the corporate giants fear.
 {{< /cards >}}
 
+{{< cards >}}
+  {{< card link="/docs/licensing_for_beginners" title="Licensing for Beginners" image="/licensing_for_beginners/licensing_for_beginners.webp" >}}
+The most fundamental, yet seriously overlooked aspect of any software is
+licensing. Whether we like it or not, the fact is that anything we create or
+want to use is subject to copyright. Here’s how to correctly licence your
+software, and what licensing means to begin with.
+{{< /cards >}}
+

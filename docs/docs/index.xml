@@ -667,6 +667,364 @@ might seem at first.&lt;/div&gt;
     </item>
     
     <item>
+      <title>Licensing for Beginners</title>
+      <link>https://docs.maxwelljensen.eu/docs/licensing_for_beginners/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.maxwelljensen.eu/docs/licensing_for_beginners/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The most fundamental, yet seriously overlooked aspect of any software is
+licensing. Whether we like it or not, the fact is that anything we create or
+want to use is subject to copyright. Worst of all, legal illiteracy is a major
+issue in the free software sphere.&lt;/p&gt;
+&lt;p&gt;The amount of developers who do not understand licensing is staggering, and it
+has serious consequences; a lot of corporate exploitation. Developers after
+developers keep getting tricked. Here&amp;rsquo;s how to correctly licence your software,
+and what licensing means to begin with.&lt;/p&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;⚠️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: THIS ARTICLE IS NOT LEGAL ADVICE. I am not a lawyer, neither
+former nor currently practising. If you are uncertain about this topic, and
+valuable assets are at stake, come into contact with qualified legal counsel.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Copyright&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;copyright&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#copyright&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The basis of licensing is copyright. If you wish to understand licensing, you
+need to understand the basics of copyright law. What is copyright? Encyclopedia
+Britannica &lt;a href=&#34;https://www.britannica.com/topic/copyright&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;defines it&lt;/a&gt; as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;copyright&lt;/strong&gt;, the exclusive, legally secured right to reproduce, distribute,
+and perform a literary, musical, dramatic, or artistic work.&lt;/p&gt;
+&lt;p&gt;Now commonly subsumed under the broader category of legal regulations known
+as intellectual-property law, copyright is designed primarily to protect an
+artist, a publisher, or another owner against specific unauthorized uses of
+his work (e.g., reproducing the work in any material form, publishing it,
+performing it in public, filming it, broadcasting it, or making an adaptation
+of it).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In summary, the goal of copyright is to protect the author of a work. The
+person who owns the copyright is called a &lt;em&gt;copyright holder&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;How is copyright established and put into effect? Historically, centuries ago,
+this used to vary by national jurisdiction. It was not guaranteed that a book
+author would have his creative work of art protected in every country. Today,
+however, most nations on the planet, including North Korea, are signatories of
+the &lt;a href=&#34;https://www.britannica.com/topic/Berne-Convention&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;International Convention for the Protection of Literary and Artistic
+Works&lt;/em&gt;&lt;/a&gt;, or &lt;em&gt;Berne
+Convention&lt;/em&gt; for short. Signatories of the &lt;em&gt;Berne Convention&lt;/em&gt; constitute the
+&lt;em&gt;Berne Copyright Union&lt;/em&gt;, which as of 2025 totals 181 nations.&lt;/p&gt;
+&lt;p&gt;The practical effect of the &lt;em&gt;Berne Convention&lt;/em&gt; for the normal person is that
+the strictest possible copyright protection applies, by default, to any
+creative work they create. This means that if you write a book in USA, Germany,
+China, or any other of the &lt;em&gt;Berne Copyright Union&lt;/em&gt; countries, all rights of the
+work are reserved to you, and nobody is legally allowed to derive from or
+distribute your work. This applies to software, musical composition, or any
+other work that the local jurisdiction considers &amp;ldquo;creative&amp;rdquo;. Violating
+copyright is called copyright infringement.&lt;/p&gt;
+&lt;p&gt;There exists an unfortunate but widespread pop myth: that lack of monetisation
+of derivative copyrighted work makes you immune to legal prosecution. This is
+wrong. It is still copyright infringement. If you create &amp;ldquo;fan art&amp;rdquo; of Warhammer
+40,000 or Star Wars, not taking money for the work has no legal impact.
+Warhammer 40,000 and Star Wars are copyright of Games Workshop and Disney,
+respectively, and you are legally obliged to ask for permission from these
+copyright holders if you may create derivative work of their work. The only
+reason why &amp;ldquo;fan communities&amp;rdquo; of popular media franchises are allowed to operate
+is because they are a net benefit to the copyright holders. Fans create hype,
+and so it is sound business to let their copyright infringement slide. This
+strange symbiotic relationship has an unfortunate effect of distorting people&amp;rsquo;s
+understanding of copyright law.&lt;/p&gt;
+&lt;h2&gt;Licensing&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;licensing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#licensing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;As you might imagine, reserving all rights for copyright to yourself is good,
+but it is not very useful without allowing others to see and maybe even
+distribute the work, in exchange for financial benefit to you. This is where
+licensing comes in. It allows us to make our project useful on GitHub, GitLab,
+Gitea, or any other git repository where others can pull the project and commit
+changes to it.&lt;/p&gt;
+&lt;p&gt;Although film theatres do not own the copyright of Star Wars, they are still
+allowed to screen films, at least for a time, from the Star Wars franchise.
+This is because Disney is giving film theatre companies the &lt;em&gt;licence&lt;/em&gt; to play
+the films. Usually this comes at a fee. Usually licences come with many terms
+that dictate what the licensee is allowed to do with licensed work. In this
+way, Disney allows the general public &amp;ndash; in a controlled way &amp;ndash; to consume
+their copyrighted work. Disney might stipulate that the latest Star Wars film
+shall be in theatres for only six months, or most of any other stipulation, as
+long as it is legally enforceable and not in violation of contract law.&lt;/p&gt;
+&lt;h3&gt;Software&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;software&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#software&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;As explained earlier, when you create a work, all rights are automatically
+reserved to you, per &lt;em&gt;Berne Convention&lt;/em&gt;. This includes software. Nobody is
+allowed to use your software without your explicit permission when you first
+create it. Licensing is a legal avenue of providing permission to others of
+when and how they may use your software. Therefore it is essential that you
+understand how to select and employ a licence for your program that makes it
+free.&lt;/p&gt;
+&lt;p&gt;Before we get to that, we should look at one last thing: free software versus
+proprietary software. Encyclopedia Britannica &lt;a href=&#34;https://www.britannica.com/science/free-software&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;defines free
+software&lt;/a&gt; as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;free software&lt;/strong&gt;, principle supporting the freedom of users to fully control
+their software. Software is considered “free” if it is offered by a developer
+without legal restriction against its study, redistribution, modification, or
+redistribution in modified form.&lt;/p&gt;
+&lt;p&gt;The promotion and propagation of free software is the chief aim of the
+free-software movement. The movement began in 1983, when programmer Richard
+Stallman announced his intention to create a free-software operating system
+named the GNU Project. Stallman went on to launch the Free Software
+Foundation (FSF) in 1985, an organization that remains a leading voice in the
+movement today.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;strong&gt;Disambiguation&lt;/strong&gt;: &amp;ldquo;Open source&amp;rdquo; is often used as a synonym for free software,
+which is incorrect. To learn more, read &lt;a href=&#34;https://www.gnu.org/philosophy/open-source-misses-the-point.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Why Open Source Misses the Point of
+Free Software&amp;rdquo;&lt;/a&gt; by Richard
+Stallman.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;&lt;strong&gt;The word &amp;ldquo;free&amp;rdquo; in this context means freedom, not absence of price.&lt;/strong&gt;
+When we talk about free software, we talk about software that respects freedom
+of the individual, for fair competition and transparency. The English language
+just has an unfortunate limitation, where the word &amp;ldquo;free&amp;rdquo; can mean two things.
+Often, in other languages, there is a difference between something being free
+and something being
+&lt;a href=&#34;https://dictionary.cambridge.org/dictionary/english/gratis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gratis&lt;/a&gt;.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The question of free software and proprietary software continues to cause
+controversy in the tech world. Proponents of free software claim that
+copyright law is outdated, and not fit for modern demands.&lt;/p&gt;
+&lt;p&gt;Now, this page might read less like documentation and more like an essay on a
+blog, but we need to understand that law is not an exact science. At the same
+time, it is very much important when developing software. Therefore, we will
+have to get through some essay-like material before arriving at a conclusion
+that satisfies the technically minded.&lt;/p&gt;
+&lt;h2&gt;Proprietary software&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;proprietary-software&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#proprietary-software&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Software that is proprietary, or closed source, cannot be modified and freely
+distributed. This is the most common type of software, since it is in line with
+the traditional ways of copyrighted work: reserving most of all rights,
+allowing access only for direct financial benefit.&lt;/p&gt;
+&lt;p&gt;This is understandable, but at the same time it poses philosophical and ethical
+questions. To take the most obvious example: Windows is the most widely used
+proprietary software on the planet. If you have Windows 10 installed on your
+computer, do you know what your computer is doing at any given time? No,
+because you do not have access to the source code of Windows 10. It is also
+doing not very good things, as illustrated by Edward Snowden, who exposed
+PRISM. Microsoft and many other large US-based tech companies forward
+information about you to the US federal government&amp;rsquo;s National Security Agency,
+or other intelligence agencies in the west. To many people that came as a
+shock, but to most proponents of free software it was exactly to be expected.
+Free software proponents are deeply distrustful of proprietary software for
+this reason, and many other reasons.&lt;/p&gt;
+&lt;p&gt;These concerns are entirely unique to software. Copyright law is on the side of
+Microsoft in spying on its users and even sending data to intelligence agencies
+without their consent. Songs, books, prose, newspapers, paintings, sculptures,
+and so on cannot spy on you. This is why the issue of software licensing is
+not just legally complicated, but also philosophically complex.&lt;/p&gt;
+&lt;h2&gt;Free software&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;free-software&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#free-software&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In contrast, free source software is software that can be freely modified and
+distributed by its users. You are entitled to view the source of the program,
+modify it, and distribute it however you desire, without restriction. Otherwise
+it is not considered free software.&lt;/p&gt;
+&lt;p&gt;Compare this to proprietary software, which most of us understand intuitively,
+as part of growing up in an industrialised western society. You make a thing,
+you own it, and you are the sole proprietor of the thing. Private ownership is
+essential for a functional society, but this does not work with software.
+Depending on who you are, the reason might be confusing. In case you struggle
+with understanding why software should absolutely be free without any
+exceptions, it is recommended to read &lt;a href=&#34;https://www.gnu.org/philosophy/why-free.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Why Software Should Not Have
+Owners&amp;rdquo;&lt;/a&gt; by Richard Stallman.&lt;/p&gt;
+&lt;p&gt;This raises an obvious question: why make your software free? There are
+many reasons for why it is beneficial, even if it&amp;rsquo;s not immediately obvious
+why.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;You don&amp;rsquo;t have to do everything yourself.&lt;/strong&gt; Volunteer programmers will
+contribute to a free software project in exchange for absolutely nothing. Their
+sole incentive is seeing a project come to life that they think will benefit
+not just them but also others. It also tests their skill as a programmer, and
+allows them further work opportunities.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Free software facilitates security.&lt;/strong&gt; All serious private people,
+companies, and institutions that have need for cryptographic solutions will use
+only free software solutions. USA&amp;rsquo;s National Security Agency uses the &lt;a href=&#34;https://en.wikipedia.org/wiki/Advanced_Encryption_Standard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advanced
+Encryption
+Standard&lt;/a&gt;, or AES,
+to encrypt secret and top secret documents in the government. AES is open to
+the general public. Anybody is free to review and test AES for security errors.
+AES is therefore one of the safest cryptographic solutions in existence, as the
+entire planet has looked at the code and no errors have been found.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Free software can be monetised.&lt;/strong&gt; Common misconception of free software is
+that free software cannot be monetised. This is false. It is entirely possible
+to make software free, but ask for money in exchange for it. There are already
+a few major projects where this is done.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/id-Software/DOOM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DOOM&lt;/a&gt;: The code base of the game is
+free, but the art assets are still copyrighted and not free (both in price
+and freedom). You still have to pay for the art assets, in other words.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Anuken/Mindustry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mindustry&lt;/a&gt;: The game is free, but you
+may purchase a licence of the game on Steam for additional features.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zrythm.org/en/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zrhythm&lt;/a&gt;: Free, but the executable
+files have to be paid for. This means that if you are sufficiently
+tech-savvy, you can simply compile the executable files yourself, and you
+skip the costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Free software protects end-user rights.&lt;/strong&gt; In most cases one is forced to
+use, and be dependent on, a producer&amp;rsquo;s continual support for a purchased
+product. For instance, if one purchases a Mercedes-Benz, it is likely that one
+will be forced to drive to the nearest Mercedes-Benz workshop if something
+breaks in the car. With free software, the end-user does not have just
+the possibility to solve software errors on their own, but also see if the
+software does exactly what it is supposed to do. With proprietary software this
+is usually impossible to verify. If something is wrong with proprietary
+software, you are at the mercy of the company behind the software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are just some of the reasons why free software proponents choose to make
+their software free. You simply have to explore &lt;a href=&#34;https://github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.
+It is the largest website for free software.&lt;/p&gt;
+&lt;h2&gt;Free software licences&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;free-software-licences&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#free-software-licences&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Contrary to proprietary licences, free software licences allow conditional
+access to the source code for everyone. Free software licences are applicable
+to all forms of media, but are typically used for software. The European Union
+maintains an &lt;a href=&#34;https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-find-and-compare-software-licenses&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;interactive
+list&lt;/a&gt;
+of the various known free software licences. Here is a curated list of the
+three best licences that preserve the rights of both the author and end-users
+of their software:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.gnu.org/licenses/gpl-3.0.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GNU General Public License v3&lt;/a&gt; (GPL-3.0)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Can:&lt;/strong&gt; Use/reproduce, Distribute, Modify/merge, Commercial use, Use patents, Place warranty&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Must:&lt;/strong&gt; Incl. Copyright, State changes, Disclose source, Copyleft/Share a., Include licence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.eupl.eu/1.2/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;European Union Public Licence 1.2&lt;/a&gt; (EUPL-1.2)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Can:&lt;/strong&gt; Use/reproduce, Distribute, Modify/merge, Commercial use, Use patents, Place warranty&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Must:&lt;/strong&gt; Incl. Copyright, Royalty free, State changes, Disclose source, Copyleft/Share a., SaaS/network, Include
+licence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.mozilla.org/en-US/MPL/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mozilla Public License 2.0&lt;/a&gt; (MPL-2.0)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Can:&lt;/strong&gt; Use/reproduce, Distribute, Modify/merge, Commercial use, Use patents, Place warranty&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Must:&lt;/strong&gt; Incl. Copyright, Disclose source, Copyleft/Share a., Lesser copyleft, Include licence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are a few legally acknowledged, or &amp;ldquo;correct,&amp;rdquo; ways of licensing a
+program. To learn more about that, &lt;a href=&#34;https://www.gnu.org/licenses/gpl-howto.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;read
+this&lt;/a&gt;. Information on that page is
+applicable to any other licence you use for software. If you follow the
+directions, your software should be legally protected. Make your licence as
+easily visible as possible, so that both end-users and abusers understand that
+your rights are protected.&lt;/p&gt;
+&lt;h2&gt;Software and present copyright law&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;software-and-present-copyright-law&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#software-and-present-copyright-law&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;If you do not care about the particulars of licensing, and want to secure your
+software, using the licences mentioned above is enough. Otherwise, there are
+important issues to be known with how licensing of software works with today&amp;rsquo;s
+copyright law. As mentioned earlier, software is unusual as a medium, and
+copyright law was not designed to fairly process it &amp;ndash; fairly for the consumer,
+anyway.&lt;/p&gt;
+&lt;p&gt;The key to understanding free software licences is that they are an ugly
+jury-rig. A hack, if you will, of copyright law. It glues together modern
+demands of software and the Internet with old, rigid, outdated legislation from
+over one hundred years in the past. Here&amp;rsquo;s what that means:&lt;/p&gt;
+&lt;p&gt;Technically, the copyright holder of the Linux kernel is still Linus Torvalds.
+However, he, through the GNU General Public License 2.0 (GPL-2.0), allows
+conditional access to the kernel code. The biggest condition of the licence is
+that a person, who redistributes or performs a modification on the kernel, has
+to license his distribution or modification under the GPL-2.0 licence. In this
+way, all derivative versions of the kernel become licensed under the licence,
+because it is itself a licence term. This &amp;ldquo;legal virality&amp;rdquo; is how the kernel is
+legally protected, and retains its protection across all modifications. Where
+does Linus Torvalds as a copyright holder fit in this? That&amp;rsquo;s the thing: he
+doesn&amp;rsquo;t, at least not in any serious capacity. Him being a copyright holder is
+irrelevant, because the licence terms do not give him any special treatment.
+There is no clause that allows him to revoke licensed access to the kernel. The
+kernel is going to be free, forever.&lt;/p&gt;
+&lt;p&gt;Yet, he is required to be a copyright holder, because legally the copyright
+holder cannot be &amp;ldquo;nobody&amp;rdquo;. It&amp;rsquo;s simply a legal concept that does not exist in
+copyright law, as there was never a time in history where that was useful for
+any scenario.&lt;/p&gt;
+&lt;h2&gt;Idiotic licensing&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;idiotic-licensing&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#idiotic-licensing&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Not all licences are created equal, and you should be wary of certain ones.
+GPL-3.0, EUPL-1.2, and MPL-2.0 are the best, as they secure the largest amount
+of rights for both the author and the author&amp;rsquo;s end-users. There are, however,
+licences that do none of these things. Here&amp;rsquo;s a few of them, but the list is by
+no means exhaustive:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache License, Version 2.0&lt;/li&gt;
+&lt;li&gt;BSD Zero Clause License&lt;/li&gt;
+&lt;li&gt;BSD 2-Clause &amp;ldquo;Simplified&amp;rdquo; License&lt;/li&gt;
+&lt;li&gt;BSD 3-Clause Clear License&lt;/li&gt;
+&lt;li&gt;MIT License&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What is wrong with these licences? The issue is rather simple: the terms of
+these licences &lt;em&gt;do not&lt;/em&gt; include that all modifications of the software fall
+under terms of the same licence. What this means is that if one were to for
+instance take code licensed under MIT License, and perform modifications on it,
+one would be allowed to apply &lt;em&gt;all&lt;/em&gt; modifications under &lt;em&gt;any&lt;/em&gt; licence;
+regardless of whether they&amp;rsquo;re proprietary or not. This is what&amp;rsquo;s called a
+&lt;em&gt;permissive licence&lt;/em&gt;, or &lt;em&gt;idiotic licence&lt;/em&gt;, because it misses &lt;a href=&#34;https://www.gnu.org/philosophy/open-source-misses-the-point.en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the entire
+point&lt;/a&gt; of
+making a software&amp;rsquo;s source open to begin with. Put another way, they are simply
+not free software. They do not fit the definition of free software.&lt;/p&gt;
+&lt;p&gt;To underline how catastrophically useless an idiotic licence can be, one should
+look no further than the story of Andrew Tanenbaum and his MINIX venture. MINIX
+is an operating system, and was licensed under some form of BSD licence and, to
+Tanenbaum&amp;rsquo;s utter obliviousness, was used by Intel in their &lt;a href=&#34;https://www.fsf.org/blogs/sysadmin/the-management-engine-an-attack-on-computer-users-freedom&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Management
+Engine&lt;/a&gt;.
+The Management Engine, or ME for short, is a micro operating system that runs
+on any modern Intel CPU. Nobody knows what it does, and theoretically can be
+used by governments or sufficiently savvy hackers to steal cryptographic keys,
+or do other nefarious things no sane person would consent to. Intel was
+entirely justified in appropriating MINIX to build ME from. None of the terms
+in the BSD licence force Intel to reveal source, its modifications, or even
+license modifications under the same licence. Tanenbaum did not even know that
+MINIX was used for this purpose until several years after the fact.&lt;/p&gt;
+&lt;p&gt;Tanenbaum has been in personal conflict on this issue, since he got to know
+that MINIX is now world&amp;rsquo;s leading spyware. He regrets choosing an idiotic
+licence to license his software, but occasionally copes with the catastrophic,
+ill-advised decision as being inevitable:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Many people (including me) don&amp;rsquo;t like the idea of an all-powerful management
+engine in there at all (since it is a possible security hole and a dangerous
+idea in the first place), but that is Intel&amp;rsquo;s business decision and a
+separate issue from the code it runs. A company as big as Intel could
+obviously write its own OS if it had to.&lt;/p&gt;
+&lt;p&gt;–&amp;ndash; Andrew Tanenbaum&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Tanenbaum is correct in that Intel would, at some point, write their own
+operating system to become hardware-level spyware on all of their products, but
+it doesn&amp;rsquo;t change the fact that one person is responsible for the origin of ME:
+Tanenbaum. If MINIX had been licensed under, for example, GPL-3.0, Intel would
+have been forced to disclose source code of ME, all of its modifications,
+reveal Tanenbaum as the copyright holder, and many other important conditions.
+If Intel did not wish to face this immense legal liability, they would have
+been forced to spend their own cash, time, and manpower to develop a new,
+proprietary alternative. It would have been a lot of money, but, because of
+Tanenbaum, they were spared all of that. Very cool, Tanenbaum.&lt;/p&gt;
+&lt;p&gt;All in all, everyone who develops any kind of software has to avoid idiotic
+licences. MIT Licence is &lt;a href=&#34;https://github.blog/2015-03-09-open-source-license-usage-on-github-com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the most commonly
+used&lt;/a&gt;
+licence, which should speak for itself of how serious legal illiteracy is in
+software engineering. Do not make the same mistake, and pick an appropriate
+licence for your work.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>ejabberd</title>
       <link>https://docs.maxwelljensen.eu/docs/landchad/ejabberd/</link>
       <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
@@ -4458,8 +4816,7 @@ webpage.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;After utilizing webp images, the audit typically goes away, but if you
 didn&#39;t scale your image properly before hand, it may still linger.&lt;/p&gt;
-&lt;h2&gt;Accessibility&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;accessibility&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#accessibility&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Image elements do not have [alt] attributes&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;image-elements-do-not-have-alt-attributes&#34;&gt;&lt;/span&gt;
+&lt;h3&gt;Image elements do not have [alt] attributes&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;image-elements-do-not-have-alt-attributes&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#image-elements-do-not-have-alt-attributes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;It may seem silly to add &lt;code&gt;alt&lt;/code&gt; attributes to images, but it helps screen
 readers convey images to users and can help page rank as a result. The
 &lt;code&gt;alt&lt;/code&gt; attribute should simply describe the image being displayed.&lt;/p&gt;
@@ -4475,14 +4832,23 @@ readers convey images to users and can help page rank as a result. The
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2&gt;SEO&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;seo&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#seo&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Document does not have a meta description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;document-does-not-have-a-meta-description&#34;&gt;&lt;/span&gt;
+&lt;h3&gt;Document does not have a meta description&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;document-does-not-have-a-meta-description&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#document-does-not-have-a-meta-description&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Adding meta descriptions to your webpage allow for web-crawlers and bots
 to easily determine what content your website contains. Just like on
 other online platforms, you can give your webpage a long list of
 keywords to help increase the chance someone stumbles upon your site
 from a search engine. You don&#39;t need to add all of the below meta tags
 to pass the audit, only add what&#39;s necessary.&lt;/p&gt;
+&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
+  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;ℹ️&lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
+    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;Very rarely do you have to manage this manually if you use a static website
+generator like &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;. Most, if not all, Hugo themes manage
+this information for you.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
 &lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--- Instructions for web scrapers ---&amp;gt;&lt;/span&gt;

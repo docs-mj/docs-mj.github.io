@@ -2,6 +2,7 @@
 title = "Optimising your website"
 linkTitle = "Web optimisation"
 date = 2024-02-03
+lastmod = 2025-02-02
 weight = 103
 +++
 
@@ -120,8 +121,6 @@ ls -lh your-photo*
 After utilizing webp images, the audit typically goes away, but if you
 didn\'t scale your image properly before hand, it may still linger.
 
-## Accessibility
-
 ### Image elements do not have \[alt\] attributes
 
 It may seem silly to add `alt` attributes to images, but it helps screen
@@ -132,8 +131,6 @@ readers convey images to users and can help page rank as a result. The
 <img src="img/cabin.webp" alt="A cabin nestled between pine trees">
 ```
 
-## SEO
-
 ### Document does not have a meta description
 
 Adding meta descriptions to your webpage allow for web-crawlers and bots
@@ -142,6 +139,12 @@ other online platforms, you can give your webpage a long list of
 keywords to help increase the chance someone stumbles upon your site
 from a search engine. You don\'t need to add all of the below meta tags
 to pass the audit, only add what\'s necessary.
+
+{{< callout type="info" >}}
+Very rarely do you have to manage this manually if you use a static website
+generator like [Hugo](https://gohugo.io/). Most, if not all, Hugo themes manage
+this information for you.
+{{< /callout >}}
 
 ```html
 <!--- Instructions for web scrapers --->

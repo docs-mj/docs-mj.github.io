@@ -10,28 +10,22 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>SSH key login – MJ Docs</title>
-  <meta name="description" content="Let’s generate and use SSH keys on our computer. This allows us to ensure our identity better than a password ever could. This allows us to do two main things:
-Password-less login: With SSH keys, we can permanently designate our profile on our local computer as safe for our server, allowing us to bypass password verification when logging into our server. Prevent hacking: Since we no longer need a password to log in, we can simply deactivate password logins on our server altogether, which prevents hacking from people who may be so lucky as to guess our password!" /><link rel="canonical" href="https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/" itemprop="url" />
+<title>Maintenace tips – MJ Docs</title>
+  <meta name="description" content=" Server login with SSH keys Scheduling with cron Optimising the website " /><link rel="canonical" href="https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/" itemprop="url" />
 
-<meta property="og:title" content="SSH key login" />
-<meta property="og:description" content="Let&rsquo;s generate and use SSH keys on our computer. This allows us to ensure our identity better than a password ever could. This allows us to do two main things:
-Password-less login: With SSH keys, we can permanently designate our profile on our local computer as safe for our server, allowing us to bypass password verification when logging into our server. Prevent hacking: Since we no longer need a password to log in, we can simply deactivate password logins on our server altogether, which prevents hacking from people who may be so lucky as to guess our password!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2024-02-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2025-01-25T12:37:37+01:00" />
+<meta property="og:title" content="Maintenace tips" />
+<meta property="og:description" content="Various documentation by Maxwell Jensen." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/" />
 
-  <meta itemprop="name" content="SSH key login">
-  <meta itemprop="description" content="Let’s generate and use SSH keys on our computer. This allows us to ensure our identity better than a password ever could. This allows us to do two main things:
-Password-less login: With SSH keys, we can permanently designate our profile on our local computer as safe for our server, allowing us to bypass password verification when logging into our server. Prevent hacking: Since we no longer need a password to log in, we can simply deactivate password logins on our server altogether, which prevents hacking from people who may be so lucky as to guess our password!">
+  <meta itemprop="name" content="Maintenace tips">
+  <meta itemprop="description" content=" Server login with SSH keys Scheduling with cron Optimising the website ">
   <meta itemprop="datePublished" content="2024-02-03T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-01-25T12:37:37+01:00">
-  <meta itemprop="wordCount" content="899">
+  <meta itemprop="wordCount" content="11">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="SSH key login">
-  <meta name="twitter:description" content="Let’s generate and use SSH keys on our computer. This allows us to ensure our identity better than a password ever could. This allows us to do two main things:
-Password-less login: With SSH keys, we can permanently designate our profile on our local computer as safe for our server, allowing us to bypass password verification when logging into our server. Prevent hacking: Since we no longer need a password to log in, we can simply deactivate password logins on our server altogether, which prevents hacking from people who may be so lucky as to guess our password!">
+  <meta name="twitter:title" content="Maintenace tips">
+  <meta name="twitter:description" content=" Server login with SSH keys Scheduling with cron Optimising the website ">
 
     <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
     <link href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
@@ -247,12 +241,13 @@ Password-less login: With SSH keys, we can permanently designate our profile on 
               
             </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/landchad/maintenance/"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/docs/landchad/maintenance/ssh/"
     
   >Maintenace tips
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
+  
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
         <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -309,6 +304,14 @@ Password-less login: With SSH keys, we can permanently designate our profile on 
       </div>
             </li></ul>
       </div>
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/licensing_for_beginners/"
+    
+  >Licensing for Beginners
+    </a>
+              
             </li></ul>
       </div></li>
     </ul>
@@ -397,8 +400,8 @@ Password-less login: With SSH keys, we can permanently designate our profile on 
               
             </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/landchad/maintenance/"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/docs/landchad/maintenance/ssh/"
     
   >Maintenace tips
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
@@ -432,6 +435,13 @@ Password-less login: With SSH keys, we can permanently designate our profile on 
       </div>
             </li></ul>
       </div></li>
+          <li class=""><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/licensing_for_beginners/"
+    
+  >Licensing for Beginners
+    </a></li>
         
       </ul>
     </div>
@@ -448,46 +458,7 @@ Password-less login: With SSH keys, we can permanently designate our profile on 
 </button>
 </div></div></aside>
     
-<nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#generate-an-ssh-key-pair">Generate an SSH key pair
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#what-does-this-ssh-key-do">What does this SSH key do?
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#backing-up-your-key">Backing up your key
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#making-your-server-trust-your-key">Making your server trust your key.
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#disabling-password-logins-for-security">Disabling Password Logins for Security
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#were-done">We’re done!
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#what-if-i-lose-my-ssh-key">What if I lose my SSH key?!
-        </a>
-      </li></ul>
-      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
-        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
-          <span>Scroll to top</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
+<nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents"></nav>
 
 
     <article class="hx-w-full hx-break-words hx-flex hx-min-h-[calc(100vh-var(--navbar-height))] hx-min-w-0 hx-justify-center hx-pb-8 hx-pr-[calc(env(safe-area-inset-right)-1.5rem)]">
@@ -499,248 +470,39 @@ Password-less login: With SSH keys, we can permanently designate our profile on 
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
           <a href="/docs/landchad/">Landchad</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-          <a href="/docs/landchad/maintenance/">Maintenace tips</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">SSH key login</div>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Maintenace tips</div>
   </div>
 
         <div class="content">
-          <h1>SSH key login</h1>
-          <p>Let&rsquo;s generate and use SSH keys on our computer. This allows us to
-ensure our identity better than a password ever could. This allows us to
-do two main things:</p>
-<ol>
-<li><strong>Password-less login</strong>: With SSH keys, we can permanently designate
-our profile on our local computer as safe for our server, allowing
-us to bypass password verification when logging into our server.</li>
-<li><strong>Prevent hacking</strong>: Since we no longer need a password to log in,
-we can simply deactivate password logins on our server altogether,
-which prevents hacking from people who may be so lucky as to guess
-our password!</li>
-</ol>
-<p>In other words, using an SSH key to login is <strong>both safer, faster and
-easier</strong>.</p>
-<p>This is especially useful once you start making scripts on your computer
-that interact with your server. You can upload files in the background,
-edit your spam filters or anything else from your local computer without
-having to input your password each time you touch the server.</p>
-<h2>Generate an SSH key pair<span class="hx-absolute -hx-mt-20" id="generate-an-ssh-key-pair"></span>
-    <a href="#generate-an-ssh-key-pair" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Generating an SSH key is simple. Just run:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+          <h1>Maintenace tips</h1>
+          <div class="hextra-cards hx-mt-4 hx-gap-4 hx-grid not-prose" style="--hextra-cards-grid-cols: 3;">
+  <a
+    class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="ssh"
+      ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-p-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>Server login with SSH keys</span></a>
+  <a
+    class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="cron"
+      ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-p-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>Scheduling with cron</span></a>
+  <a
+    class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="seo"
+      ><span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-p-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Optimising the website</span></a>
+</div>
 
-<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ssh-keygen</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>It will prompt you for several options and you can generally chose the
-default options in each case. It will ask you to optionally include a
-password on your SSH key. I generally recommend against this unless you
-happen to be using a computer where you don&rsquo;t have root access but
-someone else does (it does minimize the ease of using an SSH key in our
-case).</p>
-<h3>What does this SSH key do?<span class="hx-absolute -hx-mt-20" id="what-does-this-ssh-key-do"></span>
-    <a href="#what-does-this-ssh-key-do" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Now whenever you use <code>ssh</code> to log into a server, you have the public key
-of this SSH key pair as your identifier. You can tell your server to
-trust this key and it will automatically allow password-less logins from
-this computer.</p>
-<h3>Backing up your key<span class="hx-absolute -hx-mt-20" id="backing-up-your-key"></span>
-    <a href="#backing-up-your-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>We will do that momentarily, but first, I recommend you backup your
-newly generated key if you plan to use it. If we disable logins to this
-one key and then lose the key, we might be locked out of our server.</p>
-<p>I suggest copying your entire <code>~/.ssh/</code> directory (user-specific) to a
-USB drive and storing it securely. You may also copy it to the same
-place on another computer to use the key there.</p>
-<h2>Making your server trust your key.<span class="hx-absolute -hx-mt-20" id="making-your-server-trust-your-key"></span>
-    <a href="#making-your-server-trust-your-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Now that you have generated an SSH key, just run the following:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ssh-copy-id</span> root@yourdomain.com</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>The command will ask for your server&rsquo;s root password and log you in
-briefly. What this does is that it puts your public SSH key fingerprint
-on your server in a file <code>/root/.ssh/authorized_keys</code>. This file in turn
-allows approved SSH keys to log in without passwords.</p>
-<p>Note that you can also replace <strong>root</strong> with a username of an account on
-the server if you had made a non-root user that you&rsquo;d like to easily
-log into as well. For the username <strong>user</strong>, it will also store the key
-in <code>/home/user/.ssh/authorized_keys</code>.</p>
-<p>To test if this has worked, now try logging in normally to your server
-with ssh:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">ssh</span> root@yourdomain.com</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>It should now let you log in without a password prompt!</p>
-<p>If you find that this does not work try running the following, make sure
-you are in the directory where the keys where created.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">700</span> ~/.ssh/
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">644</span> ~/.ssh/id_rsa.pub
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">600</span> ~/.ssh/id_rsa
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">644</span> ~/.ssh/authorized_keys</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>For whatever reason these files due not have the correct permissions
-set, as ssh is very picky about correct file permissions this can cause
-errors. The above will fix these.</p>
-<h2>Disabling Password Logins for Security<span class="hx-absolute -hx-mt-20" id="disabling-password-logins-for-security"></span>
-    <a href="#disabling-password-logins-for-security" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Once we have authorized ssh keys for all the devices we need, we can
-actually just disable password logins. If you&rsquo;ve ever looked at your
-system logs (<code>journalctl -xe</code>) you will find that there are always
-hundreds of random Chinese computers trying to brute force every server
-connected to the internet with random passwords. They are usually
-unsuccessful, but let&rsquo;s make it <strong>impossible</strong> for them.</p>
-<p>Log into your server and open the <code>/etc/ssh/sshd_config</code> file. Here we
-can set settings for our SSH daemon that receives SSH requests.</p>
-<p>Now find, uncomment or create the following three lines and set them all
-to <strong>no</strong>:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">PasswordAuthentication</span> no
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ChallengeResponseAuthentication</span> no
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">UsePAM</span> no</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Once we&rsquo;ve done that, we will reload our SSH daemon:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">systemctl</span> reload sshd</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<h3>We&rsquo;re done!<span class="hx-absolute -hx-mt-20" id="were-done"></span>
-    <a href="#were-done" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Now you can log in quickly and password-less-ly to your server, despite
-the fact that it is now more secure than ever!</p>
-<p>With these settings, even if a hacker steals or perfectly guesses an
-account password, they still cannot log in without an approved SSH key!</p>
-<h2>What if I lose my SSH key?!<span class="hx-absolute -hx-mt-20" id="what-if-i-lose-my-ssh-key"></span>
-    <a href="#what-if-i-lose-my-ssh-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Firstly, don&rsquo;t do this. Take every precaution that you have a backup.</p>
-<p>If this does happen, Vultr and most other VPS providers will have a way
-out. Log onto their website and select the server you want to log into.</p>
-<p><img src="/landchad/maintenance/ssh.png" alt="" loading="lazy" /></p>
-<p>In the image above, to the right of your VPS name are a series of icons.
-Click on the computer screen-like icon which is the leftmost one.</p>
-<p>This will open up a browser window emulating a terminal and you can
-always login with your password here, since logins here count as being
-local&mdash;they do not use SSH and therefore can indeed validate with
-your password even if you have disabled it over SSH.</p>
-<p>From here, simply reverse the settings we set above and you can log in
-via SSH with a password and reapprove a newly created SSH key or
-whatever you want to do.</p>
 
         </div>
         
     <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-01-25T12:37:37.000Z">25 January, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/landchad/maintenance/cron/"
-        title="Cronjobs"
+        href="/docs/landchad/"
+        title="Landchad"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Landchad</a><a
+        href="/docs/landchad/maintenance/ssh/"
+        title="SSH key login"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Cronjobs<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
-        <script>
+      >SSH key login<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        
   
 
-  function getHugoTheme() {
-    return localStorage.getItem("color-theme");
-  }
-  
-  function getGiscusTheme() {
-    let giscusTheme = "light";
-    if(getHugoTheme() == 'light') {
-      return giscusTheme.replace('dark', 'light');
-    } else {
-      return giscusTheme.replace('light', 'dark');
-    }
-  }
-
-  function setGiscusTheme() {
-    function sendMessage(message) {
-      const iframe = document.querySelector('iframe.giscus-frame');
-      if (!iframe) return;
-      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-    }
-    sendMessage({
-      setConfig: {
-        theme: getGiscusTheme(),
-      },
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const giscusAttributes = {
-      "src": "https://giscus.app/client.js",
-      "data-repo": "maxwelljens\/giscus",
-      "data-repo-id": "R_kgDONvaPWw",
-      "data-category": "",
-      "data-category-id": "DIC_kwDONvaPW84CmVXm",
-      "data-mapping": "pathname",
-      "data-strict": "1",
-      "data-reactions-enabled": "1",
-      "data-emit-metadata": "0",
-      "data-input-position": "top",
-      "data-theme": getGiscusTheme(),
-      "data-lang": "en",
-      "crossorigin": "anonymous",
-      "async": "",
-    };
-
-    
-    const giscusScript = document.createElement("script");
-    Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
-    document.getElementById('giscus').appendChild(giscusScript);
-
-    
-    const toggles = document.querySelectorAll(".theme-toggle");
-    if (toggles) {
-      toggles.forEach(toggle => toggle.addEventListener('click', setGiscusTheme));
-    }
-  });
-</script>
-
-<div id="giscus"></div>
       </main>
     </article>
   </div>

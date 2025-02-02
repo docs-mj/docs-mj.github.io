@@ -3,6 +3,7 @@ title = 'Maintenace tips'
 date = 2024-02-03
 prev = '/docs/landchad/'
 next = '/docs/landchad/maintenance/ssh'
+url = '/docs/landchad/maintenance/ssh'
 toc = false
 comments = false
 weight = 100

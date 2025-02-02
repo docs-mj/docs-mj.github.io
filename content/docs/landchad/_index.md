@@ -3,7 +3,7 @@ title = 'Landchad'
 date = 2024-02-04
 lastmod = 2025-01-26
 prev = '/'
-next = '/docs/landchad/getting_started'
+next = '/docs/landchad/get_a_website'
 toc = false
 weight = 1
 +++
@@ -99,6 +99,9 @@ administration. These are the types of skills that will help you with managing
 not just the services in this landchad guide, but any Linux-based server and
 any service it might run.
 
-<br>
+{{< cards >}}
+  {{< card link="maintenance/ssh" title="Server login with SSH keys" icon="key" >}}
+  {{< card link="maintenance/cron" title="Scheduling with cron" icon="collection" >}}
+  {{< card link="maintenance/seo" title="Optimising the website" icon="lightning-bolt" >}}
+{{< /cards >}}
 
-{{< card link="maintenance" title="Maintaining a server" icon="server" >}}

@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MJ Docs – Maintenace tips</title>
-    <link>http://localhost:1313/docs/landchad/maintenance/</link>
+    <link>https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/</link>
     <description>Recent content in Maintenace tips on MJ Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="http://localhost:1313/docs/landchad/maintenance/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>SSH key login</title>
-      <link>http://localhost:1313/docs/landchad/maintenance/ssh/</link>
+      <link>https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/</link>
       <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/landchad/maintenance/ssh/</guid>
+      <guid>https://docs.maxwelljensen.eu/docs/landchad/maintenance/ssh/</guid>
       <description>
         
         
@@ -178,7 +178,7 @@ account password, they still cannot log in without an approved SSH key!&lt;/p&gt
     &lt;a href=&#34;#what-if-i-lose-my-ssh-key&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Firstly, don&amp;rsquo;t do this. Take every precaution that you have a backup.&lt;/p&gt;
 &lt;p&gt;If this does happen, Vultr and most other VPS providers will have a way
 out. Log onto their website and select the server you want to log into.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/landchad/maintenance/ssh.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.maxwelljensen.eu/landchad/maintenance/ssh.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In the image above, to the right of your VPS name are a series of icons.
 Click on the computer screen-like icon which is the leftmost one.&lt;/p&gt;
 &lt;p&gt;This will open up a browser window emulating a terminal and you can
@@ -194,10 +194,10 @@ whatever you want to do.&lt;/p&gt;
     
     <item>
       <title>Cronjobs</title>
-      <link>http://localhost:1313/docs/landchad/maintenance/cron/</link>
+      <link>https://docs.maxwelljensen.eu/docs/landchad/maintenance/cron/</link>
       <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/landchad/maintenance/cron/</guid>
+      <guid>https://docs.maxwelljensen.eu/docs/landchad/maintenance/cron/</guid>
       <description>
         
         
@@ -401,10 +401,10 @@ relate to an individual user.&lt;/p&gt;
     
     <item>
       <title>Optimising your website</title>
-      <link>http://localhost:1313/docs/landchad/maintenance/seo/</link>
+      <link>https://docs.maxwelljensen.eu/docs/landchad/maintenance/seo/</link>
       <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/docs/landchad/maintenance/seo/</guid>
+      <guid>https://docs.maxwelljensen.eu/docs/landchad/maintenance/seo/</guid>
       <description>
         
         
