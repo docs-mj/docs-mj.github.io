@@ -1,6 +1,7 @@
 +++
 title = "Creating a Website"
 date = 2025-02-04
+prev = '/docs'
 weight = 2
 +++
 

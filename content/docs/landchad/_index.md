@@ -2,7 +2,7 @@
 title = 'Landchad'
 date = 2024-02-04
 lastmod = 2025-01-26
-prev = '/'
+prev = '/docs'
 next = '/docs/landchad/get_a_website'
 toc = false
 weight = 1

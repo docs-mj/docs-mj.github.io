@@ -3,6 +3,7 @@ title = "Docs"
 date = 2024-01-06
 lastmod = 2025-01-27
 comments = false
+toc = false
 +++
 
 This is the place where I keep documentation for various technical things I
