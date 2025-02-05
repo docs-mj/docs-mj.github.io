@@ -1,5 +1,5 @@
 +++
-title = "Docs"
+title = "Index"
 date = 2024-01-06
 lastmod = 2025-01-27
 comments = false
@@ -21,8 +21,8 @@ a landchad and be the aristocrat that the corporate giants fear.
 
 {{< cards >}}
   {{< card link="/docs/websites_for_beginners" title="Creating a Website" image="/creating_a_website/create_a_website_card.webp" >}}
-Creating a website was never easier, but it has nothing to do with bloated
-rubbish like WordPress. Using simple tools, your favourite text editor, and an
+Creating a website has never been easier, but it has nothing to do with bloated
+rubbish like WordPress. Using a simple tool, your favourite text editor, and an
 afternoon, you can make a website – super easily.
 {{< /cards >}}
 

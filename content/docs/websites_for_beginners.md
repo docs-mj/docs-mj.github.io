@@ -83,8 +83,8 @@ prefer.
 ### How do you have a search bar?
 
 As you probably noticed, this website has a search function. Given this
-information, you might be inclined to think that this website is dynamic. This
-is not the case. How is this possible, then?
+information, you might be inclined to think that this website is dynamic. What
+if I told you that this is not the case. *"How is this possible?"* you may ask.
 
 On a static website, such as this one, the search function works differently
 from how it does on a dynamic website like WordPress. Since there's no server
@@ -126,14 +126,15 @@ available today. It's written in Go (a programming language known for its
 efficiency) and is very simple to use. Here are some key features:
 
 - **{{< icon "cog" >}} Works on all platforms**: Windows, macOS, and Linux.
-- **{{< icon "map" >}}Plenty of themes**: Hugo has a large ecosystem. As such, there's [many themes to choose from](https://themes.gohugo.io/).
-- **{{< icon "template" >}}Template-based design**: Uses templates to define how your content will
-look. This makes it easy to customise themes, if you don't find one you like,
-or want to make one from scratch.
-- **{{< icon "clipboard-list" >}}Write in Markdown**: Allows you to write content in
-[Markdown](https://www.markdownguide.org/getting-started/), a lightweight
-markup language that’s easy to learn and use. No need for laggy WYSIWYG
-WordPress editors or other wheel reinventions. Looks something like the
+- **{{< icon "map" >}}Plenty of themes**: Hugo has a large ecosystem. As such,
+there's [many themes to choose from](https://themes.gohugo.io/).
+- **{{< icon "template" >}}Template-based design**: Uses templates to define
+how your content will look. This makes it easy to customise themes, if you want
+to modify one you found, or to make one from scratch.
+- **{{< icon "clipboard-list" >}}Write in Markdown**: Allows you to write
+content in [Markdown](https://www.markdownguide.org/getting-started/), a
+lightweight markup language that’s easy to learn and use. No need for laggy
+WYSIWYG WordPress editors or other wheel reinventions. Looks something like the
 following:
 ```md
 # This is a title
@@ -260,17 +261,22 @@ logically.
   {{< /filetree/folder >}}
   {{< filetree/folder name="themes" >}}
     {{< filetree/folder name="theme-name"  >}}
-      {{< filetree/folder name="assets"  >}}
-        {{< filetree/file name="style.css" >}}
-        {{< filetree/file name="theme-image.jpg" >}}
-      {{< /filetree/folder >}}
-      {{< filetree/folder name="layouts"  >}}
-        {{< filetree/file name="base.html" >}}
-      {{< /filetree/folder >}}
     {{< /filetree/folder >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="assets"  >}}
+    {{< filetree/file name="style.css" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="layouts"  >}}
+    {{< filetree/file name="header.html" >}}
+  {{< /filetree/folder >}}
+  {{< filetree/folder name="static"  >}}
+    {{< filetree/file name="image.webp" >}}
   {{< /filetree/folder >}}
   {{< filetree/folder name="public"  >}}
     {{< filetree/file name="index.html" >}}
+    {{< filetree/folder name="posts"  >}}
+      {{< filetree/file name="my-first-post.html" >}}
+    {{< /filetree/folder >}}
   {{< /filetree/folder >}}
 {{< /filetree/container >}}
 
@@ -280,8 +286,13 @@ equally, though the general preference is for YAML.
 - `content`: Where all your website's content (posts, pages, etc.) reside.
 Inside are the files you actually edit to modify the content of your website.
 - `themes`: Contains the theme directories you choose to use.
-- `assets`: Holds static files like images, CSS, JavaScript, etc.
-- `layouts`: Custom template files if needed.
+- `assets`: Holds static files that override static theme files, like CSS
+stylesheets.
+- `layouts`: Custom template files if needed, which can override theme layouts
+also. If you have a file here called `header.html`, and if the theme implements
+one, then your `header.html` template will override the theme one.
+- `static`: Static files for your content. If you have a file here called
+`image.webp`, you access it in content by calling `/image.webp`.
 - `public`: The default directory where Hugo builds your site for production,
 but it can be changed with the `--destination` option. These files are not
 meant to be edited; they are the complete website.
@@ -410,7 +421,7 @@ project you are viewing right now: this very website itself, which is hosted on
 my [GitHub repository](https://github.com/docs-mj/docs-mj.github.io), and can
 be viewed by anyone. Due to how hosting a website through [GitHub
 Pages](https://pages.github.com/) works, my website is stored in `docs`, not
-the default `public`. Otherwise, it is a fully completed project, and should
+the default `public`. Otherwise, it is a fully standard project, and should
 give you an insight into how static websites work through simple, yet
 distinctly elegant means.
 
