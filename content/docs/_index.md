@@ -19,6 +19,13 @@ a landchad and be the aristocrat that the corporate giants fear.
 {{< /cards >}}
 
 {{< cards >}}
+  {{< card link="/docs/websites_for_beginners" title="Creating a Website" image="/creating_a_website/create_a_website_card.webp" >}}
+Creating a website was never easier, but it has nothing to do with bloated
+rubbish like WordPress. Using simple tools, your favourite text editor, and an
+afternoon, you can make a website – super easily.
+{{< /cards >}}
+
+{{< cards >}}
   {{< card link="/docs/licensing_for_beginners" title="Licensing for Beginners" image="/licensing_for_beginners/licensing_for_beginners.webp" >}}
 The most fundamental, yet seriously overlooked aspect of any software is
 licensing. Whether we like it or not, the fact is that anything we create or

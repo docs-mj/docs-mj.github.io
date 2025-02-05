@@ -8,13 +8,12 @@ weight = 2
 This is the basic "course." Follow this quick tutorial and you’ll have a fully
 functioning basic web page and server on the domain name of your choice.
 
-{{< callout type="info" >}}
-- **Domain name**: The name of a website that you type in an address bar. This
-site's domain name is `maxwelljensen.eu`.
-- **Top-level domain (TLD)**: The extension of a domain name, like `.com`,
-`.net`, `.eu`, etc.
-- **Registrar**: A service authorized to reserve a domain name for you.
-{{< /callout >}}
+> [!NOTE]
+> - **Domain name**: The name of a website that you type in an address bar. This
+> site's domain name is `maxwelljensen.eu`.
+> - **Top-level domain (TLD)**: The extension of a domain name, like `.com`,
+> `.net`, `.eu`, etc.
+> - **Registrar**: A service authorized to reserve a domain name for you.
 
 ## Registering a domain name
 
@@ -125,11 +124,10 @@ won't have to be waiting a perceptibly longer time to load the site.
 
 ![](/landchad/vultr1.png)
 
-{{< callout type="info" >}}
-Some locations might have different abilities and plans than others. For
-example, in Vultr, their New York location has optional DDOS protection and
-also has some cheaper 3.50$ servers.
-{{< /callout >}}
+> [!TIP]
+> Some locations might have different abilities and plans than others. For
+> example, in Vultr, their New York location has optional DDOS protection and
+> also has some cheaper 3.50$ servers.
 
 #### Operating system
 
@@ -300,10 +298,9 @@ your password, and you can just copy or type in the password from Vultr's site.
 If you get an error here, you might not have done your DNS settings right.
 Double-check those.
 
-{{< callout type="info" >}}
-You can also replace the `example.org` with your VPS's IP address, but you'll
-want to fix your DNS settings soon.
-{{< /callout >}}
+> [!NOTE]
+> You can also replace the `example.org` with your VPS's IP address, but you'll
+> want to fix your DNS settings soon.
 
 ### Installing the web server
 
@@ -453,10 +450,9 @@ command with `sudo`.
 Vultr and some other VPSes automatically install and enable a firewall program.
 This will block basically everything by default, so we have to change that.
 
-{{< callout type="info" >}}
-There could also be no firewall. If that is the case, the following commands
-will not work, in which case you may simply skip this step.
-{{< /callout >}}
+> [!NOTE]
+> There could also be no firewall. If that is the case, the following commands
+> will not work, in which case you may simply skip this step.
 
 {{< tabs items="Debian,Fedora" >}}
   {{< tab >}}
@@ -587,3 +583,10 @@ along with building up your Internet estate.
   might seem at first.
   {{< /tab >}}
 {{< /tabs >}}
+
+Lastly, if you are looking to simply set up a blog or another such website, take a look at the following guide:
+
+<br>
+
+{{< card link="/docs/websites_for_beginners" title="Creating a website with Hugo" icon="code" >}}
+

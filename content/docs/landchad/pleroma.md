@@ -26,16 +26,14 @@ First things first you'll need to make sure that you've hardened you
 SSH so that password authentication is disabled. There's a great tutorial on
 how to do this [which can be read here](../maintenance/ssh).
 
-{{< callout type="warning" >}}
-You will also want
-to do some other server-hardening measures with time, especially if your
-platform were to become mainstream. If there are large amounts of data going in
-and out of your server on a dynamic platform such as Pleroma, you will want to
-make sure no malicious data can exploit your system, or your personal data gets
-extracted without your consent. Explaining this in full detail is beyond the
-scope of this landchad guide, but you should be able to do this on your own
-eventually.
-{{< /callout >}}
+> [!WARNING]
+> You will also want to do some other server-hardening measures with time,
+> especially if your platform were to become mainstream. If there are large
+> amounts of data going in and out of your server on a dynamic platform such as
+> Pleroma, you will want to make sure no malicious data can exploit your
+> system, or your personal data gets extracted without your consent. Explaining
+> this in full detail is beyond the scope of this landchad guide, but you
+> should be able to do this on your own eventually.
 
 {{< tabs items="Debian,Fedora" >}}
   {{< tab >}}

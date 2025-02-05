@@ -108,10 +108,9 @@ cp /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/ejabberd/certs/$DOMAIN
 cp /etc/letsencrypt/live/$DOMAIN/privkey.pem /etc/ejabberd/certs/$DOMAIN
 ```
 
-{{< callout type="info" >}}
-  You might want to write this script to a file and setup a cronjob to run it
-  periodically. This should help prevent your certificates from expiring.
-{{< /callout >}}
+> [!NOTE]
+> You might want to write this script to a file and setup a cronjob to run it
+> periodically. This should help prevent your certificates from expiring.
 
 Make sure all the certificates are readable by the `ejabberd` user:
 

@@ -2,7 +2,7 @@
 title = "Licensing for Beginners"
 date = 2022-03-22
 lastmod = 2025-02-02
-weight = 2
+weight = 3
 +++
 
 The most fundamental, yet seriously overlooked aspect of any software is
@@ -15,11 +15,10 @@ has serious consequences; a lot of corporate exploitation. Developers after
 developers keep getting tricked. Here's how to correctly licence your software,
 and what licensing means to begin with.
 
-{{< callout type="warning" >}}
-**Disclaimer**: THIS ARTICLE IS NOT LEGAL ADVICE. I am not a lawyer, neither
+> [!CAUTION]
+> THIS ARTICLE IS NOT LEGAL ADVICE. I am not a lawyer, neither
 former nor currently practising. If you are uncertain about this topic, and
 valuable assets are at stake, come into contact with qualified legal counsel.
-{{< /callout >}}
 
 ## Copyright
 
@@ -116,22 +115,20 @@ software](https://www.britannica.com/science/free-software) as follows:
 > Foundation (FSF) in 1985, an organization that remains a leading voice in the
 > movement today.
 
-{{< callout type="info" >}}
-**Disambiguation**: "Open source" is often used as a synonym for free software,
-which is incorrect. To learn more, read ["Why Open Source Misses the Point of
-Free Software"](https://www.gnu.org/philosophy/open-source-misses-the-point.html) by Richard
-Stallman.
-{{< /callout >}}
+> [!NOTE]
+> **Disambiguation**: "Open source" is often used as a synonym for free software,
+> which is incorrect. To learn more, read ["Why Open Source Misses the Point of
+> Free Software"](https://www.gnu.org/philosophy/open-source-misses-the-point.html) by Richard
+> Stallman.
 
-{{< callout type="info" >}}
-**The word "free" in this context means freedom, not absence of price.**
-When we talk about free software, we talk about software that respects freedom
-of the individual, for fair competition and transparency. The English language
-just has an unfortunate limitation, where the word "free" can mean two things.
-Often, in other languages, there is a difference between something being free
-and something being
-[gratis](https://dictionary.cambridge.org/dictionary/english/gratis).
-{{< /callout >}}
+> [!NOTE]
+> **The word "free" in this context means freedom, not absence of price.**
+> When we talk about free software, we talk about software that respects freedom
+> of the individual, for fair competition and transparency. The English language
+> just has an unfortunate limitation, where the word "free" can mean two things.
+> Often, in other languages, there is a difference between something being free
+> and something being
+> [gratis](https://dictionary.cambridge.org/dictionary/english/gratis).
 
 The question of free software and proprietary software continues to cause
 controversy in the tech world. Proponents of free software claim that

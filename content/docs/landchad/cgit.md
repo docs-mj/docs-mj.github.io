@@ -14,11 +14,10 @@ consider installing [Gitea](/gitea) instead.
 
 {{< figure src="/landchad/cgit/screenshot.png" caption="Here is what cgit looks like. It is by design basic." >}}
 
-{{< callout type=warning >}}
-The following guide is for Debian only. On Fedora the processes and scripts
-involved differ significantly. If you want a guide for Fedora, you will need to
-find it elsewhere.
-{{< /callout >}}
+> [!WARNING]
+> The following guide is for Debian only. On Fedora the processes and scripts
+> involved differ significantly. If you want a guide for Fedora, you will need
+> to find it elsewhere.
 
 ## Installing cgit and fcgiwrap
 
