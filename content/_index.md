@@ -26,7 +26,7 @@ layout = "hextra-home"
     subtitle="No bloated software. Respect for both new and old solutions. That's what's highlighted."
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-md:hx-min-h-[340px]"
     image="frontpage_gigachad.webp"
-    imageClass="hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
+    imageClass="hx-w-full"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(194,97,254,0.15),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
@@ -38,7 +38,7 @@ layout = "hextra-home"
     subtitle="Some people fly into histrionics at the mere mention of the word 'systemd.' Not here."
     class="hx-aspect-auto md:hx-aspect-[1.1/1] max-lg:hx-min-h-[340px]"
     image="frontpage_tophatchad.webp"
-    imageClass="hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
+    imageClass="hx-w-full"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
   >}}
 {{< /hextra/feature-grid >}}

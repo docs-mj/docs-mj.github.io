@@ -18,7 +18,7 @@ really powerful systems that ordinary people hosted within their homes to host
 messages, forums, and files for hundreds of thousands of users around the
 globe. They were the landchads; aristocrats of the Internet.
 
-![Landchad sitting at his computer](/landchad/landchad.jpg)
+![Landchad sitting at his computer](/frontpage_gigachad.webp)
 
 The power was within their own hardware and they made their own service. They
 did not need to pay any Californian company or seek their approval to operate
