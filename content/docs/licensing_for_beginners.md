@@ -3,7 +3,7 @@ title = "Licensing for Beginners"
 date = 2022-03-22
 lastmod = 2025-02-02
 prev = '/docs'
-weight = 3
+weight = 4
 +++
 
 The most fundamental, yet seriously overlooked aspect of any software is

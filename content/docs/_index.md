@@ -27,6 +27,13 @@ afternoon, you can make a website – super easily.
 {{< /cards >}}
 
 {{< cards >}}
+  {{< card link="/docs/ai_on_fedora" title="AI on Fedora" image="/ai_on_fedora/ai_on_fedora.webp" >}}
+Creating a website has never been easier, but it has nothing to do with bloated
+rubbish like WordPress. Using a simple tool, your favourite text editor, and an
+afternoon, you can make a website – super easily.
+{{< /cards >}}
+
+{{< cards >}}
   {{< card link="/docs/licensing_for_beginners" title="Licensing for Beginners" image="/licensing_for_beginners/licensing_for_beginners.webp" >}}
 The most fundamental, yet seriously overlooked aspect of any software is
 licensing. Whether we like it or not, the fact is that anything we create or

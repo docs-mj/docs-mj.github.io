@@ -10,45 +10,29 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>DokuWiki – MJ Docs</title>
-  <meta name="description" content="DokuWiki is simple wiki software. Although there are many other wiki platforms, DokuWiki is probably the simplest one to use. It is also not too resource-hungry, unlike most other dynamic web platforms, meaning it should comfortably fit on your 512 MB RAM VPS or machine.
-DokuWiki’s official website itself uses DokuWiki, and here’s what it looks like.
-Installation DebianFedora Although DokuWiki is available on the main Debian repos, it is outdated and has a different directory structure, which may lead to problems with plugins and make it harder to follow the official documentation, so we’re gonna install it from a tarball." /><link rel="canonical" href="https://docs.maxwelljensen.eu/docs/landchad/dokuwiki/" itemprop="url" />
+<title>AI on Fedora – MJ Docs</title>
+  <meta name="description" content="Fedora is an awesome Linux distribution, but what makes it even more awesome is the fact that you can run AI on it fairly easily. That is, if you know how to run it first, which is the hard part. This article goes through some technical details of getting certain Fedora-specific problems out of the way. Since most Linux guides regarding AI cater to Debian-based or Arch-based systems, I have found very little information on how to get some AI tools running on Fedora." /><link rel="canonical" href="https://docs.maxwelljensen.eu/docs/ai_on_fedora/" itemprop="url" />
 
-<meta property="og:title" content="DokuWiki" />
-<meta property="og:description" content="DokuWiki is simple wiki software. Although there
-are many other wiki platforms,
-DokuWiki is probably the simplest one to use. It is also not too
-resource-hungry, unlike most other dynamic web platforms, meaning it should
-comfortably fit on your 512 MB RAM VPS or machine.
-
-      DokuWiki&rsquo;s official website itself uses DokuWiki, and here&rsquo;s what it looks like.
-    
-
-
-Installation
-    
-  DebianFedora
-
-
-  Although DokuWiki is available on the main Debian repos, it is outdated and has a different directory structure, which may lead to problems with plugins and make it harder to follow the official documentation, so we&rsquo;re gonna install it from a tarball." />
+<meta property="og:title" content="AI on Fedora" />
+<meta property="og:description" content="Fedora is an awesome Linux distribution, but what makes it even more awesome is
+the fact that you can run AI on it fairly easily. That is, if you know how to
+run it first, which is the hard part. This article goes through some technical
+details of getting certain Fedora-specific problems out of the way. Since most
+Linux guides regarding AI cater to Debian-based or Arch-based systems, I have
+found very little information on how to get some AI tools running on Fedora." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.maxwelljensen.eu/docs/landchad/dokuwiki/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2024-02-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2025-01-25T12:37:37+01:00" />
+<meta property="og:url" content="https://docs.maxwelljensen.eu/docs/ai_on_fedora/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2025-02-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-02-06T00:00:00+00:00" />
 
-  <meta itemprop="name" content="DokuWiki">
-  <meta itemprop="description" content="DokuWiki is simple wiki software. Although there are many other wiki platforms, DokuWiki is probably the simplest one to use. It is also not too resource-hungry, unlike most other dynamic web platforms, meaning it should comfortably fit on your 512 MB RAM VPS or machine.
-DokuWiki’s official website itself uses DokuWiki, and here’s what it looks like.
-Installation DebianFedora Although DokuWiki is available on the main Debian repos, it is outdated and has a different directory structure, which may lead to problems with plugins and make it harder to follow the official documentation, so we’re gonna install it from a tarball.">
-  <meta itemprop="datePublished" content="2024-02-04T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-01-25T12:37:37+01:00">
-  <meta itemprop="wordCount" content="487">
+  <meta itemprop="name" content="AI on Fedora">
+  <meta itemprop="description" content="Fedora is an awesome Linux distribution, but what makes it even more awesome is the fact that you can run AI on it fairly easily. That is, if you know how to run it first, which is the hard part. This article goes through some technical details of getting certain Fedora-specific problems out of the way. Since most Linux guides regarding AI cater to Debian-based or Arch-based systems, I have found very little information on how to get some AI tools running on Fedora.">
+  <meta itemprop="datePublished" content="2025-02-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-02-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1646">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="DokuWiki">
-  <meta name="twitter:description" content="DokuWiki is simple wiki software. Although there are many other wiki platforms, DokuWiki is probably the simplest one to use. It is also not too resource-hungry, unlike most other dynamic web platforms, meaning it should comfortably fit on your 512 MB RAM VPS or machine.
-DokuWiki’s official website itself uses DokuWiki, and here’s what it looks like.
-Installation DebianFedora Although DokuWiki is available on the main Debian repos, it is outdated and has a different directory structure, which may lead to problems with plugins and make it harder to follow the official documentation, so we’re gonna install it from a tarball.">
+  <meta name="twitter:title" content="AI on Fedora">
+  <meta name="twitter:description" content="Fedora is an awesome Linux distribution, but what makes it even more awesome is the fact that you can run AI on it fairly easily. That is, if you know how to run it first, which is the hard part. This article goes through some technical details of getting certain Fedora-specific problems out of the way. Since most Linux guides regarding AI cater to Debian-based or Arch-based systems, I have found very little information on how to get some AI tools running on Fedora.">
 
     <link rel="preload" href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" as="style" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
     <link href="/css/compiled/main.min.0d60cbb74d97ccaea83c3ea6d973c5961d69642b38588069a503bc04e284cbc7.css" rel="stylesheet" integrity="sha256-DWDLt02XzK6oPD6m2XPFlh1pZCs4WIBppQO8BOKEy8c=" />
@@ -181,7 +165,7 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
   >Index
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/landchad/"
@@ -238,34 +222,13 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
   >Ergo
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/landchad/dokuwiki/"
     
   >DokuWiki
     </a>
-  
-    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
-              <a
-                href="#installation"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Installation</a>
-            </li>
-          <li>
-              <a
-                href="#nginx-configuration"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Nginx Configuration</a>
-            </li>
-          <li>
-              <a
-                href="#contribution"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Contribution</a>
-            </li>
-          </ul>
-  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -328,13 +291,28 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
   >Creating a Website
     </a>
               
-            </li><li class="hx-flex hx-flex-col "><a
+            </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/ai_on_fedora/"
     
   >AI on Fedora
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#getting-the-common-dependencies"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Getting the common dependencies</a>
+            </li>
+          <li>
+              <a
+                href="#conclusion"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Conclusion</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -350,7 +328,7 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
 
     <ul class="hx-flex hx-flex-col hx-gap-1 max-md:hx-hidden">
         
-          <li class="open"><a
+          <li class=""><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/landchad/"
@@ -406,9 +384,9 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
   >Ergo
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/docs/landchad/dokuwiki/"
     
   >DokuWiki
@@ -474,9 +452,9 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
     
   >Creating a Website
     </a></li>
-          <li class=""><a
+          <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/docs/ai_on_fedora/"
     
   >AI on Fedora
@@ -507,15 +485,23 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#installation">Installation
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#getting-the-common-dependencies">Getting the common dependencies
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#nginx-configuration">Nginx Configuration
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#rocm">ROCm
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#contribution">Contribution
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#priming-rocm-on-fedora">Priming ROCm on Fedora
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#vulkan-and-clblast">Vulkan and CLBlast
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#conclusion">Conclusion
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -536,229 +522,381 @@ Installation DebianFedora Although DokuWiki is available on the main Debian repo
   <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
           <a href="/docs/">Index</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-          <a href="/docs/landchad/">Landchad</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">DokuWiki</div>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">AI on Fedora</div>
   </div>
 
         <div class="content">
-          <h1>DokuWiki</h1>
-          <p><a href="https://www.dokuwiki.org" target="_blank" rel="noopener">DokuWiki</a> is simple wiki software. Although <a href="https://awesome-selfhosted.net/tags/wikis.html" target="_blank" rel="noopener">there
-are many other wiki platforms</a>,
-DokuWiki is probably the simplest one to use. It is also not too
-resource-hungry, unlike most other dynamic web platforms, meaning it should
-comfortably fit on your 512 MB RAM VPS or machine.</p>
-<figure><img src="/landchad/dokuwiki/screenshot.png"
-    alt="DokuWiki&rsquo;s official website itself uses DokuWiki, and here&rsquo;s what it looks like."><figcaption>
-      <p>DokuWiki&rsquo;s official website itself uses DokuWiki, and here&rsquo;s what it looks like.</p>
+          <h1>AI on Fedora</h1>
+          <p>Fedora is an awesome Linux distribution, but what makes it even more awesome is
+the fact that you can run AI on it fairly easily. That is, if you know how to
+run it first, which is the hard part. This article goes through some technical
+details of getting certain Fedora-specific problems out of the way. Since most
+Linux guides regarding AI cater to Debian-based or Arch-based systems, I have
+found very little information on how to get some AI tools running on Fedora.</p>
+<figure><img src="/ai_on_fedora/fedora_gigachad.webp"
+    alt="Tips my AI-generated fedora in your direction."><figcaption>
+      <p>Tips my AI-generated fedora in your direction.</p>
     </figcaption>
 </figure>
 
-<h2>Installation<span class="hx-absolute -hx-mt-20" id="installation"></span>
-    <a href="#installation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
-  <div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800"><button
-        class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
-        role="tab"
-        type="button"
-        aria-controls="tabs-panel-0" aria-selected="true"  tabindex="0"  data-state="selected">Debian</button><button
-        class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
-        role="tab"
-        type="button"
-        aria-controls="tabs-panel-1">Fedora</button></div>
-</div>
-<div>
-  <div
-  class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
-  id="tabs-panel-0"
-  role="tabpanel" tabindex="0"  data-state="selected" ><p>Although DokuWiki is available on the main Debian repos, it is outdated and has a different directory structure, which may lead to problems with plugins and make it harder to follow the official documentation, so we&rsquo;re gonna install it from a tarball.</p>
-<p>First, install the dependencies.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">apt</span> install nginx php php-fpm php-xml php-mbstring php-zip php-intl php-gd</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Now, get the tarball.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">wget</span> https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
-</span></span><span class="line"><span class="cl"><span class="nf">tar</span> xzvf dokuwiki-stable.tgz
-</span></span><span class="line"><span class="cl"><span class="nf">mv</span> dokuwiki-*a /var/www/dokuwiki
-</span></span><span class="line"><span class="cl"><span class="nf">chown</span> <span class="na">-R</span> www-data:www-data /var/www/dokuwiki</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-</div>
-
-  <div
-  class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
-  id="tabs-panel-1"
-  role="tabpanel"><p>DokuWiki is available in Fedora repositories. Install it using the following command:</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install dokuwiki</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div></div>
-</div>
-<h2>Nginx Configuration<span class="hx-absolute -hx-mt-20" id="nginx-configuration"></span>
-    <a href="#nginx-configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Create a file named <code>/etc/nginx/sites-available/dokuwiki</code> using your favorite text editor and add the following lines, based on the configuration <a href="https://www.dokuwiki.org/install:nginx" target="_blank" rel="noopener">here</a>. <strong>Remember to change <code>wiki.example.org</code> to your website&rsquo;s name.</strong> Also, pay attention to the lines containing <code>client_max_body_size</code>, which determines the maximum file size allowed for uploads, and the first <code>location</code> line, because it needs to be commented during the installation and uncommented when it&rsquo;s done.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kn">server_name</span> <span class="s">wiki.example.org</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># Maximum file upload size is 4MB - change accordingly if needed
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kn">client_max_body_size</span> <span class="s">4M</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kn">client_body_buffer_size</span> <span class="mi">128k</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kn">root</span> <span class="s">/var/www/dokuwiki</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kn">index</span> <span class="s">doku.php</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">#Remember to comment the below out when you&#39;re installing, and uncomment it when done.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">#location ~ /(conf/|bin/|inc/|vendor/|install.php) { deny all; }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="c1">#Support for X-Accel-Redirect
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kn">location</span> <span class="p">~</span> <span class="sr">^/data/</span> <span class="p">{</span> <span class="kn">internal</span> <span class="p">;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kn">location</span> <span class="p">~</span> <span class="sr">^/lib.*\.(js|css|gif|png|ico|jpg|jpeg)$</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">expires</span> <span class="s">365d</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span> <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="s">@dokuwiki</span><span class="p">;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kn">location</span> <span class="s">@dokuwiki</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># rewrites &#34;doku.php/&#34; out of the URLs if you set the userwrite setting to .htaccess in dokuwiki config page
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kn">rewrite</span> <span class="s">^/_media/(.*)</span> <span class="s">/lib/exe/fetch.php?media=</span><span class="nv">$1</span> <span class="s">last</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">rewrite</span> <span class="s">^/_detail/(.*)</span> <span class="s">/lib/exe/detail.php?media=</span><span class="nv">$1</span> <span class="s">last</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">rewrite</span> <span class="s">^/_export/([^/]+)/(.*)</span> <span class="s">/doku.php?do=export_</span><span class="nv">$1&amp;id=$2</span> <span class="s">last</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">rewrite</span> <span class="s">^/(.*)</span> <span class="s">/doku.php?id=</span><span class="nv">$1&amp;$args</span> <span class="s">last</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="kn">location</span> <span class="p">~</span> <span class="sr">\.php$</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="s">/doku.php</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">include</span> <span class="s">fastcgi_params</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">fastcgi_param</span> <span class="s">REDIRECT_STATUS</span> <span class="mi">200</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kn">fastcgi_pass</span> <span class="s">unix:/var/run/php/php-fpm.sock</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># fastcgi_pass unix:/var/run/php5-fpm.sock; #old php version
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Enable the website.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">ln</span> <span class="na">-s</span> /etc/nginx/sites-available/dokuwiki /etc/nginx/sites-enabled/</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Generate a SSL certificate for the subdomain.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">certbot</span> <span class="na">--nginx</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Restart nginx and php in order for the changes to take effect.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">systemctl</span> restart nginx <span class="o">&amp;&amp;</span> <span class="nf">systemctl</span> restart php7.<span class="m">4</span>-fpm</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Finally, go to <code>wiki.yourwebsite.com/install.php</code> to finish the installation process. Read up <a href="https://www.dokuwiki.org/installer" target="_blank" rel="noopener">the documentation</a> in order to understand what each of those itens mean.</p>
-<p>Once that&rsquo;s done, remember to uncomment the <code>location</code> line on the nginx configuration file. Open <code>/etc/nginx/sites-available/dokuwiki</code> with a text editor and remove the &ldquo;#&rdquo; symbol at the beginning of the line.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="c1">#Remember to comment the below out when you&#39;re installing, and uncomment it when done.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">location</span> <span class="p">~</span> <span class="sr">/(conf/|bin/|inc/|vendor/|install.php)</span> <span class="p">{</span> <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span> <span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Reload nginx once again for the changes to take effect.</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">systemctl</span> restart nginx</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-</div>
-<p>Your wiki is now live! Have fun and happy hacking.</p>
-<h2>Contribution<span class="hx-absolute -hx-mt-20" id="contribution"></span>
-    <a href="#contribution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li><a href="https://github.com/AdachiWasRight" target="_blank" rel="noopener">Adachi</a></li>
+<p>As a proud Fedora user, I will share the knowledge I gathered. My computer setup:</p>
+<ul>
+<li><strong><span class="hx-inline-block hx-align-text-bottom icon"><svg height=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></span>
+ OS</strong>: Fedora 41</li>
+<li><strong><span class="hx-inline-block hx-align-text-bottom icon"><svg height=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+ GPU</strong>: Radeon RX 6700 XT</li>
+<li><strong><span class="hx-inline-block hx-align-text-bottom icon"><svg height=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span>
+ CPU</strong>: AMD Ryzen 7 2700X</li>
+<li><strong><span class="hx-inline-block hx-align-text-bottom icon"><svg height=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg></span>
+ RAM</strong>: 32 GB</li>
 </ul>
+<p>Using this, I managed to run:</p>
+<ul>
+<li><a href="https://github.com/LostRuins/koboldcpp/" target="_blank" rel="noopener">LostRuins/koboldcpp/</a> (LLM; text
+generation)</li>
+<li><a href="https://github.com/YellowRoseCx/koboldcpp-rocm" target="_blank" rel="noopener">YellowRoseCx/koboldcpp-rocm</a> (LLM)</li>
+<li><a href="https://github.com/oobabooga/text-generation-webui" target="_blank" rel="noopener">oobabooga/text-generation-webui</a>
+(LLM)</li>
+<li><a href="https://github.com/comfyanonymous/ComfyUI" target="_blank" rel="noopener">comfyanonymous/ComfyUI</a>
+(Diffusion; image generation)</li>
+</ul>
+<h2>Getting the common dependencies<span class="hx-absolute -hx-mt-20" id="getting-the-common-dependencies"></span>
+    <a href="#getting-the-common-dependencies" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There are some dependencies you will need, regardless of what kind of AI you
+are going to use. Thankfully, Fedora does actually have all of them available
+in the repositories, but they are not obvious to find. The main source of
+information on those dependencies is <a href="https://fedoraproject.org/wiki/SIGs/HC" target="_blank" rel="noopener">this fairly obscure Fedora Wiki
+page</a>.</p>
+<h3>ROCm<span class="hx-absolute -hx-mt-20" id="rocm"></span>
+    <a href="#rocm" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>ROCm (short for <em>Radeon Open Compute</em>) is AMD&rsquo;s poor answer to NVIDIA&rsquo;s CUDA
+technology. It&rsquo;s an open-source software platform designed to support
+high-performance computing (HPC) and artificial intelligence (AI) workloads on
+AMD GPUs. It includes a bunch of drivers, development tools, and APIs, but
+those are highly disorganised in comparison to CUDA.</p>
+<p>The main piece of information to know is that the range of hardware supported
+by ROCm is extremely narrow. NVIDIA GPUs from 2013 or even 2011 can be used to
+do LLM inference. The same can&rsquo;t be said about AMD GPUs. It&rsquo;s only recently
+that it started officially supporting RDNA 2.0 cards like the RX 6700 XT.
+<a href="https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html" target="_blank" rel="noopener">Here&rsquo;s a full
+list</a>
+of cards that are officially supported by ROCm. It&rsquo;s not an impressive list.
+There are many unofficially supported devices. I&rsquo;ve read posts on the Internet
+about people getting RX 580s to work with ROCm, but don&rsquo;t hold your breath.
+ROCm is not even supported on Windows at all, at least in practice. AMD users
+on Windows need to use <a href="https://github.com/comfyanonymous/ComfyUI?tab=readme-ov-file#directml-amd-cards-on-windows" target="_blank" rel="noopener">workarounds like
+DirectML</a>
+instead.</p>
+<p>That being said, <strong>you want to use ROCm at every available opportunity, as it
+is the fastest backend to use with AMD GPUs for any AI workload.</strong></p>
+<p>Should you have an AMD GPU architecture supported by ROCm, you will need to
+install the following packages:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install rocm-hip-devel rocm-hipblas-devel rocm-llvm-devel rocminfo hipblas-devel hipcc</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>While it is not strictly necessary to install the development (<code>*-devel</code>)
+versions of these packages, practically all AI tools on Linux will require you
+to compile the tools from source if you are using ROCm. Therefore, you might as
+well get the full suite.</p>
+<p><strong>To verify ROCm functionality on your system</strong>, run <code>rocminfo</code>. You should get
+output like this:</p>
+<details class="last-of-type:hx-mb-0 hx-rounded-lg hx-bg-neutral-50 dark:hx-bg-neutral-800 hx-p-2 hx-mt-4 hx-group" >
+  <summary class="hx-flex hx-items-center hx-cursor-pointer hx-select-none hx-list-none hx-p-1 hx-rounded hx-transition-colors hover:hx-bg-gray-100 dark:hover:hx-bg-neutral-800 before:hx-mr-1 before:hx-inline-block before:hx-transition-transform before:hx-content-[''] dark:before:hx-invert rtl:before:hx-rotate-180 group-open:before:hx-rotate-90">
+    <strong class="hx-text-lg">Long terminal output</strong>
+  </summary>
+  <div class="hx-p-2 hx-overflow-hidden">
+    <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">ROCk module is loaded
+</span></span><span class="line"><span class="cl">=====================
+</span></span><span class="line"><span class="cl">HSA System Attributes
+</span></span><span class="line"><span class="cl">=====================
+</span></span><span class="line"><span class="cl">Runtime Version:         1.1
+</span></span><span class="line"><span class="cl">Runtime Ext Version:     1.6
+</span></span><span class="line"><span class="cl">System Timestamp Freq.:  1000.000000MHz
+</span></span><span class="line"><span class="cl">Sig. Max Wait Duration:  18446744073709551615 (0xFFFFFFFFFFFFFFFF) (timestamp count)
+</span></span><span class="line"><span class="cl">Machine Model:           LARGE
+</span></span><span class="line"><span class="cl">System Endianness:       LITTLE
+</span></span><span class="line"><span class="cl">Mwaitx:                  DISABLED
+</span></span><span class="line"><span class="cl">DMAbuf Support:          YES
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">==========
+</span></span><span class="line"><span class="cl">HSA Agents
+</span></span><span class="line"><span class="cl">==========
+</span></span><span class="line"><span class="cl">*******
+</span></span><span class="line"><span class="cl">Agent 1
+</span></span><span class="line"><span class="cl">*******
+</span></span><span class="line"><span class="cl">  Name:                    AMD Ryzen 7 2700X Eight-Core Processor
+</span></span><span class="line"><span class="cl">  Uuid:                    CPU-XX
+</span></span><span class="line"><span class="cl">  Marketing Name:          AMD Ryzen 7 2700X Eight-Core Processor
+</span></span><span class="line"><span class="cl">  Vendor Name:             CPU
+</span></span><span class="line"><span class="cl">  Feature:                 None specified
+</span></span><span class="line"><span class="cl">  Profile:                 FULL_PROFILE
+</span></span><span class="line"><span class="cl">  Float Round Mode:        NEAR
+</span></span><span class="line"><span class="cl">  Max Queue Number:        0(0x0)
+</span></span><span class="line"><span class="cl">  Queue Min Size:          0(0x0)
+</span></span><span class="line"><span class="cl">  Queue Max Size:          0(0x0)
+</span></span><span class="line"><span class="cl">  Queue Type:              MULTI
+</span></span><span class="line"><span class="cl">  Node:                    0
+</span></span><span class="line"><span class="cl">  Device Type:             CPU
+</span></span><span class="line"><span class="cl">  Cache Info:
+</span></span><span class="line"><span class="cl">    L1:                      32768(0x8000) KB
+</span></span><span class="line"><span class="cl">  Chip ID:                 0(0x0)
+</span></span><span class="line"><span class="cl">  ASIC Revision:           0(0x0)
+</span></span><span class="line"><span class="cl">  Cacheline Size:          64(0x40)
+</span></span><span class="line"><span class="cl">  Max Clock Freq. (MHz):   3700
+</span></span><span class="line"><span class="cl">  BDFID:                   0
+</span></span><span class="line"><span class="cl">  Internal Node ID:        0
+</span></span><span class="line"><span class="cl">  Compute Unit:            16
+</span></span><span class="line"><span class="cl">  SIMDs per CU:            0
+</span></span><span class="line"><span class="cl">  Shader Engines:          0
+</span></span><span class="line"><span class="cl">  Shader Arrs. per Eng.:   0
+</span></span><span class="line"><span class="cl">  WatchPts on Addr. Ranges:1
+</span></span><span class="line"><span class="cl">  Memory Properties:
+</span></span><span class="line"><span class="cl">  Features:                None
+</span></span><span class="line"><span class="cl">  Pool Info:
+</span></span><span class="line"><span class="cl">    Pool 1
+</span></span><span class="line"><span class="cl">      Segment:                 GLOBAL; FLAGS: FINE GRAINED
+</span></span><span class="line"><span class="cl">      Size:                    32780072(0x1f42f28) KB
+</span></span><span class="line"><span class="cl">      Allocatable:             TRUE
+</span></span><span class="line"><span class="cl">      Alloc Granule:           4KB
+</span></span><span class="line"><span class="cl">      Alloc Recommended Granule:4KB
+</span></span><span class="line"><span class="cl">      Alloc Alignment:         4KB
+</span></span><span class="line"><span class="cl">      Accessible by all:       TRUE
+</span></span><span class="line"><span class="cl">    Pool 2
+</span></span><span class="line"><span class="cl">      Segment:                 GLOBAL; FLAGS: KERNARG, FINE GRAINED
+</span></span><span class="line"><span class="cl">      Size:                    32780072(0x1f42f28) KB
+</span></span><span class="line"><span class="cl">      Allocatable:             TRUE
+</span></span><span class="line"><span class="cl">      Alloc Granule:           4KB
+</span></span><span class="line"><span class="cl">      Alloc Recommended Granule:4KB
+</span></span><span class="line"><span class="cl">      Alloc Alignment:         4KB
+</span></span><span class="line"><span class="cl">      Accessible by all:       TRUE
+</span></span><span class="line"><span class="cl">    Pool 3
+</span></span><span class="line"><span class="cl">      Segment:                 GLOBAL; FLAGS: COARSE GRAINED
+</span></span><span class="line"><span class="cl">      Size:                    32780072(0x1f42f28) KB
+</span></span><span class="line"><span class="cl">      Allocatable:             TRUE
+</span></span><span class="line"><span class="cl">      Alloc Granule:           4KB
+</span></span><span class="line"><span class="cl">      Alloc Recommended Granule:4KB
+</span></span><span class="line"><span class="cl">      Alloc Alignment:         4KB
+</span></span><span class="line"><span class="cl">      Accessible by all:       TRUE
+</span></span><span class="line"><span class="cl">  ISA Info:
+</span></span><span class="line"><span class="cl">*******
+</span></span><span class="line"><span class="cl">Agent 2
+</span></span><span class="line"><span class="cl">*******
+</span></span><span class="line"><span class="cl">  Name:                    gfx1031
+</span></span><span class="line"><span class="cl">  Uuid:                    GPU-XX
+</span></span><span class="line"><span class="cl">  Marketing Name:          AMD Radeon RX 6700 XT
+</span></span><span class="line"><span class="cl">  Vendor Name:             AMD
+</span></span><span class="line"><span class="cl">  Feature:                 KERNEL_DISPATCH
+</span></span><span class="line"><span class="cl">  Profile:                 BASE_PROFILE
+</span></span><span class="line"><span class="cl">  Float Round Mode:        NEAR
+</span></span><span class="line"><span class="cl">  Max Queue Number:        128(0x80)
+</span></span><span class="line"><span class="cl">  Queue Min Size:          64(0x40)
+</span></span><span class="line"><span class="cl">  Queue Max Size:          131072(0x20000)
+</span></span><span class="line"><span class="cl">  Queue Type:              MULTI
+</span></span><span class="line"><span class="cl">  Node:                    1
+</span></span><span class="line"><span class="cl">  Device Type:             GPU
+</span></span><span class="line"><span class="cl">  Cache Info:
+</span></span><span class="line"><span class="cl">    L1:                      16(0x10) KB
+</span></span><span class="line"><span class="cl">    L2:                      3072(0xc00) KB
+</span></span><span class="line"><span class="cl">    L3:                      98304(0x18000) KB
+</span></span><span class="line"><span class="cl">  Chip ID:                 29663(0x73df)
+</span></span><span class="line"><span class="cl">  ASIC Revision:           0(0x0)
+</span></span><span class="line"><span class="cl">  Cacheline Size:          128(0x80)
+</span></span><span class="line"><span class="cl">  Max Clock Freq. (MHz):   2725
+</span></span><span class="line"><span class="cl">  BDFID:                   2048
+</span></span><span class="line"><span class="cl">  Internal Node ID:        1
+</span></span><span class="line"><span class="cl">  Compute Unit:            40
+</span></span><span class="line"><span class="cl">  SIMDs per CU:            2
+</span></span><span class="line"><span class="cl">  Shader Engines:          2
+</span></span><span class="line"><span class="cl">  Shader Arrs. per Eng.:   2
+</span></span><span class="line"><span class="cl">  WatchPts on Addr. Ranges:4
+</span></span><span class="line"><span class="cl">  Coherent Host Access:    FALSE
+</span></span><span class="line"><span class="cl">  Memory Properties:
+</span></span><span class="line"><span class="cl">  Features:                KERNEL_DISPATCH
+</span></span><span class="line"><span class="cl">  Fast F16 Operation:      TRUE
+</span></span><span class="line"><span class="cl">  Wavefront Size:          32(0x20)
+</span></span><span class="line"><span class="cl">  Workgroup Max Size:      1024(0x400)
+</span></span><span class="line"><span class="cl">  Workgroup Max Size per Dimension:
+</span></span><span class="line"><span class="cl">    x                        1024(0x400)
+</span></span><span class="line"><span class="cl">    y                        1024(0x400)
+</span></span><span class="line"><span class="cl">    z                        1024(0x400)
+</span></span><span class="line"><span class="cl">  Max Waves Per CU:        32(0x20)
+</span></span><span class="line"><span class="cl">  Max Work-item Per CU:    1024(0x400)
+</span></span><span class="line"><span class="cl">  Grid Max Size:           4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">  Grid Max Size per Dimension:
+</span></span><span class="line"><span class="cl">    x                        4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">    y                        4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">    z                        4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">  Max fbarriers/Workgrp:   32
+</span></span><span class="line"><span class="cl">  Packet Processor uCode:: 122
+</span></span><span class="line"><span class="cl">  SDMA engine uCode::      80
+</span></span><span class="line"><span class="cl">  IOMMU Support::          None
+</span></span><span class="line"><span class="cl">  Pool Info:
+</span></span><span class="line"><span class="cl">    Pool 1
+</span></span><span class="line"><span class="cl">      Segment:                 GLOBAL; FLAGS: COARSE GRAINED
+</span></span><span class="line"><span class="cl">      Size:                    12566528(0xbfc000) KB
+</span></span><span class="line"><span class="cl">      Allocatable:             TRUE
+</span></span><span class="line"><span class="cl">      Alloc Granule:           4KB
+</span></span><span class="line"><span class="cl">      Alloc Recommended Granule:2048KB
+</span></span><span class="line"><span class="cl">      Alloc Alignment:         4KB
+</span></span><span class="line"><span class="cl">      Accessible by all:       FALSE
+</span></span><span class="line"><span class="cl">    Pool 2
+</span></span><span class="line"><span class="cl">      Segment:                 GLOBAL; FLAGS: EXTENDED FINE GRAINED
+</span></span><span class="line"><span class="cl">      Size:                    12566528(0xbfc000) KB
+</span></span><span class="line"><span class="cl">      Allocatable:             TRUE
+</span></span><span class="line"><span class="cl">      Alloc Granule:           4KB
+</span></span><span class="line"><span class="cl">      Alloc Recommended Granule:2048KB
+</span></span><span class="line"><span class="cl">      Alloc Alignment:         4KB
+</span></span><span class="line"><span class="cl">      Accessible by all:       FALSE
+</span></span><span class="line"><span class="cl">    Pool 3
+</span></span><span class="line"><span class="cl">      Segment:                 GROUP
+</span></span><span class="line"><span class="cl">      Size:                    64(0x40) KB
+</span></span><span class="line"><span class="cl">      Allocatable:             FALSE
+</span></span><span class="line"><span class="cl">      Alloc Granule:           0KB
+</span></span><span class="line"><span class="cl">      Alloc Recommended Granule:0KB
+</span></span><span class="line"><span class="cl">      Alloc Alignment:         0KB
+</span></span><span class="line"><span class="cl">      Accessible by all:       FALSE
+</span></span><span class="line"><span class="cl">  ISA Info:
+</span></span><span class="line"><span class="cl">    ISA 1
+</span></span><span class="line"><span class="cl">      Name:                    amdgcn-amd-amdhsa--gfx1031
+</span></span><span class="line"><span class="cl">      Machine Models:          HSA_MACHINE_MODEL_LARGE
+</span></span><span class="line"><span class="cl">      Profiles:                HSA_PROFILE_BASE
+</span></span><span class="line"><span class="cl">      Default Rounding Mode:   NEAR
+</span></span><span class="line"><span class="cl">      Default Rounding Mode:   NEAR
+</span></span><span class="line"><span class="cl">      Fast f16:                TRUE
+</span></span><span class="line"><span class="cl">      Workgroup Max Size:      1024(0x400)
+</span></span><span class="line"><span class="cl">      Workgroup Max Size per Dimension:
+</span></span><span class="line"><span class="cl">        x                        1024(0x400)
+</span></span><span class="line"><span class="cl">        y                        1024(0x400)
+</span></span><span class="line"><span class="cl">        z                        1024(0x400)
+</span></span><span class="line"><span class="cl">      Grid Max Size:           4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">      Grid Max Size per Dimension:
+</span></span><span class="line"><span class="cl">        x                        4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">        y                        4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">        z                        4294967295(0xffffffff)
+</span></span><span class="line"><span class="cl">      FBarrier Max Size:       32
+</span></span><span class="line"><span class="cl">*** Done ***</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+  </div>
+</details>
+<p>If you get mostly empty output, or it lists only your CPU as an agent, it means
+that your GPU is not reocognised as a ROCm platform. You can check and see if
+there is unofficial support somewhere, but it is unlikely.</p>
+<h3>Priming ROCm on Fedora<span class="hx-absolute -hx-mt-20" id="priming-rocm-on-fedora"></span>
+    <a href="#priming-rocm-on-fedora" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>One last thing about ROCm that needs to be addressed on Fedora is that Fedora
+packages use directories that are not standard according to the ROCm project.
+This can and likely will cause problems when trying to set up AI tools, without
+it being obvious why.</p>
+<p>By standard, ROCm development files come with copies of LLVM tools like clang
+and clang++ in <code>/opt/rocm</code>, which is what the tools expect. On Fedora, however,
+the ROCm packages do not do that. By running <code>hipcc --version</code> you can find out
+where the LLVM tools are, which should be located at <code>/usr/lib64/llvm18/bin</code>.</p>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-indigo-200 hx-bg-indigo-100 hx-text-indigo-900 dark:hx-border-indigo-200/30 dark:hx-bg-indigo-900/30 dark:hx-text-indigo-200">
+  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Important</p>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><p>The <code>llvm18</code> part can change. Make sure you check <strong>your</strong> version first!</p></div>
+  </div>
+</div>
+<p>Because of this, you need to make symbolic links:</p>
+<ul>
+<li><code>/opt/rocm/llvm/bin/clang</code> to <code>/usr/lib64/llvm18/bin/clang</code></li>
+<li><code>/opt/rocm/llvm/bin/clang++</code> to <code>/usr/lib64/llvm18/bin/clang++</code></li>
+</ul>
+<p>This can be done with the following snippet:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">mkdir</span> <span class="na">-p</span> /opt/rocm/llvm <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">ln</span> <span class="na">-s</span> /usr/lib64/llvm18/bin/clang /opt/rocm/llvm/bin/clang <span class="o">&amp;&amp;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">ln</span> <span class="na">-s</span> /usr/lib64/llvm18/bin/clang++ /opt/rocm/llvm/bin/clang++</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>Now you should not be hitting into mysterious snags the way I have, as now
+there will be an <code>/opt/rocm</code> populated with the libraries and tools that are
+expected.</p>
+<h3>Vulkan and CLBlast<span class="hx-absolute -hx-mt-20" id="vulkan-and-clblast"></span>
+    <a href="#vulkan-and-clblast" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>It is not the end of the world if your GPU is not supported by ROCm, because it
+still can be supported by Vulkan or CLBlast. Vulkan is the same API that is
+used to play your favourite games on Steam on Fedora, and it can be used to do
+AI workloads as well. It is just not nearly as performant as ROCm. However, it
+is very much an attractive option, and still beats CPU-only inference by orders
+of magnitude.</p>
+<p>You will need to install the following packages:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install mesa-libOpenCL-devel libclc-devel clinfo</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>Similarly with ROCm, you can verify if your GPU is Vulkan-enabled by running
+<code>clinfo</code>. If you get a long list (as in the ROCm case above), then it means
+your GPU is recognised as a valid Vulkan platform. If you don&rsquo;t see much, then
+it is not supported, but it really should be, unless you have <em>exceptionally</em>
+old or cheap hardware.</p>
+<p>One thing to note is that Vulkan requires your CPU to have the AVX2 extension.
+This should be present on all modern CPUs, unless, as said, you have
+exceptionally old or cheap hardware. Should you not have AVX2 on your CPU for
+whatever reason, CLBlast is one last option that might be supported on your
+hardware, as it requires AVX instead. It requires the same libraries and tools
+as above, so you don&rsquo;t need anything more. Just make sure to select a &ldquo;CLBlast
+option&rdquo; or &ldquo;OpenCL option,&rdquo; if one exists, whenever you use your AI tool of
+choice.</p>
+<p>If your CPU does not even have the AVX extension, then you probably need to
+upgrade your hardware. However, it is worth nothing that <a href="https://github.com/LostRuins/koboldcpp/releases/tag/v1.82.4" target="_blank" rel="noopener">version 1.82.4 of
+koboldcpp</a> no
+longer requires AVX for its CLBlast backend, so your toaster can now run it.</p>
+<h2>Conclusion<span class="hx-absolute -hx-mt-20" id="conclusion"></span>
+    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><img src="/ai_on_fedora/comfyui.webp" alt="Low resolution screenshot showing ComfyUI in action" loading="lazy" /></p>
+<p>If this guide has helped at least one person, then my mission is complete. The
+information contained here took me at least a dozen hours of troubleshooting
+and frustration to gather &ndash; probably more. The worst part is that some of it
+is still a bit unsure. My hope is that this page can become a small repository
+of Fedora-specific knowledge that other Fedora users can use to help each
+other, since getting AI to work on Fedora can be quite frustrating.</p>
+<p>Leave a comment below, or place an issue / pull request <a href="https://github.com/docs-mj/docs-mj.github.io" target="_blank" rel="noopener">on
+GitHub</a>, if you want to share
+something not covered here, or, better yet, correct discrepancies.</p>
 
         </div>
         
-    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-01-25T12:37:37.000Z">25 January, 2025</time></div>
+    <div class="hx-mt-12 hx-mb-8 hx-block hx-text-xs hx-text-gray-500 ltr:hx-text-right rtl:hx-text-left dark:hx-text-gray-400">Last updated on <time datetime="2025-02-06T00:00:00.000Z">6 February, 2025</time></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/landchad/ergo/"
-        title="Ergo"
+        href="/docs/"
+        title="Index"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Ergo</a><a
-        href="/docs/landchad/pleroma/"
-        title="Pleroma"
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Index</a><a
+        href="/docs/licensing_for_beginners/"
+        title="Licensing for Beginners"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Pleroma<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Licensing for Beginners<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         <script>
   
 
