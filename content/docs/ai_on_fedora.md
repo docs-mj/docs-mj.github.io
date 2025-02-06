@@ -257,7 +257,7 @@ Agent 2
 {{% /details %}}
 
 If you get mostly empty output, or it lists only your CPU as an agent, it means
-that your GPU is not reocognised as a ROCm platform. You can check and see if
+that your GPU is not recognised as a ROCm platform. You can check and see if
 there is unofficial support somewhere, but it is unlikely.
 
 ### Priming ROCm on Fedora
