@@ -28,9 +28,9 @@ afternoon, you can make a website – super easily.
 
 {{< cards >}}
   {{< card link="/docs/ai_on_fedora" title="AI on Fedora" image="/ai_on_fedora/ai_on_fedora.webp" >}}
-Creating a website has never been easier, but it has nothing to do with bloated
-rubbish like WordPress. Using a simple tool, your favourite text editor, and an
-afternoon, you can make a website – super easily.
+Getting AI to run on Fedora is quite challenging, but here are some hard-earned
+technical details that might just help you get your AI up and running on the
+best Linux distribution.
 {{< /cards >}}
 
 {{< cards >}}
