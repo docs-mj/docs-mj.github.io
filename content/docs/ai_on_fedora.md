@@ -68,7 +68,7 @@ Should you have an AMD GPU architecture supported by ROCm, you will need to
 install the following packages:
 
 ```fish
-sudo dnf install rocm-hip rocm-hip-devel rocm-hipblas rocm-hipblas-devel rocm-llvm-devel rocminfo hipcc
+sudo dnf install rocm-hip rocm-hip-devel rocm-hipblas rocm-hipblas-devel rocm-llvm-devel rocminfo hipblas hipblas-devel hipcc
 ```
 
 While it is not strictly necessary to install the development (`*-devel`)
