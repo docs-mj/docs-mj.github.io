@@ -1465,7 +1465,7 @@ is the fastest backend to use with AMD GPUs for any AI workload.&lt;/strong&gt;&
 install the following packages:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dnf&lt;/span&gt; install rocm-hip-devel rocm-hipblas-devel rocm-llvm-devel rocminfo hipblas-devel hipcc&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dnf&lt;/span&gt; install rocm-hip rocm-hip-devel rocm-hipblas rocm-hipblas-devel rocm-llvm-devel rocminfo hipcc&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -1710,8 +1710,8 @@ where the LLVM tools are, which should be located at &lt;code&gt;/usr/lib64/llvm
 &lt;p&gt;Now you should not be hitting into mysterious snags the way I have, as now
 there will be an &lt;code&gt;/opt/rocm&lt;/code&gt; populated with the libraries and tools that are
 expected.&lt;/p&gt;
-&lt;h3&gt;Vulkan and CLBlast&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;vulkan-and-clblast&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#vulkan-and-clblast&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;It is not the end of the world if your GPU is not supported by ROCm, because it
+&lt;h3&gt;Vulkan&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;vulkan&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#vulkan&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;It is not the end of the world if your GPU is not supported by ROCm, because it
 still can be supported by Vulkan or CLBlast. Vulkan is the same API that is
 used to play your favourite games on Steam on Fedora, and it can be used to do
 AI workloads as well. It is just not nearly as performant as ROCm. However, it
@@ -1720,7 +1720,7 @@ of magnitude.&lt;/p&gt;
 &lt;p&gt;You will need to install the following packages:&lt;/p&gt;
 &lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
 
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dnf&lt;/span&gt; install mesa-libOpenCL-devel libclc-devel clinfo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dnf&lt;/span&gt; install mesa-libOpenCL mesa-libOpenCL-devel libclc libclc-devel clinfo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
     title=&#34;Copy code&#34;
@@ -1735,14 +1735,27 @@ of magnitude.&lt;/p&gt;
 your GPU is recognised as a valid Vulkan platform. If you don&amp;rsquo;t see much, then
 it is not supported, but it really should be, unless you have &lt;em&gt;exceptionally&lt;/em&gt;
 old or cheap hardware.&lt;/p&gt;
-&lt;p&gt;One thing to note is that Vulkan requires your CPU to have the AVX2 extension.
+&lt;h3&gt;CLBlast&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;clblast&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#clblast&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;One thing to note is that Vulkan requires your CPU to have the AVX2 extension.
 This should be present on all modern CPUs, unless, as said, you have
 exceptionally old or cheap hardware. Should you not have AVX2 on your CPU for
 whatever reason, CLBlast is one last option that might be supported on your
-hardware, as it requires AVX instead. It requires the same libraries and tools
-as above, so you don&amp;rsquo;t need anything more. Just make sure to select a &amp;ldquo;CLBlast
-option&amp;rdquo; or &amp;ldquo;OpenCL option,&amp;rdquo; if one exists, whenever you use your AI tool of
-choice.&lt;/p&gt;
+hardware, as it requires AVX instead. From what I understand, you will need the
+following:&lt;/p&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+
+&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fish&#34; data-lang=&#34;fish&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dnf&lt;/span&gt; install clblast clblast-devel&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Just make sure to select a &amp;ldquo;CLBlast option&amp;rdquo; or &amp;ldquo;OpenCL option,&amp;rdquo; if one exists,
+whenever you use your AI tool of choice.&lt;/p&gt;
 &lt;p&gt;If your CPU does not even have the AVX extension, then you probably need to
 upgrade your hardware. However, it is worth nothing that &lt;a href=&#34;https://github.com/LostRuins/koboldcpp/releases/tag/v1.82.4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;version 1.82.4 of
 koboldcpp&lt;/a&gt; no

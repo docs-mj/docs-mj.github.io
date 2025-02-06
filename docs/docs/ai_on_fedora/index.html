@@ -29,7 +29,7 @@ found very little information on how to get some AI tools running on Fedora." />
   <meta itemprop="description" content="Fedora is an awesome Linux distribution, but what makes it even more awesome is the fact that you can run AI on it fairly easily. That is, if you know how to run it first, which is the hard part. This article goes through some technical details of getting certain Fedora-specific problems out of the way. Since most Linux guides regarding AI cater to Debian-based or Arch-based systems, I have found very little information on how to get some AI tools running on Fedora.">
   <meta itemprop="datePublished" content="2025-02-06T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-02-06T19:05:30+01:00">
-  <meta itemprop="wordCount" content="1646">
+  <meta itemprop="wordCount" content="1647">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="AI on Fedora">
   <meta name="twitter:description" content="Fedora is an awesome Linux distribution, but what makes it even more awesome is the fact that you can run AI on it fairly easily. That is, if you know how to run it first, which is the hard part. This article goes through some technical details of getting certain Fedora-specific problems out of the way. Since most Linux guides regarding AI cater to Debian-based or Arch-based systems, I have found very little information on how to get some AI tools running on Fedora.">
@@ -497,7 +497,11 @@ found very little information on how to get some AI tools running on Fedora." />
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#vulkan-and-clblast">Vulkan and CLBlast
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#vulkan">Vulkan
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#clblast">CLBlast
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -591,7 +595,7 @@ is the fastest backend to use with AMD GPUs for any AI workload.</strong></p>
 install the following packages:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install rocm-hip-devel rocm-hipblas-devel rocm-llvm-devel rocminfo hipblas-devel hipcc</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install rocm-hip rocm-hip-devel rocm-hipblas rocm-hipblas-devel rocm-llvm-devel rocminfo hipcc</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -836,8 +840,8 @@ where the LLVM tools are, which should be located at <code>/usr/lib64/llvm18/bin
 <p>Now you should not be hitting into mysterious snags the way I have, as now
 there will be an <code>/opt/rocm</code> populated with the libraries and tools that are
 expected.</p>
-<h3>Vulkan and CLBlast<span class="hx-absolute -hx-mt-20" id="vulkan-and-clblast"></span>
-    <a href="#vulkan-and-clblast" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>It is not the end of the world if your GPU is not supported by ROCm, because it
+<h3>Vulkan<span class="hx-absolute -hx-mt-20" id="vulkan"></span>
+    <a href="#vulkan" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>It is not the end of the world if your GPU is not supported by ROCm, because it
 still can be supported by Vulkan or CLBlast. Vulkan is the same API that is
 used to play your favourite games on Steam on Fedora, and it can be used to do
 AI workloads as well. It is just not nearly as performant as ROCm. However, it
@@ -846,7 +850,7 @@ of magnitude.</p>
 <p>You will need to install the following packages:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install mesa-libOpenCL-devel libclc-devel clinfo</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install mesa-libOpenCL mesa-libOpenCL-devel libclc libclc-devel clinfo</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -861,14 +865,27 @@ of magnitude.</p>
 your GPU is recognised as a valid Vulkan platform. If you don&rsquo;t see much, then
 it is not supported, but it really should be, unless you have <em>exceptionally</em>
 old or cheap hardware.</p>
-<p>One thing to note is that Vulkan requires your CPU to have the AVX2 extension.
+<h3>CLBlast<span class="hx-absolute -hx-mt-20" id="clblast"></span>
+    <a href="#clblast" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>One thing to note is that Vulkan requires your CPU to have the AVX2 extension.
 This should be present on all modern CPUs, unless, as said, you have
 exceptionally old or cheap hardware. Should you not have AVX2 on your CPU for
 whatever reason, CLBlast is one last option that might be supported on your
-hardware, as it requires AVX instead. It requires the same libraries and tools
-as above, so you don&rsquo;t need anything more. Just make sure to select a &ldquo;CLBlast
-option&rdquo; or &ldquo;OpenCL option,&rdquo; if one exists, whenever you use your AI tool of
-choice.</p>
+hardware, as it requires AVX instead. From what I understand, you will need the
+following:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fish" data-lang="fish"><span class="line"><span class="cl"><span class="nf">sudo</span> <span class="nf">dnf</span> install clblast clblast-devel</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>Just make sure to select a &ldquo;CLBlast option&rdquo; or &ldquo;OpenCL option,&rdquo; if one exists,
+whenever you use your AI tool of choice.</p>
 <p>If your CPU does not even have the AVX extension, then you probably need to
 upgrade your hardware. However, it is worth nothing that <a href="https://github.com/LostRuins/koboldcpp/releases/tag/v1.82.4" target="_blank" rel="noopener">version 1.82.4 of
 koboldcpp</a> no

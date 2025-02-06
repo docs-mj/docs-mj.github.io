@@ -68,7 +68,7 @@ Should you have an AMD GPU architecture supported by ROCm, you will need to
 install the following packages:
 
 ```fish
-sudo dnf install rocm-hip-devel rocm-hipblas-devel rocm-llvm-devel rocminfo hipblas-devel hipcc
+sudo dnf install rocm-hip rocm-hip-devel rocm-hipblas rocm-hipblas-devel rocm-llvm-devel rocminfo hipcc
 ```
 
 While it is not strictly necessary to install the development (`*-devel`)
@@ -290,7 +290,7 @@ Now you should not be hitting into mysterious snags the way I have, as now
 there will be an `/opt/rocm` populated with the libraries and tools that are
 expected.
 
-### Vulkan and CLBlast
+### Vulkan
 
 It is not the end of the world if your GPU is not supported by ROCm, because it
 still can be supported by Vulkan or CLBlast. Vulkan is the same API that is
@@ -302,7 +302,7 @@ of magnitude.
 You will need to install the following packages:
 
 ```fish
-sudo dnf install mesa-libOpenCL-devel libclc-devel clinfo
+sudo dnf install mesa-libOpenCL mesa-libOpenCL-devel libclc libclc-devel clinfo
 ```
 
 Similarly with ROCm, you can verify if your GPU is Vulkan-enabled by running
@@ -311,14 +311,21 @@ your GPU is recognised as a valid Vulkan platform. If you don't see much, then
 it is not supported, but it really should be, unless you have *exceptionally*
 old or cheap hardware.
 
+### CLBlast
+
 One thing to note is that Vulkan requires your CPU to have the AVX2 extension.
 This should be present on all modern CPUs, unless, as said, you have
 exceptionally old or cheap hardware. Should you not have AVX2 on your CPU for
 whatever reason, CLBlast is one last option that might be supported on your
-hardware, as it requires AVX instead. It requires the same libraries and tools
-as above, so you don't need anything more. Just make sure to select a "CLBlast
-option" or "OpenCL option," if one exists, whenever you use your AI tool of
-choice.
+hardware, as it requires AVX instead. From what I understand, you will need the
+following:
+
+```fish
+sudo dnf install clblast clblast-devel
+```
+
+Just make sure to select a "CLBlast option" or "OpenCL option," if one exists,
+whenever you use your AI tool of choice.
 
 If your CPU does not even have the AVX extension, then you probably need to
 upgrade your hardware. However, it is worth nothing that [version 1.82.4 of
